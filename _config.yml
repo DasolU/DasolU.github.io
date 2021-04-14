@@ -39,7 +39,6 @@ favicon: "" # the favicon for your site
 
 theme: jekyll-theme-yat
 remote_theme: "DasolU/DasolU.github.io" 
-"jeffreytse/jekyll-theme-yat"
 
 # Yat date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
