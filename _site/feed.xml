@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://dasolu.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://dasolu.github.io//" rel="alternate" type="text/html" /><updated>2021-04-14T19:44:32+09:00</updated><id>https://dasolu.github.io//feed.xml</id><title type="html">Dasol Yoo</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Dasol Yoo</name></author><entry><title type="html">Big O Notation</title><link href="https://dasolu.github.io//basic/2021/04/13/big-o-notation.html" rel="alternate" type="text/html" title="Big O Notation" /><published>2021-04-13T00:00:00+09:00</published><updated>2021-04-13T00:00:00+09:00</updated><id>https://dasolu.github.io//basic/2021/04/13/big-o-notation</id><content type="html" xml:base="https://dasolu.github.io//basic/2021/04/13/big-o-notation.html">&lt;p&gt;저는 대학원을 입학하며 처음 코딩을 시작했습니다. &lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://dasolu.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://dasolu.github.io//" rel="alternate" type="text/html" /><updated>2021-04-14T20:30:19+09:00</updated><id>https://dasolu.github.io//feed.xml</id><title type="html">Dasol Yoo</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Dasol Yoo</name></author><entry><title type="html">Big O Notation</title><link href="https://dasolu.github.io//basic/2021/04/13/big-o-notation.html" rel="alternate" type="text/html" title="Big O Notation" /><published>2021-04-13T00:00:00+09:00</published><updated>2021-04-13T00:00:00+09:00</updated><id>https://dasolu.github.io//basic/2021/04/13/big-o-notation</id><content type="html" xml:base="https://dasolu.github.io//basic/2021/04/13/big-o-notation.html">&lt;p&gt;Basic 카테고리에서는 효율적인 코드 작성을 위해서 필요한 기본 개념과 알고리즘들을 하나씩 익혀나
+가겠습니다!&lt;br /&gt;
+포스팅은 &lt;strong&gt;Hello Coding 그림으로 개념을 이해하는 알고리즘(아디트야 바르가바, 한빛미디어)&lt;/strong&gt; &amp;gt;책을 요약한 것입니다.&lt;/p&gt;
+
+&lt;p&gt;저는 대학원을 입학하며 처음 코딩을 시작했습니다. &lt;br /&gt;
 그 때가 2018년도 3월이니 벌써 3년전이네요.&lt;br /&gt;
 학부에서 배운 내용이 아닌 새로운 세부 전공에 도전하다보니
 수업이나 논문에 나오는 단어의 개념도 모를때였죠.&lt;br /&gt;
-이뿐만 아니라 첫 학기에 저를 마중나온 수업은 최신 통계 방법들을 데이터에 적용하는 알고리즘을 작성하는 수업이었습니다.&lt;/p&gt;
+설상가상으로 첫 학기에 저를 마중나온 수업은 최신 통계 방법들을 코드로 작성해서 데이터에 적용하는 수업이었습니다.&lt;/p&gt;
 
 &lt;p&gt;즉, 저는 Python, 코딩, 통계, 머신러닝과 연구분야에 대한 개념까지 모두 없는 말그대로 zero base 학생이었습니다.&lt;br /&gt;
 다른 연구자들보다 능력이 부족한 상태로 시작하다보니 시간이 늘 모자랐습니다.&lt;br /&gt;
@@ -11,11 +15,8 @@
 &lt;p&gt;시간이 부족했던 저는 python을 시작할 때 하나씩 배운다는 느낌보다는 빠른 구글링으로 문제를 해결하는데 급급했습니다.
 결국 3년 후인 지금, 구글링을 통한 집요한 문제해결에는 누구보다 자신있지만, 자료 구조의 특징을 이해하고 알고리즘을 효율적으로 작성하는 방법에 대한 고민과 기본 지식이 부족한 상황입니다.&lt;/p&gt;
 
-&lt;p&gt;앞으로 Basic 카테고리에서는 효율적인 코드 작성을 위해서 필요한 기본 개념과 알고리즘들을 하나씩 익혀나가겠습니다!
-포스팅하는 내용은 &lt;strong&gt;Hello Coding 그림으로 개념을 이해하는 알고리즘(아디트야 바르가바, 한빛미디어)&lt;/strong&gt; 책을 요약한 것입니다.&lt;/p&gt;
-
 &lt;h2 id=&quot;필요성&quot;&gt;필요성&lt;/h2&gt;
-&lt;p&gt;저처럼 실무 성과에 급급하며 python을 시작하신 분들은 대부분 다음 그림에 익숙하실겁니다.
+&lt;p&gt;저처럼 실무 성과에 급급하며 python을 시작하셨다면 다음 그림에 익숙하실지도 모릅니다.&lt;br /&gt;
 &lt;img src=&quot;/assets/images/pigeon.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;저는 빅데이터를 다루는 일을 했으므로, 비둘기가 매우 오랫동안 목을 돌려야 날아가는 상황이 수두룩했습니다.&lt;br /&gt;
@@ -32,22 +33,32 @@
 &lt;h3 id=&quot;예시&quot;&gt;예시&lt;/h3&gt;
 &lt;p&gt;종이에 16개의 네모칸을 만들어야한다면, n=16입니다.&lt;/p&gt;
 
-&lt;p&gt;[경우 1] &lt;br /&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;경우 1 &lt;br /&gt;
 하나씩 네모칸을 그린다면 총 16번의 연산이 필요합니다.&lt;br /&gt;
 이때 Big O Notation은 $ O(n) $ 입니다.&lt;/p&gt;
-
-&lt;p&gt;[경우 2] &lt;br /&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;경우 2&lt;br /&gt;
 종이를 반씩 접는 방법으로 더 빠르게 네모칸을 만드는 경우에는,
 종이를 4번 접는 것만으로 16개의 칸을 만들 수 있으므로 연산 횟수는 4입니다.
 연산횟수 4를 n=16이 들어간 식으로 표현한다면 Big O Notation은
 $O(log{_2}n)$ 입니다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;1초에 10번의 연산이 가능한 경우 걸리는 시간을 계산해봅시다.&lt;br /&gt;
-[경우 1에 걸리는 시간] &lt;br /&gt;
+&lt;p&gt;1초에 10번의 연산이 가능한 경우 걸리는 시간을 계산해봅시다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;경우 1에 걸리는 시간 &lt;br /&gt;
 경우 1은 16번의 연산이 필요하므로 1.6초 걸릴 것으로 예상할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;[경우 2에 걸리는 시간]&lt;br /&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;경우 2에 걸리는 시간&lt;br /&gt;
 경우 2는 4번의 연산이 필요하므로 0.4초 걸릴 것으로 예상할 수 있습니다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;이제 우리는 Big O Notation 덕분에 만들어야하는 네모칸의 수(n)이 증가할수록 ‘경우 2’ 방법이 연산 시간을 단축해줄 것이라는 것을 예상할 수 있습니다.&lt;/p&gt;
 
@@ -61,4 +72,4 @@ $O(log{_2}n)$ 입니다.&lt;/p&gt;
   &lt;li&gt;$O(n*log n)$: 퀵 정렬 (빠른)&lt;/li&gt;
   &lt;li&gt;$O(n**2)$: 선택 정렬 (느린)&lt;/li&gt;
   &lt;li&gt;$O(n!)$: (매우 느린)&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Dasol Yoo</name></author><category term="Basic" /><category term="basic" /><category term="efficiency" /><summary type="html">저는 대학원을 입학하며 처음 코딩을 시작했습니다. 그 때가 2018년도 3월이니 벌써 3년전이네요. 학부에서 배운 내용이 아닌 새로운 세부 전공에 도전하다보니 수업이나 논문에 나오는 단어의 개념도 모를때였죠. 이뿐만 아니라 첫 학기에 저를 마중나온 수업은 최신 통계 방법들을 데이터에 적용하는 알고리즘을 작성하는 수업이었습니다.</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>Dasol Yoo</name></author><category term="Basic" /><category term="Basic" /><category term="Efficiency" /><summary type="html">Basic 카테고리에서는 효율적인 코드 작성을 위해서 필요한 기본 개념과 알고리즘들을 하나씩 익혀나 가겠습니다! 포스팅은 Hello Coding 그림으로 개념을 이해하는 알고리즘(아디트야 바르가바, 한빛미디어) &amp;gt;책을 요약한 것입니다.</summary></entry></feed>
