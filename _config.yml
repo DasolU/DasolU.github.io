@@ -160,7 +160,7 @@ gitment:
 markdown: kramdown
 kmarkdown:
   input: GFM
-#mathjax: true
+mathjax: true
 
 plugins:
   - jekyll-feed
