@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://dasolu.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://dasolu.github.io//" rel="alternate" type="text/html" /><updated>2021-04-14T20:30:19+09:00</updated><id>https://dasolu.github.io//feed.xml</id><title type="html">Dasol Yoo</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Dasol Yoo</name></author><entry><title type="html">Big O Notation</title><link href="https://dasolu.github.io//basic/2021/04/13/big-o-notation.html" rel="alternate" type="text/html" title="Big O Notation" /><published>2021-04-13T00:00:00+09:00</published><updated>2021-04-13T00:00:00+09:00</updated><id>https://dasolu.github.io//basic/2021/04/13/big-o-notation</id><content type="html" xml:base="https://dasolu.github.io//basic/2021/04/13/big-o-notation.html">&lt;p&gt;Basic 카테고리에서는 효율적인 코드 작성을 위해서 필요한 기본 개념과 알고리즘들을 하나씩 익혀나
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://dasolu.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://dasolu.github.io//" rel="alternate" type="text/html" /><updated>2021-04-14T20:34:59+09:00</updated><id>https://dasolu.github.io//feed.xml</id><title type="html">Dasol Yoo</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Dasol Yoo</name></author><entry><title type="html">Big O Notation</title><link href="https://dasolu.github.io//basic/2021/04/13/big-o-notation.html" rel="alternate" type="text/html" title="Big O Notation" /><published>2021-04-13T00:00:00+09:00</published><updated>2021-04-13T00:00:00+09:00</updated><id>https://dasolu.github.io//basic/2021/04/13/big-o-notation</id><content type="html" xml:base="https://dasolu.github.io//basic/2021/04/13/big-o-notation.html">&lt;p&gt;Basic 카테고리에서는 효율적인 코드 작성을 위해서 필요한 기본 개념과 알고리즘들을 하나씩 익혀나
 가겠습니다!&lt;br /&gt;
 포스팅은 &lt;strong&gt;Hello Coding 그림으로 개념을 이해하는 알고리즘(아디트야 바르가바, 한빛미디어)&lt;/strong&gt; &amp;gt;책을 요약한 것입니다.&lt;/p&gt;
 
@@ -27,7 +27,7 @@
 &lt;h2 id=&quot;정의&quot;&gt;정의&lt;/h2&gt;
 &lt;p&gt;Big O Notation은 알고리즘이 얼마나 빠른지 표기하는 방법입니다.&lt;/p&gt;
 
-&lt;p&gt;$ O $$($ 원하는 계산 결과 n을 만들기 위해 필요한 연산횟수$)$ 로 표기합니다. 
+&lt;p&gt;O (원하는 계산 결과 n을 만들기 위해 필요한 연산횟수) 로 표기합니다. 
 이때 n은 원하는 계산 결과입니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;예시&quot;&gt;예시&lt;/h3&gt;
