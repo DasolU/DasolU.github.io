@@ -5,6 +5,8 @@ subtitle: List 쓰다가 안되면 np.array()로 바꿔쓰다가 안되면 다�
 categories: Basic
 tags: [Basic, Efficiency, Data Structure]
 ---
+List->Array->List->Array......  
+에러가 날때마다 영문도 모른체 데이터의 자료형을 변환하는데 급급했나요?  
 두 자료구조의 차이점을 몰라서 에러가 날때마다 적당히 자료형을 바꾸며 돌려막기한다면,  
 계산 시간과 한숨을 엄청나게 낭비하게 됩니다.   
 이제 이 답답함에서 벗어나보자구요!  
