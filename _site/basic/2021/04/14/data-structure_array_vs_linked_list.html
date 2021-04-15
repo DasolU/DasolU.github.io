@@ -7,22 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Big O Notation | Dasol Yoo</title>
+<title>Data Structure Array &amp; Linked List | Dasol Yoo</title>
 <meta name="generator" content="Jekyll v4.2.0">
-<meta property="og:title" content="Big O Notation">
+<meta property="og:title" content="Data Structure Array &amp; Linked List">
 <meta name="author" content="Dasol Yoo">
 <meta property="og:locale" content="en_US">
-<meta name="description" content="Basic 카테고리에서는 효율적인 코드 작성을 위해서 필요한 기본 개념과 알고리즘들을 하나씩 익혀나 가겠습니다! 포스팅은 Hello Coding 그림으로 개념을 이해하는 알고리즘(아디트야 바르가바, 한빛미디어) &gt;책을 요약한 것입니다.">
-<meta property="og:description" content="Basic 카테고리에서는 효율적인 코드 작성을 위해서 필요한 기본 개념과 알고리즘들을 하나씩 익혀나 가겠습니다! 포스팅은 Hello Coding 그림으로 개념을 이해하는 알고리즘(아디트야 바르가바, 한빛미디어) &gt;책을 요약한 것입니다.">
-<link rel="canonical" href="https://dasolu.github.io//basic/2021/04/13/big-o-notation.html">
-<meta property="og:url" content="https://dasolu.github.io//basic/2021/04/13/big-o-notation.html">
+<meta name="description" content="List-&gt;Array-&gt;List-&gt;Array…… 에러가 날때마다 영문도 모른체 데이터의 자료형을 변환하는데 급급했나요? 두 자료구조의 차이점을 몰라서 에러가 날때마다 적당히 자료형을 바꾸며 돌려막기한다면, 계산 시간과 한숨을 엄청나게 낭비하게 됩니다. 이제 이 답답함에서 벗어나보자구요!">
+<meta property="og:description" content="List-&gt;Array-&gt;List-&gt;Array…… 에러가 날때마다 영문도 모른체 데이터의 자료형을 변환하는데 급급했나요? 두 자료구조의 차이점을 몰라서 에러가 날때마다 적당히 자료형을 바꾸며 돌려막기한다면, 계산 시간과 한숨을 엄청나게 낭비하게 됩니다. 이제 이 답답함에서 벗어나보자구요!">
+<link rel="canonical" href="https://dasolu.github.io//basic/2021/04/14/data-structure_array_vs_linked_list.html">
+<meta property="og:url" content="https://dasolu.github.io//basic/2021/04/14/data-structure_array_vs_linked_list.html">
 <meta property="og:site_name" content="Dasol Yoo">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2021-04-13T00:00:00+09:00">
+<meta property="article:published_time" content="2021-04-14T00:00:00+09:00">
 <meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="Big O Notation">
+<meta property="twitter:title" content="Data Structure Array &amp; Linked List">
 <script type="application/ld+json">
-{"url":"https://dasolu.github.io//basic/2021/04/13/big-o-notation.html","headline":"Big O Notation","dateModified":"2021-04-13T00:00:00+09:00","datePublished":"2021-04-13T00:00:00+09:00","@type":"BlogPosting","author":{"@type":"Person","name":"Dasol Yoo"},"description":"Basic 카테고리에서는 효율적인 코드 작성을 위해서 필요한 기본 개념과 알고리즘들을 하나씩 익혀나 가겠습니다! 포스팅은 Hello Coding 그림으로 개념을 이해하는 알고리즘(아디트야 바르가바, 한빛미디어) &gt;책을 요약한 것입니다.","mainEntityOfPage":{"@type":"WebPage","@id":"https://dasolu.github.io//basic/2021/04/13/big-o-notation.html"},"@context":"https://schema.org"}</script>
+{"url":"https://dasolu.github.io//basic/2021/04/14/data-structure_array_vs_linked_list.html","headline":"Data Structure Array &amp; Linked List","dateModified":"2021-04-14T00:00:00+09:00","datePublished":"2021-04-14T00:00:00+09:00","@type":"BlogPosting","author":{"@type":"Person","name":"Dasol Yoo"},"description":"List-&gt;Array-&gt;List-&gt;Array…… 에러가 날때마다 영문도 모른체 데이터의 자료형을 변환하는데 급급했나요? 두 자료구조의 차이점을 몰라서 에러가 날때마다 적당히 자료형을 바꾸며 돌려막기한다면, 계산 시간과 한숨을 엄청나게 낭비하게 됩니다. 이제 이 답답함에서 벗어나보자구요!","mainEntityOfPage":{"@type":"WebPage","@id":"https://dasolu.github.io//basic/2021/04/14/data-structure_array_vs_linked_list.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="shortcut icon" href="">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -120,7 +120,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
     display: none;
   }
 </style>
-<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
@@ -544,11 +543,11 @@ function googleTranslateElementInit() {
 
 
 <header class="post-header">
-  <h1 class="post-title p-name" itemprop="name headline">Big O Notation</h1>
-  <h3 class="post-subtitle">돌아가기만 하면 된다구? 마구잡이식 코딩은 이제 그만!</h3>
+  <h1 class="post-title p-name" itemprop="name headline">Data Structure Array &amp; Linked List</h1>
+  <h3 class="post-subtitle">List 쓰다가 안되면 np.array()로 바꿔쓰다가 안되면 다시 list()로 바꾸고 있다면?</h3>
 
   <p class="post-meta">
-    <time class="dt-published" datetime="2021-04-13T00:00:00+09:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Apr 13, 2021
+    <time class="dt-published" datetime="2021-04-14T00:00:00+09:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Apr 14, 2021
     </time>
 
     
@@ -588,101 +587,125 @@ function googleTranslateElementInit() {
     <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
   </p>
 <div class="post-tags">
-<a class="post-tag" href="/tags.html#Basic">#Basic</a><a class="post-tag" href="/tags.html#Efficiency">#Efficiency</a>
+<a class="post-tag" href="/tags.html#Basic">#Basic</a><a class="post-tag" href="/tags.html#Efficiency">#Efficiency</a><a class="post-tag" href="/tags.html#Data%20Structure">#Data Structure</a>
 </div></header>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
     <div class="post-content e-content" itemprop="articleBody">
 
-      <p>Basic 카테고리에서는 효율적인 코드 작성을 위해서 필요한 기본 개념과 알고리즘들을 하나씩 익혀나
-가겠습니다!<br>
-포스팅은 <strong>Hello Coding 그림으로 개념을 이해하는 알고리즘(아디트야 바르가바, 한빛미디어)</strong> &gt;책을 요약한 것입니다.</p>
+      <p>List-&gt;Array-&gt;List-&gt;Array……<br>
+에러가 날때마다 영문도 모른체 데이터의 자료형을 변환하는데 급급했나요?<br>
+두 자료구조의 차이점을 몰라서 에러가 날때마다 적당히 자료형을 바꾸며 돌려막기한다면,<br>
+계산 시간과 한숨을 엄청나게 낭비하게 됩니다. <br>
+이제 이 답답함에서 벗어나보자구요!</p>
 
-<p>저는 대학원을 입학하며 처음 코딩을 시작했습니다. <br>
-그 때가 2018년도 3월이니 벌써 3년전이네요.<br>
-학부에서 배운 내용이 아닌 새로운 세부 전공에 도전하다보니
-수업이나 논문에 나오는 단어의 개념도 모를때였죠.<br>
-설상가상으로 첫 학기에 저를 마중나온 수업은 최신 통계 방법들을 코드로 작성해서 데이터에 적용하는 수업이었습니다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># What I did before
+</span><span class="nb">list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="n">listagain</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+</code></pre></div></div>
 
-<p>즉, 저는 Python, 코딩, 통계, 머신러닝과 연구분야에 대한 개념까지 모두 없는 말그대로 zero base 학생이었습니다.<br>
-다른 연구자들보다 능력이 부족한 상태로 시작하다보니 시간이 늘 모자랐습니다.<br>
-모든 것들을 해내기 위해서 거의 1년간은 아침에 택시를 타고 집에 들어가며 수업 과제들, 연구 미팅 준비를 하며 지냈습니다.</p>
+<p>시작은 리스트였으나,<br>
+np.where을 사용해서 원하는 값의 index를 찾으려다가,<br>
+error 때문에 list-&gt;array로 바꾸어 사용하다가,<br>
+array에 값을 추가하고 싶은데 list.append()가 생각나서,<br>
+다시 list로 바꾸어 사용해보셨나요?</p>
 
-<p>시간이 부족했던 저는 python을 시작할 때 하나씩 배운다는 느낌보다는 빠른 구글링으로 문제를 해결하는데 급급했습니다.
-결국 3년 후인 지금, 구글링을 통한 집요한 문제해결에는 누구보다 자신있지만, 자료 구조의 특징을 이해하고 알고리즘을 효율적으로 작성하는 방법에 대한 고민과 기본 지식이 부족한 상황입니다.</p>
+<p>여러분은 아닐지 몰라도 저는 자주 그랬습니다ㅎㅎ…. <br>
+그래서 오늘은 다양한 Data Structure(자료 구조) 중 선형 구조(linear Structure)에 속하는 <strong>Array와 Linked List</strong>를 비교 분석해봅니다.</p>
 
-<h2 id="필요성">필요성</h2>
-<p>저처럼 실무 성과에 급급하며 python을 시작하셨다면 다음 그림에 익숙하실지도 모릅니다.<br>
-<img src="/assets/images/pigeon.jpeg" alt=""></p>
+<h2 id="자료-구조-이해의-필요성">자료 구조 이해의 필요성</h2>
+<p>효율적인 프로그램 작성을 목표로한다면 가장 중요한 것은 <strong>저장 공간의 효율성</strong>과 <strong>실행 시간의 신속성</strong>입니다 (정보처리기사 시나공 책).</p>
 
-<p>저는 빅데이터를 다루는 일을 했으므로, 비둘기가 매우 오랫동안 목을 돌려야 날아가는 상황이 수두룩했습니다.<br>
-이제 저도 빠르고 효율적인 코드를 작성하는 사람이 되고 싶습니다.<br>
-<strong>Big O Notation (빅오 표기법)</strong>은 <strong>‘알고리즘이 얼마나 빠른가? 더 나은 방법은 없을까?’</strong>라는 생각에 대한 정량적인 비교를 가능하게 합니다.<br>
-예를 들어, <strong>Big O Notation</strong>으로 인풋 데이터가 늘어날 때 연산 횟수가 증가하는 정도를 예측할 수 있습니다.</p>
+<p>우리가 메모리에 여러 개의 원소를 저장하고 싶을 때, 우리는 컴퓨터에게 공간을 요청합니다.<br>
+Array(배열)과 linked list(연결 리스트)는 원소를 저장하는 방법입니다.</p>
 
-<h2 id="정의">정의</h2>
-<p>Big O Notation은 알고리즘이 얼마나 빠른지 표기하는 방법입니다.</p>
+<h2 id="array-정의">Array 정의</h2>
+<p>Array(배열)는 동일한 자료형의 데이터들이 순서를 가지고 나열되어있는 집합입니다.<br>
+Array를 연속적인 메모리 공간에 저장됩니다.<br>
+따라서 길이가 N인 array를 지정하면 각 원소의 주소를 쉽게 알 수 있습니다.</p>
 
-<p>O(원하는 계산 결과 n을 만들기 위해 필요한 연산횟수) 로 표기합니다. 
-이때 n은 원하는 계산 결과입니다.</p>
+<h3 id="장점">장점</h3>
+<p>이러한 특징 덕분에 array에 들어있는 원소들에게 순서대로 0부터 N-1까지 번호표를 붙일 수 있습니다.<br>
+이때 번호표를 <strong>index</strong>라고 부르고, 번호표를 이용해서 원소들을 부를 수 있게 됩니다.<br>
+<strong>1. 메모리 이용 효율이 가장 좋다. Why? 메모리를 연속적으로 배정받기 때문.</strong>  <br>
+<strong>2. 데이터에 임의 접근이 가능하다.</strong><br>
+<strong>3. For loop처럼 원소마다 반복되는 작업을 하려 할때 적합하다.</strong></p>
+
+<h3 id="단점">단점</h3>
+<p><strong>1. 데이터 추가가 어렵다.</strong><br>
+Array는 정적인 자료 구조이므로 계속해서 데이터 늘어난다면, array는 전체 원소를 저장할 새로운 메모리(장소)를 찾게됩니다.<br>
+만약 100개의 이름을 저장해야하지만 0부터 99까지 이어져있는 메모리(장소)가 없다면, 배열을 만들 수 없습니다.</p>
+
+<p><strong>2. 데이터 삭제시 메모리가 빈 공간으로 남겨져 낭비된다.</strong></p>
 
 <h3 id="예시">예시</h3>
-<p>종이에 16개의 네모칸을 만들어야한다면, n=16입니다.</p>
-
 <ul>
   <li>
-    <p>경우 1 <br>
-하나씩 네모칸을 그린다면 총 16번의 연산이 필요합니다.<br>
-이때 Big O Notation은 $ O(n) $ 입니다.</p>
+    <p>Student array에 신입사원들의 이름을 가나다 순으로 담아놨다면 3번째에 위치한 신입사원의 이름은 student(2)를 사용해서 간편하게 알아낼 수 있습니다.</p>
   </li>
   <li>
-    <p>경우 2<br>
-종이를 반씩 접는 방법으로 더 빠르게 네모칸을 만드는 경우에는,
-종이를 4번 접는 것만으로 16개의 칸을 만들 수 있으므로 연산 횟수는 4입니다.
-연산횟수 4를 n=16이 들어간 식으로 표현한다면 Big O Notation은
-$O(log{_2}n)$ 입니다.</p>
+    <p>배열의 크기 N에 따라서 크기가 N인 1차원 배열, 크기가 NxN인2차원 배열로 부릅니다.</p>
   </li>
 </ul>
 
-<p>1초에 10번의 연산이 가능한 경우 걸리는 시간을 계산해봅시다.</p>
-<ul>
-  <li>
-    <p>경우 1에 걸리는 시간 <br>
-경우 1은 16번의 연산이 필요하므로 1.6초 걸릴 것으로 예상할 수 있습니다.</p>
-  </li>
-  <li>
-    <p>경우 2에 걸리는 시간<br>
-경우 2는 4번의 연산이 필요하므로 0.4초 걸릴 것으로 예상할 수 있습니다.</p>
-  </li>
-</ul>
+<h2 id="linked-list-정의">Linked list 정의</h2>
+<p>Linked list는 각 <strong>노드</strong>(data부분+ pointer부분)의 포인터에 다음 노드의 위치를 저장하여 데이터를 연결시키는 저장 방법입니다.<br>
+따라서 array와는 달리 데이터가 원소의 메모리를 임의의 어느 곳에나 둘 수 있습니다.</p>
 
-<p>이제 우리는 Big O Notation 덕분에 만들어야하는 네모칸의 수(n)이 증가할수록 ‘경우 2’ 방법이 연산 시간을 단축해줄 것이라는 것을 예상할 수 있습니다.</p>
+<h3 id="장점-1">장점</h3>
+<p><strong>1. 새로운 노드를 쉽게 삽입&amp; 삭제할 수 있다.</strong></p>
 
-<h2 id="종류">종류</h2>
+<h3 id="단점-1">단점</h3>
+<p><strong>1. Array와 달리 n번째 원소를 한 번에 찾을 수 없다.</strong><br>
+<strong>2. Array와 달리 각 노드에 data뿐만아니라 포인터 부분을 저장하므로 메모리 이용 효율이 나쁘다.</strong>  <br>
+<strong>3. 데이터에 임의 접근이 불가능하다.</strong></p>
 
-<p>많이 사용하는 Big O Notation을 빠른 순서대로 나열했습니다.</p>
+<h2 id="연산-시간-비교">연산 시간 비교</h2>
+<p>Array 와 Linked list의 연산 시간을 Big O notation으로 표현한다면?</p>
 
-<ol>
-  <li>$O(log n)$: 이진탐색</li>
-  <li>$O(n)$: 단순탐색</li>
-  <li>$O(n*log n)$: 퀵 정렬 (빠른)</li>
-  <li>$O(n**2)$: 선택 정렬 (느린)</li>
-  <li>$O(n!)$: (매우 느린)</li>
-</ol>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: right"> </th>
+      <th style="text-align: right">Array</th>
+      <th style="text-align: right">Linked list</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right">읽기</td>
+      <td style="text-align: right">O(1)</td>
+      <td style="text-align: right">O(n)</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">삽입</td>
+      <td style="text-align: right">O(n)</td>
+      <td style="text-align: right">O(1)</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">삭제</td>
+      <td style="text-align: right">O(1)</td>
+      <td style="text-align: right">O(n)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Array에서 삽입이 O(n)인 이유? 뒤에 오는 모든 원소들의 위치를 바꿔야하기 때문입니다.</p>
 
 
     </div>
 
 </article>
 <div class="post-nav">
-<span></span><a class="next" href="/basic/2021/04/14/data-structure_array_vs_linked_list.html" title="Data Structure Array &amp; Linked List">Data Structure Array &amp; Linked List...</a>
+<a class="previous" href="/basic/2021/04/13/big-o-notation.html" title="Big O Notation">Big O Notation</a><a class="next" href="/career/2021/04/15/data-analyst-engineer-scientist.html" title="Data Analyst? Data Engineer? Data Scientist?">Data Analyst? Data Engineer? Data Scientist?...</a>
 </div>
 <div class="post-related">
       <div>Related Articles</div>
       <ul>
-        <li><a class="post-link" href="/basic/2021/04/14/data-structure_array_vs_linked_list.html" title="Data Structure Array &amp; Linked List">Data Structure Array &amp; Linked List</a></li>
-<li><a class="post-link" href="/basic/2021/04/13/big-o-notation.html" title="Data Structure Array &amp; Linked List">Big O Notation</a></li>
-<li><a class="post-link" href="/career/2021/04/15/data-analyst-engineer-scientist.html" title="Data Structure Array &amp; Linked List">Data Analyst? Data Engineer? Data Scientist?</a></li>
+        <li><a class="post-link" href="/basic/2021/04/14/data-structure_array_vs_linked_list.html" title="Data Analyst? Data Engineer? Data Scientist?">Data Structure Array &amp; Linked List</a></li>
+<li><a class="post-link" href="/basic/2021/04/13/big-o-notation.html" title="Data Analyst? Data Engineer? Data Scientist?">Big O Notation</a></li>
+<li><a class="post-link" href="/career/2021/04/15/data-analyst-engineer-scientist.html" title="Data Analyst? Data Engineer? Data Scientist?">Data Analyst? Data Engineer? Data Scientist?</a></li>
 </ul>
     </div>
 <div class="post-comments">  <div id="gitment_thread"></div>
@@ -690,7 +713,7 @@ $O(log{_2}n)$ 입니다.</p>
   <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
   <script>
     var gitment = new Gitment({
-      id: '/basic/2021/04/13/big-o-notation',
+      id: '/basic/2021/04/14/data-structure_array_vs_linked_list',
       owner: 'DasolU',
       repo: '',
       oauth: {

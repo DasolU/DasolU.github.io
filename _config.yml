@@ -37,7 +37,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dasolu.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 favicon: "" # the favicon for your site
 
-theme: jekyll-theme-yat
+#theme: jekyll-theme-yat
 remote_theme: "DasolU/DasolU.github.io" 
 
 # Yat date format
@@ -169,4 +169,4 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-spaceship
-
+  - jemoji

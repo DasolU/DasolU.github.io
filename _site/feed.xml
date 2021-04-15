@@ -1,4 +1,172 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://dasolu.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://dasolu.github.io//" rel="alternate" type="text/html" /><updated>2021-04-14T20:34:59+09:00</updated><id>https://dasolu.github.io//feed.xml</id><title type="html">Dasol Yoo</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Dasol Yoo</name></author><entry><title type="html">Big O Notation</title><link href="https://dasolu.github.io//basic/2021/04/13/big-o-notation.html" rel="alternate" type="text/html" title="Big O Notation" /><published>2021-04-13T00:00:00+09:00</published><updated>2021-04-13T00:00:00+09:00</updated><id>https://dasolu.github.io//basic/2021/04/13/big-o-notation</id><content type="html" xml:base="https://dasolu.github.io//basic/2021/04/13/big-o-notation.html">&lt;p&gt;Basic 카테고리에서는 효율적인 코드 작성을 위해서 필요한 기본 개념과 알고리즘들을 하나씩 익혀나
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://dasolu.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://dasolu.github.io//" rel="alternate" type="text/html" /><updated>2021-04-15T17:51:04+09:00</updated><id>https://dasolu.github.io//feed.xml</id><title type="html">Dasol Yoo</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Dasol Yoo</name></author><entry><title type="html">Data Analyst? Data Engineer? Data Scientist?</title><link href="https://dasolu.github.io//career/2021/04/15/data-analyst-engineer-scientist.html" rel="alternate" type="text/html" title="Data Analyst? Data Engineer? Data Scientist?" /><published>2021-04-15T00:00:00+09:00</published><updated>2021-04-15T00:00:00+09:00</updated><id>https://dasolu.github.io//career/2021/04/15/data-analyst-engineer-scientist</id><content type="html" xml:base="https://dasolu.github.io//career/2021/04/15/data-analyst-engineer-scientist.html">&lt;p&gt;데이터를 분석하는 일을 하고 싶은데 관련 직무가 정말 많죠.&lt;br /&gt;
+나만의 커리어를 쌓아가기 위해서 직무별 특징을 이해하고 필요 역량을 살펴볼게요. &lt;br /&gt;
+각종 채용 공고를 보고 각 직무별 요구하는 job skills를 정리해봤습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;data-analyst&quot;&gt;Data Analyst&lt;/h2&gt;
+&lt;h3 id=&quot;정의&quot;&gt;정의&lt;/h3&gt;
+&lt;p&gt;Data-driven 의사결정을 내릴 수 있도록 정량적 수치와 분석 결과를 제공하는 사람&lt;/p&gt;
+&lt;h3 id=&quot;하는-일&quot;&gt;하는 일&lt;/h3&gt;
+&lt;p&gt;서비스에서 발생하는 Raw Data들을 정제/가공/적재하며, &lt;br /&gt;
+회사 구성원에게 Insight가 전달될 수 있도록 대시보드 및 리포트를 구성&lt;/p&gt;
+&lt;h3 id=&quot;skill&quot;&gt;Skill&lt;/h3&gt;
+&lt;p&gt;필수 역량&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;모바일 서비스 데이터 분석 방법(LTV, AARRR, Cohort, Funnel 등)에 대한 이해&lt;/li&gt;
+  &lt;li&gt;SQL을 사용한 Raw Data 핸들링 역량&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;우대 역량&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;통계, 예측 모델링 지식&lt;/li&gt;
+  &lt;li&gt;데이터 시각화(Tableau, Grafana 등)에 대한 경험&lt;/li&gt;
+  &lt;li&gt;Data Warehouse 구축 지식이나 경험&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;data-engineer&quot;&gt;Data Engineer&lt;/h2&gt;
+&lt;h3 id=&quot;정의-1&quot;&gt;정의&lt;/h3&gt;
+&lt;p&gt;효율적인 데이터환경을 함께 만드는 사람&lt;/p&gt;
+
+&lt;h3 id=&quot;하는-일-1&quot;&gt;하는 일&lt;/h3&gt;
+&lt;p&gt;Hadoop-Ecosystem에서 데이터마트를 설계하고 Data Workflow개발 및 자동화 업무를 수행&lt;br /&gt;
+효율적인 데이터 활용 및 데이터거버넌스와 관련된 데이터 도구들을 개발&lt;/p&gt;
+
+&lt;h3 id=&quot;skill-1&quot;&gt;Skill&lt;/h3&gt;
+&lt;p&gt;필수 역량&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Hadoop-Ecosystem, Database, Data Warehouse에 대한 기본적인 이해&lt;/li&gt;
+  &lt;li&gt;데이터마트를 주도적으로 설계 및 구축하고 운영한 경험&lt;/li&gt;
+  &lt;li&gt;복잡하거나 반복적인 문제를 데이터모델을 이용하여 단순화, 자동화하여 해결한 경험&lt;/li&gt;
+  &lt;li&gt;SQL상급, Python중급 정도의 기술역량&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;우대 역량&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;AARRR모델과 관련된 데이터처리 경험&lt;/li&gt;
+  &lt;li&gt;데이터거버넌스 관련 도구 개발, Airflow 운영 및 트러블슈팅, 웹개발(React)경험&lt;/li&gt;
+  &lt;li&gt;kubernetes 활용경험&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;data-scientist&quot;&gt;Data Scientist&lt;/h2&gt;
+&lt;h3 id=&quot;정의-2&quot;&gt;정의&lt;/h3&gt;
+&lt;p&gt;데이터에 대한 깊이 있는 분석을 기반으로 서비스와 직/간접적으로 연결될 수 있는 아이디어 도출, 모델 개발 및 모듈화를 수행&lt;/p&gt;
+&lt;h3 id=&quot;하는-일-2&quot;&gt;하는 일&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;데이터 분석 과정에서 다양한 Data Mining 및 Machine Learning/Deep Learning 기술들을 활용&lt;/li&gt;
+  &lt;li&gt;실시간, 대용량, 복잡한 데이터와 비즈니스 상황에 적합한 가공/분석 기법을 개발하고 제언하며, 기존의 기술들에 대해서도 최적화/개선을 수행&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;skill-2&quot;&gt;Skill&lt;/h3&gt;
+&lt;p&gt;필수 역량&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;서비스 환경의 데이터를 이용한 모델 개발 및 적용 경험&lt;/li&gt;
+  &lt;li&gt;Python, R, Scala, Java, SQL 등 데이터를 분석하고 모델링 할 수 있는 하나 이상의 개발 언어&lt;/li&gt;
+  &lt;li&gt;통계, Machine Learning/Deep Learning에 대한 이해와 목적을 달성하기 위한 모형 및 데이터 선택에 대한 분석 경험&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;우대 역량&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Hadoop이나, Spark, Hive 같은 빅데이터 분석 플랫폼 사용 경험과 대용량 데이터 분산 처리에 대한 이해&lt;/li&gt;
+  &lt;li&gt;고객과 서비스에 대한 고민을 데이터와 연결 지어 생각하시고, 적극적으로 분석하고 새로운 가치를 발굴해 나간 경험&lt;/li&gt;
+  &lt;li&gt;적극적이고 효율적인 커뮤니케이션을 통해서 개발된 결과를 비즈니스와 연결하시거나 인사이트를 제공하여 의사결정에 기여한 경험&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Dasol Yoo</name></author><category term="Career" /><category term="Career" /><summary type="html">데이터를 분석하는 일을 하고 싶은데 관련 직무가 정말 많죠. 나만의 커리어를 쌓아가기 위해서 직무별 특징을 이해하고 필요 역량을 살펴볼게요. 각종 채용 공고를 보고 각 직무별 요구하는 job skills를 정리해봤습니다.</summary></entry><entry><title type="html">Data Structure Array &amp;amp; Linked List</title><link href="https://dasolu.github.io//basic/2021/04/14/data-structure_array_vs_linked_list.html" rel="alternate" type="text/html" title="Data Structure Array &amp;amp; Linked List" /><published>2021-04-14T00:00:00+09:00</published><updated>2021-04-14T00:00:00+09:00</updated><id>https://dasolu.github.io//basic/2021/04/14/data-structure_array_vs_linked_list</id><content type="html" xml:base="https://dasolu.github.io//basic/2021/04/14/data-structure_array_vs_linked_list.html">&lt;p&gt;List-&amp;gt;Array-&amp;gt;List-&amp;gt;Array……&lt;br /&gt;
+에러가 날때마다 영문도 모른체 데이터의 자료형을 변환하는데 급급했나요?&lt;br /&gt;
+두 자료구조의 차이점을 몰라서 에러가 날때마다 적당히 자료형을 바꾸며 돌려막기한다면,&lt;br /&gt;
+계산 시간과 한숨을 엄청나게 낭비하게 됩니다. &lt;br /&gt;
+이제 이 답답함에서 벗어나보자구요!&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# What I did before
+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;listagain&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;시작은 리스트였으나,&lt;br /&gt;
+np.where을 사용해서 원하는 값의 index를 찾으려다가,&lt;br /&gt;
+error 때문에 list-&amp;gt;array로 바꾸어 사용하다가,&lt;br /&gt;
+array에 값을 추가하고 싶은데 list.append()가 생각나서,&lt;br /&gt;
+다시 list로 바꾸어 사용해보셨나요?&lt;/p&gt;
+
+&lt;p&gt;여러분은 아닐지 몰라도 저는 자주 그랬습니다ㅎㅎ…. &lt;br /&gt;
+그래서 오늘은 다양한 Data Structure(자료 구조) 중 선형 구조(linear Structure)에 속하는 &lt;strong&gt;Array와 Linked List&lt;/strong&gt;를 비교 분석해봅니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;자료-구조-이해의-필요성&quot;&gt;자료 구조 이해의 필요성&lt;/h2&gt;
+&lt;p&gt;효율적인 프로그램 작성을 목표로한다면 가장 중요한 것은 &lt;strong&gt;저장 공간의 효율성&lt;/strong&gt;과 &lt;strong&gt;실행 시간의 신속성&lt;/strong&gt;입니다 (정보처리기사 시나공 책).&lt;/p&gt;
+
+&lt;p&gt;우리가 메모리에 여러 개의 원소를 저장하고 싶을 때, 우리는 컴퓨터에게 공간을 요청합니다.&lt;br /&gt;
+Array(배열)과 linked list(연결 리스트)는 원소를 저장하는 방법입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;array-정의&quot;&gt;Array 정의&lt;/h2&gt;
+&lt;p&gt;Array(배열)는 동일한 자료형의 데이터들이 순서를 가지고 나열되어있는 집합입니다.&lt;br /&gt;
+Array를 연속적인 메모리 공간에 저장됩니다.&lt;br /&gt;
+따라서 길이가 N인 array를 지정하면 각 원소의 주소를 쉽게 알 수 있습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;장점&quot;&gt;장점&lt;/h3&gt;
+&lt;p&gt;이러한 특징 덕분에 array에 들어있는 원소들에게 순서대로 0부터 N-1까지 번호표를 붙일 수 있습니다.&lt;br /&gt;
+이때 번호표를 &lt;strong&gt;index&lt;/strong&gt;라고 부르고, 번호표를 이용해서 원소들을 부를 수 있게 됩니다.&lt;br /&gt;
+&lt;strong&gt;1. 메모리 이용 효율이 가장 좋다. Why? 메모리를 연속적으로 배정받기 때문.&lt;/strong&gt;  &lt;br /&gt;
+&lt;strong&gt;2. 데이터에 임의 접근이 가능하다.&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;3. For loop처럼 원소마다 반복되는 작업을 하려 할때 적합하다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;단점&quot;&gt;단점&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;1. 데이터 추가가 어렵다.&lt;/strong&gt;&lt;br /&gt;
+Array는 정적인 자료 구조이므로 계속해서 데이터 늘어난다면, array는 전체 원소를 저장할 새로운 메모리(장소)를 찾게됩니다.&lt;br /&gt;
+만약 100개의 이름을 저장해야하지만 0부터 99까지 이어져있는 메모리(장소)가 없다면, 배열을 만들 수 없습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. 데이터 삭제시 메모리가 빈 공간으로 남겨져 낭비된다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;예시&quot;&gt;예시&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Student array에 신입사원들의 이름을 가나다 순으로 담아놨다면 3번째에 위치한 신입사원의 이름은 student(2)를 사용해서 간편하게 알아낼 수 있습니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;배열의 크기 N에 따라서 크기가 N인 1차원 배열, 크기가 NxN인2차원 배열로 부릅니다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;linked-list-정의&quot;&gt;Linked list 정의&lt;/h2&gt;
+&lt;p&gt;Linked list는 각 &lt;strong&gt;노드&lt;/strong&gt;(data부분+ pointer부분)의 포인터에 다음 노드의 위치를 저장하여 데이터를 연결시키는 저장 방법입니다.&lt;br /&gt;
+따라서 array와는 달리 데이터가 원소의 메모리를 임의의 어느 곳에나 둘 수 있습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;장점-1&quot;&gt;장점&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;1. 새로운 노드를 쉽게 삽입&amp;amp; 삭제할 수 있다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;단점-1&quot;&gt;단점&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;1. Array와 달리 n번째 원소를 한 번에 찾을 수 없다.&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;2. Array와 달리 각 노드에 data뿐만아니라 포인터 부분을 저장하므로 메모리 이용 효율이 나쁘다.&lt;/strong&gt;  &lt;br /&gt;
+&lt;strong&gt;3. 데이터에 임의 접근이 불가능하다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;연산-시간-비교&quot;&gt;연산 시간 비교&lt;/h2&gt;
+&lt;p&gt;Array 와 Linked list의 연산 시간을 Big O notation으로 표현한다면?&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Array&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Linked list&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;읽기&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;O(1)&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;O(n)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;삽입&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;O(n)&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;O(1)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;삭제&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;O(1)&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;O(n)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Array에서 삽입이 O(n)인 이유? 뒤에 오는 모든 원소들의 위치를 바꿔야하기 때문입니다.&lt;/p&gt;</content><author><name>Dasol Yoo</name></author><category term="Basic" /><category term="Basic" /><category term="Efficiency" /><category term="Data Structure" /><summary type="html">List-&amp;gt;Array-&amp;gt;List-&amp;gt;Array…… 에러가 날때마다 영문도 모른체 데이터의 자료형을 변환하는데 급급했나요? 두 자료구조의 차이점을 몰라서 에러가 날때마다 적당히 자료형을 바꾸며 돌려막기한다면, 계산 시간과 한숨을 엄청나게 낭비하게 됩니다. 이제 이 답답함에서 벗어나보자구요!</summary></entry><entry><title type="html">Big O Notation</title><link href="https://dasolu.github.io//basic/2021/04/13/big-o-notation.html" rel="alternate" type="text/html" title="Big O Notation" /><published>2021-04-13T00:00:00+09:00</published><updated>2021-04-13T00:00:00+09:00</updated><id>https://dasolu.github.io//basic/2021/04/13/big-o-notation</id><content type="html" xml:base="https://dasolu.github.io//basic/2021/04/13/big-o-notation.html">&lt;p&gt;Basic 카테고리에서는 효율적인 코드 작성을 위해서 필요한 기본 개념과 알고리즘들을 하나씩 익혀나
 가겠습니다!&lt;br /&gt;
 포스팅은 &lt;strong&gt;Hello Coding 그림으로 개념을 이해하는 알고리즘(아디트야 바르가바, 한빛미디어)&lt;/strong&gt; &amp;gt;책을 요약한 것입니다.&lt;/p&gt;
 
@@ -27,7 +195,7 @@
 &lt;h2 id=&quot;정의&quot;&gt;정의&lt;/h2&gt;
 &lt;p&gt;Big O Notation은 알고리즘이 얼마나 빠른지 표기하는 방법입니다.&lt;/p&gt;
 
-&lt;p&gt;O (원하는 계산 결과 n을 만들기 위해 필요한 연산횟수) 로 표기합니다. 
+&lt;p&gt;O(원하는 계산 결과 n을 만들기 위해 필요한 연산횟수) 로 표기합니다. 
 이때 n은 원하는 계산 결과입니다.&lt;/p&gt;
 
 &lt;h3 id=&quot;예시&quot;&gt;예시&lt;/h3&gt;
