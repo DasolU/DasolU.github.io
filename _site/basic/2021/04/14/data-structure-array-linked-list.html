@@ -1,38 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en"><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
-<!-- Begin Jekyll SEO tag v2.7.1 -->
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c"></meta><!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Data Structure Array &amp; Linked List | Dasol Yoo</title>
-<meta name="generator" content="Jekyll v4.2.0">
-<meta property="og:title" content="Data Structure Array &amp; Linked List">
-<meta name="author" content="Dasol Yoo">
-<meta property="og:locale" content="en_US">
-<meta name="description" content="List-&gt;Array-&gt;List-&gt;Array…… 에러가 날때마다 영문도 모른체 데이터의 자료형을 변환하는데 급급했나요? 두 자료구조의 차이점을 몰라서 에러가 날때마다 적당히 자료형을 바꾸며 돌려막기한다면, 계산 시간과 한숨을 엄청나게 낭비하게 됩니다. 이제 이 답답함에서 벗어나보자구요!">
-<meta property="og:description" content="List-&gt;Array-&gt;List-&gt;Array…… 에러가 날때마다 영문도 모른체 데이터의 자료형을 변환하는데 급급했나요? 두 자료구조의 차이점을 몰라서 에러가 날때마다 적당히 자료형을 바꾸며 돌려막기한다면, 계산 시간과 한숨을 엄청나게 낭비하게 됩니다. 이제 이 답답함에서 벗어나보자구요!">
-<link rel="canonical" href="https://dasolu.github.io//basic/2021/04/14/data-structure-array-linked-list.html">
-<meta property="og:url" content="https://dasolu.github.io//basic/2021/04/14/data-structure-array-linked-list.html">
-<meta property="og:site_name" content="Dasol Yoo">
-<meta property="og:type" content="article">
-<meta property="article:published_time" content="2021-04-14T00:00:00+09:00">
-<meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="Data Structure Array &amp; Linked List">
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Data Structure Array &amp; Linked List" />
+<meta name="author" content="Dasol Yoo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="List-&gt;Array-&gt;List-&gt;Array…… 에러가 날때마다 영문도 모른체 데이터의 자료형을 변환하는데 급급했나요? 두 자료구조의 차이점을 몰라서 에러가 날때마다 적당히 자료형을 바꾸며 돌려막기한다면, 계산 시간과 한숨을 엄청나게 낭비하게 됩니다. 이제 이 답답함에서 벗어나보자구요!" />
+<meta property="og:description" content="List-&gt;Array-&gt;List-&gt;Array…… 에러가 날때마다 영문도 모른체 데이터의 자료형을 변환하는데 급급했나요? 두 자료구조의 차이점을 몰라서 에러가 날때마다 적당히 자료형을 바꾸며 돌려막기한다면, 계산 시간과 한숨을 엄청나게 낭비하게 됩니다. 이제 이 답답함에서 벗어나보자구요!" />
+<link rel="canonical" href="http://localhost:4000/basic/2021/04/14/data-structure-array-linked-list.html" />
+<meta property="og:url" content="http://localhost:4000/basic/2021/04/14/data-structure-array-linked-list.html" />
+<meta property="og:site_name" content="Dasol Yoo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-14T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Data Structure Array &amp; Linked List" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"https://dasolu.github.io//basic/2021/04/14/data-structure-array-linked-list.html"},"url":"https://dasolu.github.io//basic/2021/04/14/data-structure-array-linked-list.html","author":{"@type":"Person","name":"Dasol Yoo"},"@type":"BlogPosting","description":"List-&gt;Array-&gt;List-&gt;Array…… 에러가 날때마다 영문도 모른체 데이터의 자료형을 변환하는데 급급했나요? 두 자료구조의 차이점을 몰라서 에러가 날때마다 적당히 자료형을 바꾸며 돌려막기한다면, 계산 시간과 한숨을 엄청나게 낭비하게 됩니다. 이제 이 답답함에서 벗어나보자구요!","headline":"Data Structure Array &amp; Linked List","dateModified":"2021-04-14T00:00:00+09:00","datePublished":"2021-04-14T00:00:00+09:00","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/basic/2021/04/14/data-structure-array-linked-list.html","headline":"Data Structure Array &amp; Linked List","dateModified":"2021-04-14T00:00:00+09:00","datePublished":"2021-04-14T00:00:00+09:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/basic/2021/04/14/data-structure-array-linked-list.html"},"author":{"@type":"Person","name":"Dasol Yoo"},"description":"List-&gt;Array-&gt;List-&gt;Array…… 에러가 날때마다 영문도 모른체 데이터의 자료형을 변환하는데 급급했나요? 두 자료구조의 차이점을 몰라서 에러가 날때마다 적당히 자료형을 바꾸며 돌려막기한다면, 계산 시간과 한숨을 엄청나게 낭비하게 됩니다. 이제 이 답답함에서 벗어나보자구요!","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="shortcut icon" href="">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <script src="/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="https://dasolu.github.io//feed.xml" title="Dasol Yoo">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+  <script src="/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dasol Yoo" /><link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
 <!-- and it's easy to individually load additional languages -->
-<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+<script charset="UTF-8"
+        src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
 
 
 
@@ -144,23 +142,21 @@ document.addEventListener('DOMContentLoaded', function(event) {
 <header class="site-header " role="banner">
 
   <div class="wrapper">
-    <div class="site-header-inner">
-<span class="site-brand"><a class="site-brand-inner" rel="author" href="/">
+    <div class="site-header-inner"><span class="site-brand"><a class="site-brand-inner" rel="author" href="/">
   <img class="site-favicon" title="Dasol Yoo" src="" onerror="this.style.display='none'">
   Dasol Yoo
 </a>
 </span><nav class="site-nav">
-          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
           <label for="nav-trigger">
             <span class="menu-icon">
-              <svg viewbox="0 0 18 15" width="18px" height="15px">
-                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
               </svg>
             </span>
           </label>
 
-          <div class="trigger">
-<a class="page-link" href="/about.html">ABOUT</a><a class="page-link" href="/archives.html">ARCHIVES</a><a class="page-link" href="/categories.html">CATEGORIES</a><a class="page-link" href="/">HOME</a><a class="page-link" href="/tags.html">TAGS</a>
+          <div class="trigger"><a class="page-link" href="/about.html">ABOUT</a><a class="page-link" href="/archives.html">ARCHIVES</a><a class="page-link" href="/categories.html">CATEGORIES</a><a class="page-link" href="/">HOME</a><a class="page-link" href="/tags.html">TAGS</a>
 
 
 
@@ -299,10 +295,8 @@ function googleTranslateElementInit() {
 </script>
 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</span>
-</div>
-        </nav>
-</div>
+</span></div>
+        </nav></div>
   </div>
 </header>
 
@@ -585,18 +579,15 @@ function googleTranslateElementInit() {
 
 
     <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
-  </p>
-<div class="post-tags">
-<a class="post-tag" href="/tags.html#Basic">#Basic</a><a class="post-tag" href="/tags.html#Efficiency">#Efficiency</a><a class="post-tag" href="/tags.html#Data%20Structure">#Data Structure</a>
-</div></header>
+  </p><div class="post-tags"><a class="post-tag" href="/tags.html#Basic">#Basic</a><a class="post-tag" href="/tags.html#Efficiency">#Efficiency</a><a class="post-tag" href="/tags.html#Data Structure">#Data Structure</a></div></header>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
     <div class="post-content e-content" itemprop="articleBody">
 
-      <p>List-&gt;Array-&gt;List-&gt;Array……<br>
-에러가 날때마다 영문도 모른체 데이터의 자료형을 변환하는데 급급했나요?<br>
-두 자료구조의 차이점을 몰라서 에러가 날때마다 적당히 자료형을 바꾸며 돌려막기한다면,<br>
-계산 시간과 한숨을 엄청나게 낭비하게 됩니다. <br>
+      <p>List-&gt;Array-&gt;List-&gt;Array……<br />
+에러가 날때마다 영문도 모른체 데이터의 자료형을 변환하는데 급급했나요?<br />
+두 자료구조의 차이점을 몰라서 에러가 날때마다 적당히 자료형을 바꾸며 돌려막기한다면,<br />
+계산 시간과 한숨을 엄청나게 낭비하게 됩니다. <br />
 이제 이 답답함에서 벗어나보자구요!</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># What I did before
@@ -605,36 +596,36 @@ function googleTranslateElementInit() {
 <span class="n">listagain</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>시작은 리스트였으나,<br>
-np.where을 사용해서 원하는 값의 index를 찾으려다가,<br>
-error 때문에 list-&gt;array로 바꾸어 사용하다가,<br>
-array에 값을 추가하고 싶은데 list.append()가 생각나서,<br>
+<p>시작은 리스트였으나,<br />
+np.where을 사용해서 원하는 값의 index를 찾으려다가,<br />
+error 때문에 list-&gt;array로 바꾸어 사용하다가,<br />
+array에 값을 추가하고 싶은데 list.append()가 생각나서,<br />
 다시 list로 바꾸어 사용해보셨나요?</p>
 
-<p>여러분은 아닐지 몰라도 저는 자주 그랬습니다ㅎㅎ…. <br>
+<p>여러분은 아닐지 몰라도 저는 자주 그랬습니다ㅎㅎ…. <br />
 그래서 오늘은 다양한 Data Structure(자료 구조) 중 선형 구조(linear Structure)에 속하는 <strong>Array와 Linked List</strong>를 비교 분석해봅니다.</p>
 
 <h2 id="자료-구조-이해의-필요성">자료 구조 이해의 필요성</h2>
 <p>효율적인 프로그램 작성을 목표로한다면 가장 중요한 것은 <strong>저장 공간의 효율성</strong>과 <strong>실행 시간의 신속성</strong>입니다 (정보처리기사 시나공 책).</p>
 
-<p>우리가 메모리에 여러 개의 원소를 저장하고 싶을 때, 우리는 컴퓨터에게 공간을 요청합니다.<br>
+<p>우리가 메모리에 여러 개의 원소를 저장하고 싶을 때, 우리는 컴퓨터에게 공간을 요청합니다.<br />
 Array(배열)과 linked list(연결 리스트)는 원소를 저장하는 방법입니다.</p>
 
 <h2 id="array-정의">Array 정의</h2>
-<p>Array(배열)는 동일한 자료형의 데이터들이 순서를 가지고 나열되어있는 집합입니다.<br>
-Array를 연속적인 메모리 공간에 저장됩니다.<br>
+<p>Array(배열)는 동일한 자료형의 데이터들이 순서를 가지고 나열되어있는 집합입니다.<br />
+Array를 연속적인 메모리 공간에 저장됩니다.<br />
 따라서 길이가 N인 array를 지정하면 각 원소의 주소를 쉽게 알 수 있습니다.</p>
 
 <h3 id="장점">장점</h3>
-<p>이러한 특징 덕분에 array에 들어있는 원소들에게 순서대로 0부터 N-1까지 번호표를 붙일 수 있습니다.<br>
-이때 번호표를 <strong>index</strong>라고 부르고, 번호표를 이용해서 원소들을 부를 수 있게 됩니다.<br>
-<strong>1. 메모리 이용 효율이 가장 좋다. Why? 메모리를 연속적으로 배정받기 때문.</strong>  <br>
-<strong>2. 데이터에 임의 접근이 가능하다.</strong><br>
+<p>이러한 특징 덕분에 array에 들어있는 원소들에게 순서대로 0부터 N-1까지 번호표를 붙일 수 있습니다.<br />
+이때 번호표를 <strong>index</strong>라고 부르고, 번호표를 이용해서 원소들을 부를 수 있게 됩니다.<br />
+<strong>1. 메모리 이용 효율이 가장 좋다. Why? 메모리를 연속적으로 배정받기 때문.</strong>  <br />
+<strong>2. 데이터에 임의 접근이 가능하다.</strong><br />
 <strong>3. For loop처럼 원소마다 반복되는 작업을 하려 할때 적합하다.</strong></p>
 
 <h3 id="단점">단점</h3>
-<p><strong>1. 데이터 추가가 어렵다.</strong><br>
-Array는 정적인 자료 구조이므로 계속해서 데이터 늘어난다면, array는 전체 원소를 저장할 새로운 메모리(장소)를 찾게됩니다.<br>
+<p><strong>1. 데이터 추가가 어렵다.</strong><br />
+Array는 정적인 자료 구조이므로 계속해서 데이터 늘어난다면, array는 전체 원소를 저장할 새로운 메모리(장소)를 찾게됩니다.<br />
 만약 100개의 이름을 저장해야하지만 0부터 99까지 이어져있는 메모리(장소)가 없다면, 배열을 만들 수 없습니다.</p>
 
 <p><strong>2. 데이터 삭제시 메모리가 빈 공간으로 남겨져 낭비된다.</strong></p>
@@ -650,15 +641,15 @@ Array는 정적인 자료 구조이므로 계속해서 데이터 늘어난다면
 </ul>
 
 <h2 id="linked-list-정의">Linked list 정의</h2>
-<p>Linked list는 각 <strong>노드</strong>(data부분+ pointer부분)의 포인터에 다음 노드의 위치를 저장하여 데이터를 연결시키는 저장 방법입니다.<br>
+<p>Linked list는 각 <strong>노드</strong>(data부분+ pointer부분)의 포인터에 다음 노드의 위치를 저장하여 데이터를 연결시키는 저장 방법입니다.<br />
 따라서 array와는 달리 데이터가 원소의 메모리를 임의의 어느 곳에나 둘 수 있습니다.</p>
 
 <h3 id="장점-1">장점</h3>
 <p><strong>1. 새로운 노드를 쉽게 삽입&amp; 삭제할 수 있다.</strong></p>
 
 <h3 id="단점-1">단점</h3>
-<p><strong>1. Array와 달리 n번째 원소를 한 번에 찾을 수 없다.</strong><br>
-<strong>2. Array와 달리 각 노드에 data뿐만아니라 포인터 부분을 저장하므로 메모리 이용 효율이 나쁘다.</strong>  <br>
+<p><strong>1. Array와 달리 n번째 원소를 한 번에 찾을 수 없다.</strong><br />
+<strong>2. Array와 달리 각 노드에 data뿐만아니라 포인터 부분을 저장하므로 메모리 이용 효율이 나쁘다.</strong>  <br />
 <strong>3. 데이터에 임의 접근이 불가능하다.</strong></p>
 
 <h2 id="연산-시간-비교">연산 시간 비교</h2>
@@ -697,20 +688,12 @@ Array는 정적인 자료 구조이므로 계속해서 데이터 늘어난다면
     </div>
 
 </article>
-<div class="post-nav">
-<a class="previous" href="/basic/2021/04/13/big-o-notation.html" title="Big O Notation">Big O Notation</a><a class="next" href="/career/2021/04/15/data-analyst-engineer-scientist.html" title="Data Analyst? Data Engineer? Data Scientist?">Data Analyst? Data Engineer? Data Scientist?...</a>
-</div>
-<div class="post-related">
+<div class="post-nav"><a class="previous" href="/basic/2021/04/13/big-o-notation.html" title="Big O Notation">Big O Notation</a><a class="next" href="/career/2021/04/15/data-analyst-engineer-scientist.html" title="Data Analyst? Data Engineer? Data Scientist?">Data Analyst? Data Engineer? Data Scientist?...</a></div><div class="post-related">
       <div>Related Articles</div>
       <ul>
-        <li><a class="post-link" href="/basic/2021/04/15/data-structure-stack.html" title="Data Analyst? Data Engineer? Data Scientist?">Data Structure Stack</a></li>
-<li><a class="post-link" href="/career/2021/04/15/data-analyst-engineer-scientist.html" title="Data Analyst? Data Engineer? Data Scientist?">Data Analyst? Data Engineer? Data Scientist?</a></li>
-<li><a class="post-link" href="/basic/2021/04/13/big-o-notation.html" title="Data Analyst? Data Engineer? Data Scientist?">Big O Notation</a></li>
-<li><a class="post-link" href="/algorithm/2021/04/16/sort.html" title="Data Analyst? Data Engineer? Data Scientist?">Sort</a></li>
-</ul>
-    </div>
-<div class="post-comments">  <div id="gitment_thread"></div>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css">
+        <li><a class="post-link" href="/basic/2021/04/13/big-o-notation.html" title="Data Analyst? Data Engineer? Data Scientist?">Big O Notation</a></li><li><a class="post-link" href="/career/2021/04/15/data-analyst-engineer-scientist.html" title="Data Analyst? Data Engineer? Data Scientist?">Data Analyst? Data Engineer? Data Scientist?</a></li><li><a class="post-link" href="/basic/2021/04/14/data-structure-array-linked-list.html" title="Data Analyst? Data Engineer? Data Scientist?">Data Structure Array &amp; Linked List</a></li><li><a class="post-link" href="/basic/2021/04/15/data-structure-stack.html" title="Data Analyst? Data Engineer? Data Scientist?">Data Structure Stack</a></li></ul>
+    </div><div class="post-comments">  <div id="gitment_thread"></div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
   <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
   <script>
     var gitment = new Gitment({
@@ -865,8 +848,7 @@ Array는 정적인 자료 구조이므로 계속해서 데이터 늘어난다면
       <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
       generator." href="http://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
       another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
-      <div class="footer-col rss-subscribe">Subscribe <a href="/feed.xml">via RSS</a>
-</div>
+      <div class="footer-col rss-subscribe">Subscribe <a href="/feed.xml">via RSS</a></div>
     </div>
   </div>
 </footer>

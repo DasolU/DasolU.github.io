@@ -6,7 +6,7 @@ gemspec
 
 
 #gem 'jemoji'
-#gem "webrick", "~> 1.7"
+gem "webrick", "~> 1.7"
 
 #gem "jekyll-spaceship", "~> 0.9.8"
 #gem "jekyll-theme-yat"
