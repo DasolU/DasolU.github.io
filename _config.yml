@@ -38,7 +38,7 @@ url: "https://dasolu.github.io/" # the base hostname & protocol for your site, e
 favicon: "" # the favicon for your site
 
 #theme: jekyll-theme-yat
-remote_theme: "DasolU/DasolU.github.io" 
+remote_theme: "jeffreytse/jekyll-theme-yat" #"DasolU/DasolU.github.io" 
 
 # Yat date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
@@ -161,7 +161,7 @@ gitment:
 markdown: kramdown
 kmarkdown:
   input: GFM
-mathjax: true
+#mathjax: true
 
 plugins:
   - jekyll-feed
@@ -169,4 +169,3 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-spaceship
-  - jemoji
