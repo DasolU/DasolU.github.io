@@ -1,0 +1,74 @@
+I"}<h2 id="필요성">필요성</h2>
+<p>저는 숫자를 다루는 일을 했다보니 다른 알고리즘보다 정렬 함수에 상대적으로 익숙한 편이었습니다.</p>
+
+<p>그렇지만 결과가 나오는 방법을 기억하고 사용만해왔고, 어떻게 데이터를 정렬해주는지는 이해한 적은 한 번도 없었습니다.</p>
+
+<p>책을 읽다보니 정렬 알고리즘에도 다양한 종류가 있고 알고리즘마다 시간 복잡도와 사용 상황이 다르더라구요.</p>
+
+<p>효율적인 알고리즘 작성을 위해서 다양한 정렬 알고리즘을 이해하고, 주어진 데이터 상황에 알맞은 알고리즘을 사용하도록 해봅시다!</p>
+
+<h2 id="quick-sort">Quick Sort</h2>
+
+<p>퀵 정렬은 하나의 파일을 기준값(Pivot, 피봇)보다 작은 원소들과 큰 원소들로 <strong>분할</strong>하고, 기준값 왼쪽에 는 작은 원소들을 오른쪽에는 큰 원소들을 <strong>정렬</strong>하는 방법입니다. 기준값을 기준으로 더이상 분할할 것이 없을 때까지 반복합니다.</p>
+
+<h3 id="divide--conquer">Divide &amp; Conquer</h3>
+
+<p>분할 정복 방법이란 문제의 크기를 줄이기 위해 가장 간단한 기본 단계를 <a href="https://dasolu.github.io/algorithm/2021/04/15/recursion.html">재귀</a>방법으로 반복해서 답을 찾는 방법입니다.</p>
+
+<h4 id="구현">구현</h4>
+
+<p>분할 정복 구현 방법은 두 가지만 기억하면 됩니다.</p>
+
+<ol>
+  <li>기본 단계 만들기: 해결 가능한 가장 간단한 문제를 생각하고 구현하기.
+    <ul>
+      <li>배열을 다루는 재귀 함수를 만들 때, 보통 기본 단계는 원소의 개수가 0 또는 1인 배열입니다.</li>
+    </ul>
+  </li>
+  <li>재귀 함수 사용해서 주어진 문제가 기본 단계가 될 때까지 나누어 작게 만들기.
+    <ul>
+      <li>재귀 함수를 호출할 때마다 호출의 대상(예시&gt; 배열)의 크기가 점점 작아지도록 구현합니다.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="예시">예시</h4>
+
+<p>한 list에 있는 원소들을 모두 더하려고 할때 for문을 사용하는 방법을 다음과 같이 사용할 수 있지만,</p>
+
+<p>이때 분할 정복 방법을 다음처럼 사용한다면 재귀함수를 호출할 때마다 호출되는 array의 크기를 줄일 수 있습니다. ~단계를 줄이고 ~하는 장점이 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">quicksort</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">array</span><span class="p">)</span><span class="o">&lt;=</span><span class="mi">1</span><span class="p">:</span> <span class="c1">#기본 단계
+</span>        <span class="k">return</span> <span class="n">array</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">pivot</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># 우선 임의로 0으로 설정했지만, 원래는 기준 원소를 무작위로 선택합니다.
+</span>        								 <span class="c1"># 사실은 pivot 값에 따라서 평균 O(nlog2n)에서 최대 O(n^2)까지 정렬 속도가 달라집니다.
+</span>        <span class="n">less</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">array</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">pivot</span><span class="p">]</span>
+        <span class="n">great</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">array</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">pivot</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">quicksort</span><span class="p">(</span><span class="n">less</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="n">pivot</span><span class="p">]</span> <span class="o">+</span> <span class="n">quicksort</span><span class="p">(</span><span class="n">great</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">quicksort</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span> 
+</code></pre></div></div>
+
+<h2 id="insertion-sort">Insertion Sort</h2>
+
+<p>삽입 정렬은 <strong>이미 순서화된 파일</strong>에 새로운 레코드를 순서에 맞게 정렬하는 방법이며, 앞의 n-1개의 데이터와 n번째 데이터를 비교해서 n번째 데이터가 최솟값이면 첫 번째 위치로 보내는 방법을 반복합니다.</p>
+
+<h2 id="selection-sort">Selection Sort</h2>
+
+<p>선택 정렬은 n개의 레코드 중에 최솟값을 찾아 첫 번째 위치로 보내고, 나머지 n-1개 데이터에서 최솟값을 찾아 두 번째 위치에 놓는 방법입니다.</p>
+
+<h2 id="bubble-sort">Bubble Sort</h2>
+
+<p>버블 정렬은 <strong>인접한 두 개의 레코드</strong> 즉, n-1번째와 n번째 레코드를 비교하여 크기에 따라 레코드 위치를 바꾸는 과정을 반복하는 방법입니다.</p>
+
+<h2 id="heap-sort">Heap Sort</h2>
+
+<p>힙 정렬은 전 이진 트리(complete binary tree)를 heap tree로 변환하여 정렬하는 방법입니다.</p>
+
+<p>변환 방법은</p>
+
+<p><strong>인접한 두 개의 레코드</strong> 즉, n-1번째와 n번째 레코드를 비교하여 크기에 따라 레코드 위치를 바꾸는 과정을 반복하는 방법입니다.</p>
+
+:ET
