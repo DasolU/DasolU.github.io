@@ -28,7 +28,7 @@ list.sort(key=lambda x: x[1], reverse=True)
 
 sorted_list = sorted(list, key=lambda x: x[1]**2, reverse=True)
 
-### 예시: 문자열 정렬
+#### 예시: 문자열 정렬
 
 [프로그래머스 가장 큰 수][1] 문제를 풀기 위해서 **"문자열 비교 연산 방법"** 에 대한 이해가 필요합니다.
 
@@ -72,13 +72,13 @@ list.extend([4,5])
 
 -> [1,2,3,4,5]
 
-### 다른 리스트 자체 추가
+### 다른 리스트 전체 추가
 
 list.append([4,5])
 
 -> [1,2,3,[4,5]]
 
-### 문자열 덧셈
+### String 덧셈
 
 문자열(string)으로 구성된 list의 모든 원소들을 더할 때.
 
@@ -114,4 +114,4 @@ print(numbers)
 
 
 
-[1] https://programmers.co.kr/learn/courses/30/parts/12198
+[1]: https://programmers.co.kr/learn/courses/30/parts/12198
