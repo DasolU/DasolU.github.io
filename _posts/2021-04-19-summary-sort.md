@@ -2,8 +2,8 @@
 layout: post
 title: Summary for Sort Algorithm
 subtitle: 정렬 알고리즘 풀이를 위한 필수 함수 총정리
-categories: Coding Test
-tags: [Codingtest, Summary]
+categories: CodingTest
+tags: [CodingTest, Summary]
 ---
 🌟코딩테스트에서 **정렬** 문제를 풀기 위해 꼭 필요한 함수 총 정리!!!!!🌟
 
