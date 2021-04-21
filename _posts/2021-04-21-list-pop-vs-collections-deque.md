@@ -2,7 +2,7 @@
 layout: post
 title: Queue list.pop(0) VS deque.popleft()
 subtitle: 둘 중에 뭘 써야하지? 효율성을 따져보자!
-categories: Coding Test
+categories: CodingTest
 tags: [CodingTest, Efficiency]
 ---
 

@@ -5,7 +5,7 @@ subititle: Queue 사용 vs. For loop 사용
 categories: CodingTest
 tags: [CodingTest]
 ---
-프로그래머스 스택/큐 카테고리의 [주식가격][2] 문제의 솔루션 두 가지 방법을 비교해봤습니다.
+프로그래머스 스택/큐 카테고리의 [주식가격][1] 문제의 솔루션 두 가지 방법을 비교해봤습니다.
 
 ## For loop 사용
 
