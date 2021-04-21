@@ -2,8 +2,8 @@
 layout: post
 title: Queue 구현? list.pop(0) vs. deque.popleft()
 subtitle: 둘 중에 뭘 써야하지? 효율성을 따져보자!
-categories: CodingTest
 tags: [CodingTest, Efficiency]
+categories: CodingTest
 ---
 
 [BFS 알고리즘][3]을 작성할 때 queue(큐)를 구현하기 위해서 list 자료형을 즐겨 사용하셨나요? 
