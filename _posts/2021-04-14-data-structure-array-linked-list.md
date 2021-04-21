@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Structure Array & Linked List
+title: Data Structure Array vs. Linked List
 subtitle: List 쓰다가 안되면 np.array()로 바꿔쓰다가 안되면 다시 list()로 바꾸고 있다면?
 categories: Basic
 tags: [Basic, Efficiency, Data Structure]
@@ -69,13 +69,15 @@ Linked list는 각 **노드**(data부분+ pointer부분)의 포인터에 다음 
 **2. Array와 달리 각 노드에 data뿐만아니라 포인터 부분을 저장하므로 메모리 이용 효율이 나쁘다.**    
 **3. 데이터에 임의 접근이 불가능하다.**  
 
-## 연산 시간 비교
-Array 와 Linked list의 연산 시간을 Big O notation으로 표현한다면?  
+## 시간 복잡도 비교
+Array 와 Linked list의 시간 복잡도를 Big O notation으로 표현한다면?  
 
 |  | Array | Linked list |
-| --: | ----: | ---------: |
+| :-- | ----: | ---------: |
 |읽기 | O(1) |O(n)|
-|삽입   | O(n) |O(1)|
-|삭제 | O(1) |O(n)|
+|앞에 삽입/삭제   | O(n) |O(1)|
+|뒤에 삽입/삭제 | O(1) |O(n)|
+|중간에 삽입/삭제 | O(n) |O(n)|
 
 Array에서 삽입이 O(n)인 이유? 뒤에 오는 모든 원소들의 위치를 바꿔야하기 때문입니다.
+

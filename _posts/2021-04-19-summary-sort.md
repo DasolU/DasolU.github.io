@@ -66,7 +66,19 @@ np.sort(array)
 
 ## List 덧셈
 
+list = [1,2,3]
+
 ### 다른 리스트 내부의 원소 추가
+
+#### list+list
+
+list+[4,5] 
+
+-> [1,2,3,4,5]
+
+#### list.extend(리스트)
+
+⚠️ extend(리스트) ⭕️ extend(원소) ❌ : extend 함수는 input에 리스트만 넣을 수 있다
 
 list.extend([4,5])
 
@@ -74,15 +86,27 @@ list.extend([4,5])
 
 ### 다른 리스트 전체 추가
 
+#### list.append(리스트, 원소)
+
+🌟 append(리스트) ⭕️ append(원소) ⭕️ : append 함수는 input에 리스트와 원소 모두 넣을 수 있다.
+
+🌟 따라서 [stack][2], [queue][3]에 원소를 추가할 때는 list.append(node)가 적합하다.
+
+
+
 list.append([4,5])
 
 -> [1,2,3,[4,5]]
+
+list.append(4)
+
+-> [1,2,3,4]
 
 ### String 덧셈
 
 문자열(string)으로 구성된 list의 모든 원소들을 더할 때.
 
-```
+```python
 ''.join(['a','b','c'])
 #-> 'abc'
 '_'.join(['a','b','c'])
@@ -115,3 +139,6 @@ print(numbers)
 
 
 [1]: https://programmers.co.kr/learn/courses/30/parts/12198
+[2]: https://dasolu.github.io/basic/2021/04/15/data-structure-stack.html
+[3]: https://dasolu.github.io/algorithm/2021/04/20/BFS.html
+
