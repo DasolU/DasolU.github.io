@@ -26,11 +26,9 @@ queue.append(new_node)	# 가장 오른쪽에 node 추가
 
 #### 단점: 삽입&삭제 효율성 낮다.
 
-Contiguous list 자료형은 linear list(선형 리스트)에 속하기 때문에 **빈 공간 없이 차례대로 데이터를 저장**하는 특징이 있습니다.
+* Contiguous list 자료형은 linear list(선형 리스트)에 속하기 때문에 **빈 공간 없이 차례대로 데이터를 저장**하는 특징이 있습니다. 따라서 list에 데이터를 추가/제거하면 추가/제거하려는 위치 뒷부분의 **데이터를 이동**합니다.
 
-따라서 list에 데이터를 추가/제거하면 추가/제거하려는 위치 뒷부분의 **데이터를 이동**합니다.
-
-즉, list로 구현산 큐에 데이터를 추가/제거할 때, 시간 복잡도는 **O(n)**이므로 데이터 개수가 많아지면 시간이 오래 걸리는 단점이 있습니다.
+* 즉, list로 구현한 큐에 데이터를 추가/제거할 때, 시간 복잡도는 **O(n)**이므로 데이터 개수가 많아지면 시간이 오래 걸리는 단점이 있습니다.
 
 #### 장점: 쉬운 데이터 접근 
 
@@ -57,7 +55,7 @@ queue.append(new_node)	# 가장 오른쪽에 node 추가
 
 * deque는 [linked list 자료형][4]을 사용한다고 합니다. 따라서 데이터를 추가/제거할 때, 시간 복잡도는 **O(1)**이므로 데이터 개수가 많을수록 list로 구현한 queue보다 월등하게 효율적이게 됩니다.
 
-* 시간 복잡도에 대한 내용은 [이 블로그][1]를 참고해서 만들었습니다.
+* 시간 복잡도에 대한 내용은 [이 블로그][1] 와 [이 글][5]을 참고해서 만들었습니다.
 
 #### 단점: 어려운 데이터 접근
 
@@ -175,4 +173,6 @@ dequeue 사용
 [2]: https://programmers.co.kr/learn/courses/30/parts/12081
 [3]: https://dasolu.github.io/algorithm/2021/04/20/BFS.html
 [4]: https://dasolu.github.io/basic/2021/04/14/data-structure-array-linked-list.html
+
+[5]: https://docs.python.org/3/library/collections.html#collections.deque
 
