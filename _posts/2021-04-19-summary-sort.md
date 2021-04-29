@@ -90,9 +90,11 @@ list.extend([4,5])
 
 🌟 append(리스트) ⭕️ append(원소) ⭕️ : append 함수는 input에 리스트와 원소 모두 넣을 수 있다.
 
-🌟 따라서 [stack][2], [queue][3]에 원소를 추가할 때는 list.append(node)가 적합하다.
+🌟 따라서 [stack][2], [queue][3]를 구현하고 원소를 추가할 때는 list.append(node)를 사용하면 된다.
 
+⚠️ 하지만 list를 사용하면 시간 복잡도가 증가하므로  **`collections.deque`** 를 사용하도록 하자!
 
+([deque 관련 글][4]을 참고하세요)
 
 list.append([4,5])
 
@@ -142,3 +144,4 @@ print(numbers)
 [2]: https://dasolu.github.io/basic/2021/04/15/data-structure-stack.html
 [3]: https://dasolu.github.io/algorithm/2021/04/20/BFS.html
 
+[4]: https://dasolu.github.io/codingtest/2021/04/21/list-pop-vs-collections-deque.html
