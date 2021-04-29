@@ -64,16 +64,14 @@ python list의 시간복잡도에 대해 정리된 [링크][2]를 보고 내용�
 
 * Get Length
 
-
-
-## collections.deque와 비교
-
-### 시간 복잡도가 O(n)인 deque 연산들
+## 시간 복잡도가 O(n)인 collections.deque 연산들
 
 * remove
 * rotate
 
-### 시간 복잡도가 O(1)인 deque 연산들
+## 시간 복잡도가 O(1)인 collections.deque 연산들
+
+### 처음과 끝에 추가/삭제
 
 🌟처음과 끝에 추가/삭제하는 연산 모두 O(1)로 시간 단축이 가능하다‼️
 
