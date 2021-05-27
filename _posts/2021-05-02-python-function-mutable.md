@@ -3,7 +3,7 @@ layout: post
 title: python 함수 밖 list와 integer를 가져와서 연산하는 방법
 subtitle: integer는 불러와야 하는데, list는 안불러와도 그냥 바로 쓸 수 있다!
 categories: Basic
-tags: [Basic, Codingtest]
+tags: [Basic, CodingTest]
 ---
 python 함수 밖에 있는 데이터를 함수 안에 가져와서 연산하고 변화된 데이터를 return해야할 때가 있죠!
 
