@@ -3,7 +3,7 @@ layout: post
 title: 모델 성능 평가 지표
 subititle: Confusion matrix, Precision, Recall, Accuracy?
 categories: AI
-tags: [Vailidation]
+tags: [AI, Vailidation]
 ---
 **‘현재 딥러닝을 하고 있다면 축하한다. 딥러닝을 시작하려고 마음을 먹었다면 축하한다. 만약, 세상을 바꾸고 싶다면, 여기가 바로 그런 곳이다’.** -Andrew Ng-
 

@@ -38,7 +38,7 @@ tags: [AI, NLP, Deep Learning]
 
 ### 모델의 진화
 
-![image-20210525155026371](/Users/dasol/Library/Application Support/typora-user-images/image-20210525155026371.png)
+![image-20210525155026371](/assets/images/naverainow/image-20210525155026371.png)
 
 
 
@@ -59,7 +59,7 @@ tags: [AI, NLP, Deep Learning]
 
 ![image-20210525143239311](/assets/images/naverainow/image-20210525143239311.png)
 
-![image-20210525143334952](/Users/dasol/Library/Application Support/typora-user-images/image-20210525143334952.png)
+![image-20210525143334952](/assets/images/naverainow/image-20210525143334952.png)
 
 
 
@@ -71,7 +71,7 @@ tags: [AI, NLP, Deep Learning]
 
 ### 규모
 
-![image-20210525143748986](/Users/dasol/Library/Application Support/typora-user-images/image-20210525143748986.png)
+![image-20210525143748986](/assets/images/naverainow/image-20210525143748986.png)
 
 ![image-20210525143854804](//assets/images/naverainow/image-20210525143854804.png)
 
@@ -116,7 +116,7 @@ tags: [AI, NLP, Deep Learning]
 
 ![image-20210525153700154](/assets/images/naverainow/image-20210525153700154.png)
 
-![image-20210525153813711](/Users/dasol/Library/Application Support/typora-user-images/image-20210525153813711.png)
+![image-20210525153813711](/assets/images/naverainow/image-20210525153813711.png)
 
 * 현재 모델의 크키가 커지는 속도가 GPU 메모리가 증가하는 속도보다 더 크다.
 
