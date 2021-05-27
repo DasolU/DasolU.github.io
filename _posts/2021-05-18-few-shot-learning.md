@@ -3,19 +3,19 @@ layout: post
 title: Few-shot Learning 딥러닝 시 데이터 수가 매우 적을 때?
 subititle: 카카오브레인 AutoLearn 연구팀의 퓨샷 러닝 연구
 categories: AI
-tags: [DeepLearning]
+tags: [Deep Learning]
 ---
 ## Reference
 
 이 글은 [카카오브레인 AutoLearn 연구팀의 퓨샷 러닝 연구][1]를 참고 요약한 것입니다.
 
+### 논문
+
+https://arxiv.org/pdf/1905.01436.pdf @ CVPR 2019
+
 ## EGNN
 
 Edge-Labeling Graph Neural Network for Few-shot Learning
-
-#### 논문
-
-https://arxiv.org/pdf/1905.01436.pdf @ CVPR 2019
 
 ### 필요성
 

@@ -3,7 +3,7 @@ layout: post
 title: NAVER AI Now
 subititle: NAVER가 만들어가려는 BIG AI 시대란?
 categories: AI
-tags: [AI, BigAI, NLP, DeepLearning]
+tags: [AI, NLP, Deep Learning]
 ---
 ## 기존 AI 시대
 
@@ -34,7 +34,7 @@ tags: [AI, BigAI, NLP, DeepLearning]
 
 모델 규모가 클수록 효율성이 늘어난다. (loss 줄어든다)
 
-![image-20210525141146627](/Users/dasol/Library/Application Support/typora-user-images/image-20210525141146627.png)
+![image-20210525141146627](/assets/images/naverainow/image-20210525141146627.png)
 
 ### 모델의 진화
 
@@ -57,7 +57,7 @@ tags: [AI, BigAI, NLP, DeepLearning]
 5. **AI 개발자가 아니어도 누구나 필요한 서비스를 만고, 문제를 해결할 수 있다.**
    1. **그렇다면 AI 개발자로서 나아가야 할 방향은 무엇인가?**
 
-![image-20210525143239311](/Users/dasol/Library/Application Support/typora-user-images/image-20210525143239311.png)
+![image-20210525143239311](/assets/images/naverainow/image-20210525143239311.png)
 
 ![image-20210525143334952](/Users/dasol/Library/Application Support/typora-user-images/image-20210525143334952.png)
 
@@ -67,13 +67,13 @@ tags: [AI, BigAI, NLP, DeepLearning]
 
 * **GPU 서버 병렬 학습**이 필수가 되었다.
 
-![image-20210525143637310](/Users/dasol/Library/Application Support/typora-user-images/image-20210525143637310.png)
+![image-20210525143637310](/assets/images/naverainow/image-20210525143637310.png)
 
 ### 규모
 
 ![image-20210525143748986](/Users/dasol/Library/Application Support/typora-user-images/image-20210525143748986.png)
 
-![image-20210525143854804](/Users/dasol/Library/Application Support/typora-user-images/image-20210525143854804.png)
+![image-20210525143854804](//assets/images/naverainow/image-20210525143854804.png)
 
 ## NLP Big Data 수집
 
@@ -114,7 +114,7 @@ tags: [AI, BigAI, NLP, DeepLearning]
 
 ## HyperCLOVA 기술
 
-![image-20210525153700154](/Users/dasol/Library/Application Support/typora-user-images/image-20210525153700154.png)
+![image-20210525153700154](/assets/images/naverainow/image-20210525153700154.png)
 
 ![image-20210525153813711](/Users/dasol/Library/Application Support/typora-user-images/image-20210525153813711.png)
 

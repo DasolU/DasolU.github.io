@@ -49,5 +49,5 @@ tags: [Vailidation]
 
 ## Reference
 
-[1]: https://sumniya.tistory.com/26
+https://sumniya.tistory.com/26
 
