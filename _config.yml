@@ -150,7 +150,10 @@ defaults:
 
 # Gitment comments
 gitment:
-   username: DasolU #"Your GitHub username"
+   enable: true
+   owner: dasolu
+   githubID: dasolu
+   username: dasolu #"Your GitHub username"
    repo: dasolu.github.io#"The repo to store comments"
    client_id: 9646d9e9ccfb6cddc18c#"Your client ID"
    client_secret: d12d773f3f365729fdb33dd3516498e93deeea19#"Your client secret"
@@ -161,7 +164,7 @@ gitment:
 markdown: kramdown
 kmarkdown:
   input: GFM
-#mathjax: true
+mathjax: true
 
 plugins:
   - jekyll-feed
