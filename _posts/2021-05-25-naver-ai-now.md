@@ -73,7 +73,7 @@ tags: [AI, NLP, Deep Learning]
 
 ![image-20210525143748986](/assets/images/naverainow/image-20210525143748986.png)
 
-![image-20210525143854804](//assets/images/naverainow/image-20210525143854804.png)
+![image-20210525143854804](/assets/images/naverainow/image-20210525143854804.png)
 
 ## NLP Big Data 수집
 

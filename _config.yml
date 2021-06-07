@@ -24,7 +24,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Dasol Yoo #Nothing to fear but fear itself
+title: Dasol Yoo
 email: dasolyoo.yonsei@gmail.com
 author: Dasol Yoo
 copyright: Copyright © 2021
@@ -68,7 +68,7 @@ yat:
 #
 #   - lang: fr
 #     img: https://www.countryflags.io/fr/flat/64.png
-#     text: Franch
+#     text: French
 #
 #   - lang: zh-CN
 #     img: https://www.countryflags.io/cn/flat/64.png
@@ -134,8 +134,8 @@ yat:
 # Page default value
 defaults:
    home:
-     heading: "Life without Fear"#"Your awesome heading"
-     subheading: "Calmly & Confidently"#"Your awesome subheading"
+     heading: "Life without Fear"
+     subheading: "Calmly & Confidently"
 #     banner: "/Users/dasol/Documents/vlog/Branding/SAM_1543.JPG"
 
 # Excerpt size setting
@@ -145,15 +145,15 @@ defaults:
 # paginate: 5
 
 # Disqus comments
-# disqus:
+#disqus:
 #   shortname: "Your Disqus username"
 
 # Gitment comments
 gitment:
-   username: "DasolU"
-#   repo: "The repo to store comments"
-#   client_id: "Your client ID"
-#   client_secret: "Your client secret"
+   username: DasolU #"Your GitHub username"
+   repo: dasolu.github.io#"The repo to store comments"
+   client_id: 9646d9e9ccfb6cddc18c#"Your client ID"
+   client_secret: d12d773f3f365729fdb33dd3516498e93deeea19#"Your client secret"
 #   redirect_uri: "Your redirect url"   # If you use a custom domain name
 
 # Build settings

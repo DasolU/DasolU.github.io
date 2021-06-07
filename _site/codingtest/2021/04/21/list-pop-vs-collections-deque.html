@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c"></meta><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Queue 구현? list.pop(0) vs. deque.popleft() | Dasol Yoo</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Queue 구현? list.pop(0) vs. deque.popleft()" />
+<meta name="author" content="Dasol Yoo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="BFS 알고리즘을 작성할 때 queue(큐)를 구현하기 위해서 list 자료형을 즐겨 사용하셨나요?" />
+<meta property="og:description" content="BFS 알고리즘을 작성할 때 queue(큐)를 구현하기 위해서 list 자료형을 즐겨 사용하셨나요?" />
+<link rel="canonical" href="http://localhost:4000/codingtest/2021/04/21/list-pop-vs-collections-deque.html" />
+<meta property="og:url" content="http://localhost:4000/codingtest/2021/04/21/list-pop-vs-collections-deque.html" />
+<meta property="og:site_name" content="Dasol Yoo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-21T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Queue 구현? list.pop(0) vs. deque.popleft()" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/codingtest/2021/04/21/list-pop-vs-collections-deque.html","headline":"Queue 구현? list.pop(0) vs. deque.popleft()","dateModified":"2021-04-21T00:00:00+09:00","datePublished":"2021-04-21T00:00:00+09:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/codingtest/2021/04/21/list-pop-vs-collections-deque.html"},"author":{"@type":"Person","name":"Dasol Yoo"},"description":"BFS 알고리즘을 작성할 때 queue(큐)를 구현하기 위해서 list 자료형을 즐겨 사용하셨나요?","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dasol Yoo" /><link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8"
+        src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner"><span class="site-brand"><a class="site-brand-inner" rel="author" href="/">
+  <img class="site-favicon" title="Dasol Yoo" src="" onerror="this.style.display='none'">
+  Dasol Yoo
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger"><a class="page-link" href="/about.html">ABOUT</a><a class="page-link" href="/archives.html">ARCHIVES</a><a class="page-link" href="/categories.html">CATEGORIES</a><a class="page-link" href="/">HOME</a><a class="page-link" href="/tags.html">TAGS</a>
+
+
+
+
+<span class="page-link">
+
+<div id="google_translate_element" style="display: none;">
+</div>
+
+<span class="ct-language">
+  <ul class="list-unstyled ct-language-dropdown">
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="en">
+          
+          <img src="https://www.countryflags.io/us/flat/64.png" title="English">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="fr">
+          
+          <img src="https://www.countryflags.io/fr/flat/64.png" title="Franch">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="zh-CN">
+          
+          <img src="https://www.countryflags.io/cn/flat/64.png" title="Chinese(Simple)">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ja">
+          
+          <img src="https://www.countryflags.io/jp/flat/64.png" title="Japan">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ko">
+          
+          <img src="https://www.countryflags.io/kr/flat/64.png" title="Korean">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ru">
+          
+          <img src="https://www.countryflags.io/ru/flat/64.png" title="Russia">
+          
+        </a>
+      </li>
+    
+  </ul>
+</span>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: '',
+    autoDisplay: false,
+    layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+  }, 'google_translate_element');
+
+  function restoreLang() {
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore_el = innerDoc.getElementsByTagName("button");
+
+    for (var i = 0; i < restore_el.length; i++) {
+      if (restore_el[i].id.indexOf("restore") >= 0) {
+        restore_el[i].click();
+        var close_el = innerDoc.getElementsByClassName("goog-close-link");
+        close_el[0].click();
+        return;
+      }
+    }
+  }
+
+  function triggerHtmlEvent(element, eventName) {
+    var event;
+    if (document.createEvent) {
+      event = document.createEvent('HTMLEvents');
+      event.initEvent(eventName, true, true);
+      element.dispatchEvent(event);
+    } else {
+      event = document.createEventObject();
+      event.eventType = eventName;
+      element.fireEvent('on' + event.eventType, event);
+    }
+  }
+
+  var googleCombo = document.querySelector("select.goog-te-combo");
+  var langSelect = document.querySelector('.ct-language');
+  langSelect.addEventListener('click', function(event) {
+    if (!event.target) {
+      return;
+    }
+
+    var selected = document.querySelector('.ct-language .ct-language-selected');
+    if (selected) {
+      selected.classList.remove('ct-language-selected');
+    }
+
+    var target = event.target;
+    while (target && target !== langSelect ) {
+      if (target.matches('.lang-select')) {
+        break;
+      }
+      target = target.parentElement;
+    }
+
+    if (target && target.matches('.lang-select')) {
+      var lang = target.getAttribute('data-lang');
+      if (googleCombo.value == lang) {
+        restoreLang();
+      } else {
+        target.parentElement.classList.add('ct-language-selected');
+        googleCombo.value = lang;
+        triggerHtmlEvent(googleCombo, 'change');
+      }
+    }
+
+    event.preventDefault();
+  });
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</span></div>
+        </nav></div>
+  </div>
+</header>
+
+<script>
+  (function() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  })();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light">Light</p>
+      <p class="dark">Dark</p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script>
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">Queue 구현? list.pop(0) vs. deque.popleft()</h1>
+  <h3 class="post-subtitle">둘 중에 뭘 써야하지? 효율성을 따져보자!</h3>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2021-04-21T00:00:00+09:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Apr 21, 2021
+    </time>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 7 mins</span>
+  </p><div class="post-tags"><a class="post-tag" href="/tags.html#CodingTest">#CodingTest</a><a class="post-tag" href="/tags.html#Efficiency">#Efficiency</a></div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+
+      <p><a href="https://dasolu.github.io/algorithm/2021/04/20/BFS.html">BFS 알고리즘</a>을 작성할 때 queue(큐)를 구현하기 위해서 list 자료형을 즐겨 사용하셨나요?</p>
+
+<p>하지만 큐에서 데이터를 제거할 때 queue.pop(0)을 사용하면 코딩테스트에서 효율성 점수😅가 낮게 나올 수 있어요! (아래 예시에서 확인할 수 있습니다.)</p>
+
+<p>효율성을 높이기 위해 큐를 구현하는 다른 방법을 공부하고 두 방법의 효율성을 비교했습니다.</p>
+
+<h2 id="queue를-만드는-방법들">Queue를 만드는 방법들</h2>
+
+<h3 id="list-사용">List 사용</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">queue</span> <span class="o">=</span> <span class="p">[]</span> 
+<span class="n">node</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>	<span class="c1"># 가장 왼쪽 node 제거 
+</span><span class="n">queue</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_node</span><span class="p">)</span>	<span class="c1"># 가장 오른쪽에 node 추가
+</span></code></pre></div></div>
+
+<h4 id="단점-삽입삭제-효율성-낮다">단점: 삽입&amp;삭제 효율성 낮다.</h4>
+
+<ul>
+  <li>
+    <p>Contiguous list 자료형은 linear list(선형 리스트)에 속하기 때문에 <strong>빈 공간 없이 차례대로 데이터를 저장</strong>하는 특징이 있습니다. 따라서 list에 데이터를 추가/제거하면 추가/제거하려는 위치 뒷부분의 <strong>데이터를 이동</strong>합니다.</p>
+  </li>
+  <li>
+    <p>즉, list로 구현한 큐에 데이터를 추가/제거할 때, 시간 복잡도는 <strong>O(n)</strong>이므로 데이터 개수가 많아지면 시간이 오래 걸리는 단점이 있습니다.</p>
+  </li>
+</ul>
+
+<h4 id="장점-쉬운-데이터-접근">장점: 쉬운 데이터 접근</h4>
+
+<h3 id="deque데크-사용">Deque(데크) 사용</h3>
+
+<p>🌟새로운 방법</p>
+
+<p>collections 모듈이 제공하는 Deque(데크)를 사용합니다.</p>
+
+<p>Deque(double-ended queue)는 데이터를 양방향에서 추가하고 제거할 수 있는 자료 구조입니다.</p>
+
+<p>따라서 데크 자료 구조의 왼쪽에서 데이터를 제거하고 오른쪽으로 새로운 데이터를 삽입하면 큐와 같은 기능을 하게 됩니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
+<span class="n">queue</span> <span class="o">=</span> <span class="n">deque</span><span class="p">()</span>
+<span class="n">node</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="n">popleft</span><span class="p">()</span>	<span class="c1"># 가장 왼쪽 node 제거 
+</span><span class="n">queue</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_node</span><span class="p">)</span>	<span class="c1"># 가장 오른쪽에 node 추가
+</span></code></pre></div></div>
+
+<h4 id="장점-삽입삭제-효율성이-높다">장점: 삽입&amp;삭제 효율성이 높다.</h4>
+
+<ul>
+  <li>
+    <p>deque는 <a href="https://dasolu.github.io/basic/2021/04/14/data-structure-array-linked-list.html">linked list 자료형</a>을 사용한다고 합니다. 따라서 데이터를 추가/제거할 때, 시간 복잡도는 <strong>O(1)</strong>이므로 데이터 개수가 많을수록 list로 구현한 queue보다 월등하게 효율적이게 됩니다.</p>
+  </li>
+  <li>
+    <p>시간 복잡도에 대한 내용은 <a href="https://www.daleseo.com/python-queue/">이 블로그</a> 와 <a href="https://docs.python.org/3/library/collections.html#collections.deque">이 글</a>을 참고해서 만들었습니다.</p>
+  </li>
+</ul>
+
+<h4 id="단점-어려운-데이터-접근">단점: 어려운 데이터 접근</h4>
+
+<h2 id="예시">예시</h2>
+
+<p>프로그래머스 스택/큐 카테고리의 <a href="https://programmers.co.kr/learn/courses/30/parts/12081">주식가격</a> 문제에 두 가지 방법을 적용해보았습니다.</p>
+
+<h3 id="listpop0">list.pop(0)</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solution1</span><span class="p">(</span><span class="n">prices</span><span class="p">):</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">prices</span> <span class="c1"># list로 만든 queue
+</span>    <span class="n">q_idx</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">prices</span><span class="p">)))</span>	<span class="c1"># list로 만든 queue
+</span>    <span class="n">max_idx</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+    <span class="k">while</span> <span class="n">q</span><span class="p">:</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">node_idx</span> <span class="o">=</span> <span class="n">q_idx</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">q</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">node</span><span class="o">&gt;</span><span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                <span class="n">time</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">node_idx</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">node_idx</span>
+                <span class="k">break</span>
+        <span class="k">if</span> <span class="n">time</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">time</span> <span class="o">=</span> <span class="n">max_idx</span><span class="o">-</span><span class="n">node_idx</span>
+        <span class="n">answer</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">answer</span>
+</code></pre></div></div>
+
+<h4 id="성능">성능</h4>
+
+<p>solution1을 프로그래머스에서 채점하면 시간 초과로 인해 실패합니다.❌</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">정확성</span><span class="p">:</span> <span class="mf">66.7</span>
+<span class="n">효율성</span><span class="p">:</span> <span class="mf">0.0</span> <span class="p">(</span><span class="n">시간</span> <span class="n">초과</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">정확도</span> <span class="n">테스트</span>
+<span class="n">테스트</span> <span class="mi">1</span> <span class="err">〉</span> 	 <span class="n">통과</span> <span class="p">(</span><span class="mf">0.01</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.2</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">2</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">0.09</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.1</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">3</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">0.97</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.3</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">4</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">1.17</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.2</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">5</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">1.37</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.3</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">6</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">0.04</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.3</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">7</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">0.68</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.2</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">8</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">0.86</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.3</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">9</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">0.05</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.2</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">10</span> <span class="err">〉</span>   <span class="n">통과</span> <span class="p">(</span><span class="mf">1.30</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.3</span><span class="n">MB</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="dequepopleft">deque.popleft()</h3>
+
+<p>solution1과 동일하지만 deque로 바꾼 솔루션입니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
+<span class="k">def</span> <span class="nf">solution2</span><span class="p">(</span><span class="n">prices</span><span class="p">):</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>	<span class="c1"># deque로 만든 queue
+</span>    <span class="n">q_idx</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">prices</span><span class="p">))))</span>	<span class="c1"># deque로 만든 queue
+</span>    <span class="n">max_idx</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+    <span class="k">while</span> <span class="n">q</span><span class="p">:</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">popleft</span><span class="p">()</span>
+        <span class="n">node_idx</span> <span class="o">=</span> <span class="n">q_idx</span><span class="p">.</span><span class="n">popleft</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">q</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">node</span><span class="o">&gt;</span><span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                <span class="n">time</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">node_idx</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">node_idx</span>
+                <span class="k">break</span>
+        <span class="k">if</span> <span class="n">time</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">time</span> <span class="o">=</span> <span class="n">max_idx</span><span class="o">-</span><span class="n">node_idx</span>
+        <span class="n">answer</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">answer</span>
+</code></pre></div></div>
+
+<h4 id="성능-1">성능</h4>
+
+<p>효율성이 높아졌습니다! ⭕️</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dequeue</span> <span class="n">사용</span>
+<span class="n">정확성</span><span class="p">:</span> <span class="mf">66.7</span>
+<span class="n">효율성</span><span class="p">:</span> <span class="mf">26.7</span>
+<span class="n">합계</span><span class="p">:</span> <span class="mf">93.3</span> <span class="o">/</span> <span class="mf">100.0</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">정확도</span> <span class="n">테스트</span>
+<span class="n">테스트</span> <span class="mi">1</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">0.01</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.2</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">2</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">0.08</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.3</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">3</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">0.92</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.2</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">4</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">1.07</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.3</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">5</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">1.09</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.2</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">6</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">0.04</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.2</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">7</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">0.40</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.2</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">8</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">0.70</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.3</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">9</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">0.05</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.2</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">10</span> <span class="err">〉</span>   <span class="n">통과</span> <span class="p">(</span><span class="mf">1.79</span><span class="n">ms</span><span class="p">,</span> <span class="mf">10.3</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">효율성</span> <span class="n">테스트</span>
+<span class="n">테스트</span> <span class="mi">1</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">247.57</span><span class="n">ms</span><span class="p">,</span> <span class="mf">21.2</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">2</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">149.96</span><span class="n">ms</span><span class="p">,</span> <span class="mi">19</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">3</span> <span class="err">〉</span>    <span class="n">실패</span> <span class="p">(</span><span class="n">시간</span> <span class="n">초과</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">4</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">193.79</span><span class="n">ms</span><span class="p">,</span> <span class="mf">19.7</span><span class="n">MB</span><span class="p">)</span>
+<span class="n">테스트</span> <span class="mi">5</span> <span class="err">〉</span>    <span class="n">통과</span> <span class="p">(</span><span class="mf">97.84</span><span class="n">ms</span><span class="p">,</span> <span class="mf">18.3</span><span class="n">MB</span><span class="p">)</span>
+</code></pre></div></div>
+
+
+
+    </div>
+
+</article>
+<div class="post-nav"><a class="previous" href="/algorithm/2021/04/20/greedy.html" title="Greedy">Greedy</a><a class="next" href="/codingtest/2021/04/21/programmers-stock-price.html" title="Programmers 주식가격 문제">Programmers 주식가격 문제</a></div><div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li><a class="post-link" href="/algorithm/2021/04/20/BFS.html" title="Programmers 주식가격 문제">BFS (Breadth-First Search)알고리즘</a></li><li><a class="post-link" href="/codingtest/2021/04/21/list-pop-vs-collections-deque.html" title="Programmers 주식가격 문제">Queue 구현? list.pop(0) vs. deque.popleft()</a></li><li><a class="post-link" href="/basic/2021/04/14/data-structure-array-linked-list.html" title="Programmers 주식가격 문제">Data Structure Array vs. Linked List</a></li><li><a class="post-link" href="/codingtest/2021/04/19/summary-sort.html" title="Programmers 주식가격 문제">Summary for Sort Algorithm</a></li></ul>
+    </div><div class="post-comments">  <div id="gitment_thread"></div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+  <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+  <script>
+    var gitment = new Gitment({
+      id: '/codingtest/2021/04/21/list-pop-vs-collections-deque',
+      owner: 'DasolU',
+      repo: 'dasolu.github.io#"The repo to store comments"',
+      oauth: {
+        client_id: '9646d9e9ccfb6cddc18c#"Your client ID"',
+        client_secret: 'd12d773f3f365729fdb33dd3516498e93deeea19#"Your client secret"',
+      },
+    });
+    gitment.render('gitment_thread')
+  </script>
+</div></section>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+      <div>Copyright © 2021 @Dasol Yoo</div>
+      <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="http://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
+      <div class="footer-col rss-subscribe">Subscribe <a href="/feed.xml">via RSS</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

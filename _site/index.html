@@ -386,6 +386,7 @@ function googleTranslateElementInit() {
   </section><script>
   function hashLocate(hashValue) {
     hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
     var element = document.getElementById(hashValue);
 
     if (!element) {
@@ -547,6 +548,1274 @@ function googleTranslateElementInit() {
   <div class="pagination">
   <!-- Post list links -->
   <ul class="post-list"><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h2 class="post-title"><a class="post-link" href="/ai/2021/05/25/naver-ai-now.html">
+          NAVER AI Now
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 25, 2021</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <p class="post-excerpt">
+        기존 AI 시대
+
+각 문제별로 데이터 확보-&gt;정제-&gt;모델개발-&gt;서비스
+
+
+  문제: 긴시간과 많은 리소스 필요, 결과물을 다른데 사용하는데 제한
+  한계: 한정적 자원에 의한 속도와 스케일 한계-&gt;새로운 패러다임의 필요성
+  해결: Big model의 일반화와 확장을 통한 플랫폼화
+
+
+BIG AI 시대
+
+정의
+
+
+  새로운 AI 시대: 파라메터 수 높이는 것
+    
+      파라메터 수가 많아짐에 따라 해결 가능한 문제 수가 많아진다.
+      더 큰 모델, 더 빠른 학습이 경쟁 주제이다.
+    
+  
+
+
+필요한 것
+
+
+  
+    슈퍼컴퓨팅 인프라: 필수, NAVER는 700pf이상 ...
+      </p>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#AI">#AI</a><a class="post-tag" href="/tags.html#NLP">#NLP</a><a class="post-tag" href="/tags.html#Deep Learning">#Deep Learning</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h2 class="post-title"><a class="post-link" href="/ai/2021/05/18/ml-vailidation.html">
+          모델 성능 평가 지표
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 18, 2021</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <p class="post-excerpt">
+        ‘현재 딥러닝을 하고 있다면 축하한다. 딥러닝을 시작하려고 마음을 먹었다면 축하한다. 만약, 세상을 바꾸고 싶다면, 여기가 바로 그런 곳이다’. -Andrew Ng-
+
+Confusion matrix
+
+
+  정답
+    
+      True를 True로 예측: True Positive(TP)
+      False를 False로 예측: True Negative(TN)
+    
+  
+  오답
+    
+      True를 False로 예측: False Negative(FN)
+      False를 True로 예측: False Positive(FP)
+    
+  
+
+
+Precision
+
+
+  
+    정밀도 = 모델이 T...
+      </p>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#AI">#AI</a><a class="post-tag" href="/tags.html#Vailidation">#Vailidation</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h2 class="post-title"><a class="post-link" href="/ai/2021/05/18/few-shot-learning.html">
+          Few-shot Learning 딥러닝 시 데이터 수가 매우 적을 때?
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 18, 2021</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <p class="post-excerpt">
+        Reference
+
+이 글은 카카오브레인 AutoLearn 연구팀의 퓨샷 러닝 연구를 참고 요약한 것입니다.
+
+논문
+
+https://arxiv.org/pdf/1905.01436.pdf @ CVPR 2019
+
+EGNN
+
+Edge-Labeling Graph Neural Network for Few-shot Learning
+
+필요성
+
+
+  
+    딥러닝 시 데이터 수가 매우 적을 때
+  
+  
+    {러시안블루, 페르시안, 먼치킨}처럼 고양이의 종류를 구분하는 태스크를 풀 때
+    
+      같은 범주의 데이터를 더 가깝게, 다른 범주의 데이터를 더 멀게 할 정도로 충분히 복잡하지 않을 때
+    
+  
+
+
+방법...
+      </p>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#Deep Learning">#Deep Learning</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h2 class="post-title"><a class="post-link" href="/algorithm/2021/05/05/DFS.html">
+          DFS (Depth-First Search)
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 05, 2021</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <p class="post-excerpt">
+        DFS (Depth-First-Search)은 깊이 우선 탐색 알고리즘의 줄임말입니다.
+
+필요성
+
+
+  한 node에서 목표 node로 도착할 수 있는 경로(short-path)를 찾을 때
+  예) 미로찾기
+
+
+구현
+
+구현 방법은 두 가지만 기억하면 됩니다.
+
+
+  문제를 그래프로 구현한다.
+    
+      해시 테이블을 사용해서 이웃 node와의 관계를 기록한다.
+    
+  
+  깊이 우선 탐색 방법을 사용한다.
+    
+      스택를 생성하고 스택에 첫 번째 노드 넣기
+      스택에서 노드 꺼내기
+      노드의 방문 여부를 조사
+        
+          목적: 탐색 스택에 같은 노드가 ...
+      </p>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#Algorithm">#Algorithm</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h2 class="post-title"><a class="post-link" href="/basic/2021/05/02/python-function-mutable.html">
+          python 함수 밖 list와 integer를 가져와서 연산하는 방법
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> May 02, 2021</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <p class="post-excerpt">
+        python 함수 밖에 있는 데이터를 함수 안에 가져와서 연산하고 변화된 데이터를 return해야할 때가 있죠!
+
+python 기초 공부를 마치신 분들은 integer를 함수 안으로 가져오는 방법에 대해서 익숙하실겁니다.
+
+저도 integer에 대해서 공부했기때문에, list를 가져오는 방법도 동일할 것이라고 생각했습니다.
+
+📌 그렇지만 list는 integer와 달리 불러오지 않아도 함수 안에서 바로 사용할 수 있습니다‼️
+
+이유가 뭘까요?
+
+함수 밖의 integer를 함수 안으로 가져오는 방법
+
+두 가지 방법이 알려져 있습니다.
+
+
+  
+    매개변수로 가져오기
+
+    
+      
+        def f...
+      </p>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#Basic">#Basic</a><a class="post-tag" href="/tags.html#CodingTest">#CodingTest</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h2 class="post-title"><a class="post-link" href="/codingtest/2021/04/30/backjoon-basic.html">
+          BAEKJOON 백준 시작 방법 초보자 길라잡이
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Apr 30, 2021</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <p class="post-excerpt">
+        프로그래머스만 사용하다가 백준을 시작하면 테스트 값 입력 방식이 달라서 당황스러울 수 있습니다.
+
+백준은 프로그래머스와 다르게 입력 값을 직접 받아서 처리해줘야하기 때문입니다.
+
+백준 ABCDE 문제 13023번을 예로 들며 백준 문제 풀기 방법에 대해 익혔습니다.
+
+입력 예시
+
+프로그래머스에서는 함수를 만들고 제출하면 함수에 입력 값이 자동으로 입력되었었죠?
+
+하지만 백준에서는 답안을 제출할 때 입력을 받아서 처리한뒤 사용하는 코드를 추가해줘야합니다.
+
+예를 들어, 백준에서는 아래와 같이 배열도 리스트도 아닌 숫자 모음이 입력 예시로 주어집니다.
+
+5 4
+0 1
+1 2
+2 3
+3 4
+
+
+입력 값 받아오기
+
+백준에...
+      </p>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#CodingTest">#CodingTest</a><a class="post-tag" href="/tags.html#BAEKJOON">#BAEKJOON</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h2 class="post-title"><a class="post-link" href="/codingtest/2021/04/29/python-list-time-complexity.html">
+          python list 연산의 시간복잡도
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Apr 29, 2021</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <p class="post-excerpt">
+        요즘은 코딩테스트 준비를 위해 솔루션을 여러가지로 작성해보며 계산 시간과 메모리 효율성에 대해서 테스트 해보고 있습니다.
+
+백준을 돌아다니던 와중에 자주 틀리는 요인에 대한 글을 읽으면서, list 자료형 사용시 조심해야겠다고 생각한 부분들이 나와서 반가웠습니다.
+
+또한 제 고민이 헛되지 않았고, 제가 list 자료형에 대해 이해한 내용이 맞다는걸 알게되어서 좋았습니다.
+
+단순히 코딩테스트만을 위한 것이 아니라 비전공자 입장에서 코드 작성시 고려해야하는 점들에 대해서 배우는게 많았습니다.
+
+시간 복잡도가 O(n)인 list 연산들
+
+python list의 시간복잡도에 대해 정리된 링크를 보고 내용을 정리했습니다. ...
+      </p>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#CodingTest">#CodingTest</a><a class="post-tag" href="/tags.html#Efficiency">#Efficiency</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h2 class="post-title"><a class="post-link" href="/codingtest/2021/04/25/programmers-network.html">
+          Programmers 네트워크 문제
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Apr 25, 2021</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 10 mins</span>
+      </div>
+      <p class="post-excerpt">
+        프로그래머스 깊이/너비 우선 탐색(DFS/BFS) 카테고리의 네트워크 문제의 솔루션 3 가지를 비교하고 시간 단축 방법을 정리했습니다.
+
+BFS 알고리즘을 공부했기에 문제에 적용해보려 시도했지만 쉽지 않았습니다.
+
+그래서 이번 문제를 풀 때 필요했던 생각의 방향을 줄글로 기록합니다.
+
+아이디어
+
+
+  첫 번째 노드 (임의의 노드) 시작해서 연결된 모든 노드를 방문하며 연결된 모든 노드를 탐색한다. 그리고 visited에 기록한다.
+  이러한 방법을 사용하면 두 번째 노드에서 탐색을 시작할 때, 두 번째 노드와 연결이 되어있지만 이미 방문했던 (= 첫 번째 노드와 연결되어 있는) 노드는 탐색할 필요가 없게 된다.
+따...
+      </p>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#CodingTest">#CodingTest</a><a class="post-tag" href="/tags.html#Efficiency">#Efficiency</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h2 class="post-title"><a class="post-link" href="/codingtest/2021/04/21/programmers-stock-price.html">
+          Programmers 주식가격 문제
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Apr 21, 2021</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 6 mins</span>
+      </div>
+      <p class="post-excerpt">
+        프로그래머스 스택/큐 카테고리의 주식가격 문제의 솔루션 두 가지 방법을 비교해봤습니다.
+
+For loop 사용
+
+선택한 답 ⭕️
+
+def solution1(prices):
+    answer = [len(prices)-1-i for i in range(len(prices))]
+    for i in range(len(prices)):
+        for j in range(i+1,len(prices)):
+            if prices[j]&lt;prices[i]:
+                answer[i]= j-i
+                break
+    return answer
+
+
+성능
+
+정확...
+      </p>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#CodingTest">#CodingTest</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h2 class="post-title"><a class="post-link" href="/codingtest/2021/04/21/list-pop-vs-collections-deque.html">
+          Queue 구현? list.pop(0) vs. deque.popleft()
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Apr 21, 2021</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 7 mins</span>
+      </div>
+      <p class="post-excerpt">
+        BFS 알고리즘을 작성할 때 queue(큐)를 구현하기 위해서 list 자료형을 즐겨 사용하셨나요?
+
+하지만 큐에서 데이터를 제거할 때 queue.pop(0)을 사용하면 코딩테스트에서 효율성 점수😅가 낮게 나올 수 있어요! (아래 예시에서 확인할 수 있습니다.)
+
+효율성을 높이기 위해 큐를 구현하는 다른 방법을 공부하고 두 방법의 효율성을 비교했습니다.
+
+Queue를 만드는 방법들
+
+List 사용
+
+queue = [] 
+node = queue.pop(0)	# 가장 왼쪽 node 제거 
+queue.append(new_node)	# 가장 오른쪽에 node 추가
+
+
+단점: 삽입&amp;삭제 효율성 낮다.
+
+
+  
+   ...
+      </p>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#CodingTest">#CodingTest</a><a class="post-tag" href="/tags.html#Efficiency">#Efficiency</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h2 class="post-title"><a class="post-link" href="/algorithm/2021/04/20/greedy.html">
+          Greedy
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Apr 20, 2021</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <p class="post-excerpt">
+        알고리즘 공부가 처음이고, 구현 연습을 하고 싶다면?
+
+Greedy algorithm (탐욕 알고리즘)으로 시작해보세요!
+
+필요성
+
+
+  모든 경우를 고려해야해서 시간이 오래걸리는 문제를 만났을 때
+  정답에 가까운 꽤 괜찮은 답을 구하고 싶을 때
+  최대한 많은, 큰 … 정답을 구하고 싶을 때
+
+
+정의
+
+Greedy algorithm (탐욕 알고리즘)은 approximation algorithm(근사 알고리즘)입니다.
+
+성능
+
+두 가지 지표로 판단합니다.
+
+
+  얼마나 빠른가?
+  최적해에 얼마나 가까운가?
+
+
+
+      </p>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#Algorithm">#Algorithm</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h2 class="post-title"><a class="post-link" href="/algorithm/2021/04/20/BFS.html">
+          BFS (Breadth-First Search)알고리즘
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Apr 20, 2021</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 6 mins</span>
+      </div>
+      <p class="post-excerpt">
+        BFS (Breadth-First-Search)은 너비 우선 탐색 알고리즘의 줄임말입니다.
+
+Graph(그래프)의 너비를 우선으로 탐색한다는게 무슨 말일까요?
+
+필요성
+
+
+  한 node에서 다른 node로 가는 최단 경로(short-path)를 찾을 때
+  예) 가장 적은 수로 승리하는 게임 방법 계산, 가장 적은 개수의 글자를 고치는 맞춤법 검사기, 가장 가까운 병원 찾기
+  한 node에서 다른 node로 가는 경로가 존재하는지 알고 싶을 때
+
+
+정의
+
+BFS (너비 우선 탐색) 알고리즘은 graph(그래프)를 사용해서 최단 경로 문제(short-path problem)를 푸는 방법으로, 답을 찾을 때까지 그...
+      </p>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#Algorithm">#Algorithm</a></div>
+    </li><li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h2 class="post-title"><a class="post-link" href="/codingtest/2021/04/19/summary-sort.html">
+          Summary for Sort Algorithm
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Apr 19, 2021</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+      </div>
+      <p class="post-excerpt">
+        🌟코딩테스트에서 정렬 문제를 풀기 위해 꼭 필요한 함수 총 정리!!!!!🌟
+
+코테 전에 정렬 알고리즘 필수 요약 보고 들어가세요!
+
+계속 업데이트 합니다.
+
+정렬 방법
+List 정렬
+
+
+  
+    list 원본을 변경하거나 정렬한 list를 return하는 두 가지 방법이 있으며 두 방법 모두 key와 reverse 모두 사용 가능하다.
+  
+  
+    정렬의 default는 오름차순이다.
+  
+
+
+List 원본 변경
+
+list.sort(key=lambda x: x1, reverse=True)
+
+이 방법은 반환 값이 없으며 (Return None) 원본을 바꾸는 방법입니다.
+
+새로운 list 반환
+
+sorted...
+      </p>
+      <div class="post-tags"><a class="post-tag" href="/tags.html#CodingTest">#CodingTest</a><a class="post-tag" href="/tags.html#Summary">#Summary</a></div>
+    </li><li>
       
 
 
@@ -966,12 +2235,12 @@ Skill
 
 
       <h2 class="post-title"><a class="post-link" href="/basic/2021/04/14/data-structure-array-linked-list.html">
-          Data Structure Array &amp; Linked List
+          Data Structure Array vs. Linked List
         </a>
       </h2>
       <div class="post-meta">
         <span class="post-date"><i class="fa fa-calendar"></i> Apr 14, 2021</span>
-        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
       </div>
       <p class="post-excerpt">
         List-&gt;Array-&gt;List-&gt;Array……
@@ -1068,7 +2337,8 @@ array에 값을 추...
       <p class="post-excerpt">
         Basic 카테고리에서는 효율적인 코드 작성을 위해서 필요한 기본 개념과 알고리즘들을 하나씩 익혀나
 가겠습니다!
-포스팅은 Hello Coding 그림으로 개념을 이해하는 알고리즘(아디트야 바르가바, 한빛미디어) &gt;책을 요약한 것입니다.
+
+서론
 
 저는 대학원을 입학하며 처음 코딩을 시작했습니다. 
 그 때가 2018년도 3월이니 벌써 3년전이네요.
@@ -1076,7 +2346,8 @@ array에 값을 추...
 수업이나 논문에 나오는 단어의 개념도 모를때였죠.
 설상가상으로 첫 학기에 저를 마중나온 수업은 최신 통계 방법들을 코드로 작성해서 데이터에 적용하는 수업이었습니다.
 
-즉, 저는 Python, 코딩, 통계, 머신러닝과 ...
+즉, 저는 Python, 코딩, 통계, 머신러닝과 연구분야에 대한 개념까지 모두 없는 말그대로 zero base 학생이었습니다.
+다른 연구자들보다 능력이 부족한 상태로 시작...
       </p>
       <div class="post-tags"><a class="post-tag" href="/tags.html#Basic">#Basic</a><a class="post-tag" href="/tags.html#Efficiency">#Efficiency</a></div>
     </li></ul>
@@ -1112,26 +2383,38 @@ array에 값을 추...
   <ul>
     <li>
       <a href="/index.html">
-        All<span>6</span>
+        All<span>19</span>
       </a>
     </li>
 
     
       <li>
+        <a href="/categories.html#h-AI">
+          AI <span>3</span>
+        </a>
+      </li>
+    
+      <li>
         <a href="/categories.html#h-Algorithm">
-          Algorithm <span>2</span>
+          Algorithm <span>5</span>
         </a>
       </li>
     
       <li>
         <a href="/categories.html#h-Basic">
-          Basic <span>3</span>
+          Basic <span>4</span>
         </a>
       </li>
     
       <li>
         <a href="/categories.html#h-Career">
           Career <span>1</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/categories.html#h-CodingTest">
+          CodingTest <span>6</span>
         </a>
       </li>
     

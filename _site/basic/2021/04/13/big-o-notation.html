@@ -9,8 +9,8 @@
 <meta property="og:title" content="Big O Notation" />
 <meta name="author" content="Dasol Yoo" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Basic 카테고리에서는 효율적인 코드 작성을 위해서 필요한 기본 개념과 알고리즘들을 하나씩 익혀나 가겠습니다! 포스팅은 Hello Coding 그림으로 개념을 이해하는 알고리즘(아디트야 바르가바, 한빛미디어) &gt;책을 요약한 것입니다." />
-<meta property="og:description" content="Basic 카테고리에서는 효율적인 코드 작성을 위해서 필요한 기본 개념과 알고리즘들을 하나씩 익혀나 가겠습니다! 포스팅은 Hello Coding 그림으로 개념을 이해하는 알고리즘(아디트야 바르가바, 한빛미디어) &gt;책을 요약한 것입니다." />
+<meta name="description" content="Basic 카테고리에서는 효율적인 코드 작성을 위해서 필요한 기본 개념과 알고리즘들을 하나씩 익혀나 가겠습니다!" />
+<meta property="og:description" content="Basic 카테고리에서는 효율적인 코드 작성을 위해서 필요한 기본 개념과 알고리즘들을 하나씩 익혀나 가겠습니다!" />
 <link rel="canonical" href="http://localhost:4000/basic/2021/04/13/big-o-notation.html" />
 <meta property="og:url" content="http://localhost:4000/basic/2021/04/13/big-o-notation.html" />
 <meta property="og:site_name" content="Dasol Yoo" />
@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Big O Notation" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/basic/2021/04/13/big-o-notation.html","headline":"Big O Notation","dateModified":"2021-04-13T00:00:00+09:00","datePublished":"2021-04-13T00:00:00+09:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/basic/2021/04/13/big-o-notation.html"},"author":{"@type":"Person","name":"Dasol Yoo"},"description":"Basic 카테고리에서는 효율적인 코드 작성을 위해서 필요한 기본 개념과 알고리즘들을 하나씩 익혀나 가겠습니다! 포스팅은 Hello Coding 그림으로 개념을 이해하는 알고리즘(아디트야 바르가바, 한빛미디어) &gt;책을 요약한 것입니다.","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/basic/2021/04/13/big-o-notation.html","headline":"Big O Notation","dateModified":"2021-04-13T00:00:00+09:00","datePublished":"2021-04-13T00:00:00+09:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/basic/2021/04/13/big-o-notation.html"},"author":{"@type":"Person","name":"Dasol Yoo"},"description":"Basic 카테고리에서는 효율적인 코드 작성을 위해서 필요한 기본 개념과 알고리즘들을 하나씩 익혀나 가겠습니다!","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="shortcut icon" href="">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -373,6 +373,7 @@ function googleTranslateElementInit() {
 <script>
   function hashLocate(hashValue) {
     hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
     var element = document.getElementById(hashValue);
 
     if (!element) {
@@ -585,8 +586,9 @@ function googleTranslateElementInit() {
     <div class="post-content e-content" itemprop="articleBody">
 
       <p>Basic 카테고리에서는 효율적인 코드 작성을 위해서 필요한 기본 개념과 알고리즘들을 하나씩 익혀나
-가겠습니다!<br />
-포스팅은 <strong>Hello Coding 그림으로 개념을 이해하는 알고리즘(아디트야 바르가바, 한빛미디어)</strong> &gt;책을 요약한 것입니다.</p>
+가겠습니다!</p>
+
+<h2 id="서론">서론</h2>
 
 <p>저는 대학원을 입학하며 처음 코딩을 시작했습니다. <br />
 그 때가 2018년도 3월이니 벌써 3년전이네요.<br />
@@ -623,18 +625,19 @@ function googleTranslateElementInit() {
   <li>
     <p>경우 1 <br />
 하나씩 네모칸을 그린다면 총 16번의 연산이 필요합니다.<br />
-이때 Big O Notation은 $ O(n) $ 입니다.</p>
+이때 Big O Notation은 O(n) 입니다.</p>
   </li>
   <li>
     <p>경우 2<br />
 종이를 반씩 접는 방법으로 더 빠르게 네모칸을 만드는 경우에는,
 종이를 4번 접는 것만으로 16개의 칸을 만들 수 있으므로 연산 횟수는 4입니다.
 연산횟수 4를 n=16이 들어간 식으로 표현한다면 Big O Notation은
-$O(log{_2}n)$ 입니다.</p>
+O(logn) 입니다.</p>
   </li>
 </ul>
 
 <p>1초에 10번의 연산이 가능한 경우 걸리는 시간을 계산해봅시다.</p>
+
 <ul>
   <li>
     <p>경우 1에 걸리는 시간 <br />
@@ -653,21 +656,26 @@ $O(log{_2}n)$ 입니다.</p>
 <p>많이 사용하는 Big O Notation을 빠른 순서대로 나열했습니다.</p>
 
 <ol>
-  <li>$O(log n)$: 이진탐색</li>
-  <li>$O(n)$: 단순탐색</li>
-  <li>$O(n*log n)$: 퀵 정렬 (빠른)</li>
-  <li>$O(n**2)$: 선택 정렬 (느린)</li>
-  <li>$O(n!)$: (매우 느린)</li>
+  <li>O(log n): 이진탐색</li>
+  <li>O(n): 단순탐색</li>
+  <li>O(nlog n): 퀵 정렬 (빠른)</li>
+  <li>O(n^2): 선택 정렬 (느린)</li>
+  <li>O(n!): (매우 느린)</li>
 </ol>
+
+<h2 id="reference">Reference</h2>
+
+<p>포스팅은 <strong>Hello Coding 그림으로 개념을 이해하는 알고리즘(아디트야 바르가바, 한빛미디어)</strong> &gt;책을 요약한 것입니다.</p>
+
 
 
     </div>
 
 </article>
-<div class="post-nav"><span></span><a class="next" href="/basic/2021/04/14/data-structure-array-linked-list.html" title="Data Structure Array &amp; Linked List">Data Structure Array &amp; Linked List...</a></div><div class="post-related">
+<div class="post-nav"><span></span><a class="next" href="/basic/2021/04/14/data-structure-array-linked-list.html" title="Data Structure Array vs. Linked List">Data Structure Array vs. Linked List...</a></div><div class="post-related">
       <div>Related Articles</div>
       <ul>
-        <li><a class="post-link" href="/algorithm/2021/04/16/sort.html" title="Data Structure Array &amp; Linked List">Sort</a></li><li><a class="post-link" href="/basic/2021/04/13/big-o-notation.html" title="Data Structure Array &amp; Linked List">Big O Notation</a></li><li><a class="post-link" href="/basic/2021/04/14/data-structure-array-linked-list.html" title="Data Structure Array &amp; Linked List">Data Structure Array &amp; Linked List</a></li><li><a class="post-link" href="/algorithm/2021/04/15/recursion.html" title="Data Structure Array &amp; Linked List">Recursion</a></li></ul>
+        <li><a class="post-link" href="/algorithm/2021/04/20/greedy.html" title="Data Structure Array vs. Linked List">Greedy</a></li><li><a class="post-link" href="/basic/2021/04/14/data-structure-array-linked-list.html" title="Data Structure Array vs. Linked List">Data Structure Array vs. Linked List</a></li><li><a class="post-link" href="/codingtest/2021/04/30/backjoon-basic.html" title="Data Structure Array vs. Linked List">BAEKJOON 백준 시작 방법 초보자 길라잡이</a></li><li><a class="post-link" href="/algorithm/2021/04/20/BFS.html" title="Data Structure Array vs. Linked List">BFS (Breadth-First Search)알고리즘</a></li></ul>
     </div><div class="post-comments">  <div id="gitment_thread"></div>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
   <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
@@ -675,10 +683,10 @@ $O(log{_2}n)$ 입니다.</p>
     var gitment = new Gitment({
       id: '/basic/2021/04/13/big-o-notation',
       owner: 'DasolU',
-      repo: '',
+      repo: 'dasolu.github.io#"The repo to store comments"',
       oauth: {
-        client_id: '',
-        client_secret: '',
+        client_id: '9646d9e9ccfb6cddc18c#"Your client ID"',
+        client_secret: 'd12d773f3f365729fdb33dd3516498e93deeea19#"Your client secret"',
       },
     });
     gitment.render('gitment_thread')

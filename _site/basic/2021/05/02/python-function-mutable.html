@@ -4,20 +4,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c"></meta><!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Dasol Yoo | Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</title>
+<title>python 함수 밖 list와 integer를 가져와서 연산하는 방법 | Dasol Yoo</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Dasol Yoo" />
+<meta property="og:title" content="python 함수 밖 list와 integer를 가져와서 연산하는 방법" />
 <meta name="author" content="Dasol Yoo" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<link rel="canonical" href="http://localhost:4000/404.html" />
-<meta property="og:url" content="http://localhost:4000/404.html" />
+<meta name="description" content="python 함수 밖에 있는 데이터를 함수 안에 가져와서 연산하고 변화된 데이터를 return해야할 때가 있죠!" />
+<meta property="og:description" content="python 함수 밖에 있는 데이터를 함수 안에 가져와서 연산하고 변화된 데이터를 return해야할 때가 있죠!" />
+<link rel="canonical" href="http://localhost:4000/basic/2021/05/02/python-function-mutable.html" />
+<meta property="og:url" content="http://localhost:4000/basic/2021/05/02/python-function-mutable.html" />
 <meta property="og:site_name" content="Dasol Yoo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-02T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Dasol Yoo" />
+<meta property="twitter:title" content="python 함수 밖 list와 integer를 가져와서 연산하는 방법" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/404.html","headline":"Dasol Yoo","@type":"WebPage","author":{"@type":"Person","name":"Dasol Yoo"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/basic/2021/05/02/python-function-mutable.html","headline":"python 함수 밖 list와 integer를 가져와서 연산하는 방법","dateModified":"2021-05-02T00:00:00+09:00","datePublished":"2021-05-02T00:00:00+09:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/basic/2021/05/02/python-function-mutable.html"},"author":{"@type":"Person","name":"Dasol Yoo"},"description":"python 함수 밖에 있는 데이터를 함수 안에 가져와서 연산하고 변화된 데이터를 return해야할 때가 있죠!","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="shortcut icon" href="">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -521,25 +523,316 @@ function googleTranslateElementInit() {
 </script>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">python 함수 밖 list와 integer를 가져와서 연산하는 방법</h1>
+  <h3 class="post-subtitle">integer는 불러와야 하는데, list는 안불러와도 그냥 바로 쓸 수 있다!</h3>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2021-05-02T00:00:00+09:00" itemprop="datePublished"><i class="fa fa-calendar"></i> May 02, 2021
+    </time>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+  </p><div class="post-tags"><a class="post-tag" href="/tags.html#Basic">#Basic</a><a class="post-tag" href="/tags.html#CodingTest">#CodingTest</a></div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+
+      <p>python 함수 밖에 있는 데이터를 함수 안에 가져와서 연산하고 변화된 데이터를 return해야할 때가 있죠!</p>
+
+<p>python 기초 공부를 마치신 분들은 integer를 함수 안으로 가져오는 방법에 대해서 익숙하실겁니다.</p>
+
+<p>저도 integer에 대해서 공부했기때문에, list를 가져오는 방법도 동일할 것이라고 생각했습니다.</p>
+
+<p>📌 그렇지만 list는 integer와 달리 불러오지 않아도 함수 안에서 바로 사용할 수 있습니다‼️</p>
+
+<p>이유가 뭘까요?</p>
+
+<h2 id="함수-밖의-integer를-함수-안으로-가져오는-방법">함수 밖의 integer를 함수 안으로 가져오는 방법</h2>
+
+<p>두 가지 방법이 알려져 있습니다.</p>
+
+<ol>
+  <li>
+    <p><strong>매개변수</strong>로 가져오기</p>
+
+    <ul>
+      <li>
+        <p>def function(매개변수)에서 “매개변수” 자리에 integer를 넣어준다.</p>
+      </li>
+      <li>
+        <p>함수 안에서 연산한다.</p>
+      </li>
+      <li>
+        <p>변화된 integer 값을 (new_integer) return 으로 내보낸다.</p>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">integer</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">integer</span><span class="p">):</span>
+    <span class="n">integer</span> <span class="o">+=</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">integer</span>
+<span class="n">new_integer</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">integer</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">new_integer</span><span class="p">)</span>
+<span class="c1">#-&gt; 2
+</span></code></pre></div></div>
+
+<ol>
+  <li><strong>global</strong>을 사용하기
+    <ul>
+      <li>매개변수를 사용하지 않고 global interger로 가져온다.</li>
+      <li>함수 안에서 연산한다.</li>
+      <li>return으로 변화된 값을 내보낸다.</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">integer</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">def</span> <span class="nf">function</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">integer</span>
+    <span class="n">integer</span> <span class="o">+=</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">integer</span>
+<span class="n">new_integer</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">new_integer</span><span class="p">)</span>
+<span class="c1">#-&gt; 2
+</span></code></pre></div></div>
+
+<h2 id="함수-밖의-list를-함수-안으로-가져오는-방법">함수 밖의 list를 함수 안으로 가져오는 방법</h2>
+
+<p>📌list는 함수 밖 list를 사용할 때, 그냥 바로 사용하면 됩니다.</p>
+
+<p>​	integer와 달리 매개변수로 데러오지 않아도, global로 선언하지 않아도 됩니다‼️</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="k">def</span> <span class="nf">function</span><span class="p">():</span>
+    <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+=</span><span class="mi">100</span>
+    <span class="n">l</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
+    
+<span class="n">function</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="c1">#-&gt; [101, 2]
+</span></code></pre></div></div>
+
+<h2 id="list와-integer-방법-차이-원인">list와 integer 방법 차이 원인</h2>
+
+<p>📌 integer는 <strong>immutable</strong>(변화 불가능한)</p>
+
+<ul>
+  <li>integer가 정의되면 특정 주소에 저장되기 때문에, integer를 복사하고 그 값을 연산해도 원본 값은 변화하지 않는다.</li>
+  <li>따라서 매개변수 또는 global로 직접 값을 가져와서 연산해줘야 원본에 변화를 줄 수 있다.</li>
+</ul>
+
+<p>📌list는 <strong>mutable</strong>(변화 가능한)</p>
+
+<ul>
+  <li>list.pop()과 같은 연산은 list 원본에 변화를 줄 수 있다.</li>
+  <li>따라서 <strong>함수 내부에서 list의 연산은 함수 밖의 list 원본에 영향을 미친다.</strong></li>
+</ul>
+
+<p>출처 : https://stackoverflow.com/questions/23029727/why-do-list-operations-in-python-operate-outside-of-the-function-scope</p>
+
+
+
+    </div>
+
+</article>
+<div class="post-nav"><a class="previous" href="/codingtest/2021/04/30/backjoon-basic.html" title="BAEKJOON 백준 시작 방법 초보자 길라잡이">BAEKJOON 백준 시작 방법 초보자 길라잡이...</a><a class="next" href="/algorithm/2021/05/05/DFS.html" title="DFS (Depth-First Search)">DFS (Depth-First Search)</a></div><div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li><a class="post-link" href="/algorithm/2021/04/20/BFS.html" title="DFS (Depth-First Search)">BFS (Breadth-First Search)알고리즘</a></li><li><a class="post-link" href="/codingtest/2021/04/30/backjoon-basic.html" title="DFS (Depth-First Search)">BAEKJOON 백준 시작 방법 초보자 길라잡이</a></li><li><a class="post-link" href="/ai/2021/05/25/naver-ai-now.html" title="DFS (Depth-First Search)">NAVER AI Now</a></li><li><a class="post-link" href="/algorithm/2021/05/05/DFS.html" title="DFS (Depth-First Search)">DFS (Depth-First Search)</a></li></ul>
+    </div><div class="post-comments">  <div id="gitment_thread"></div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+  <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+  <script>
+    var gitment = new Gitment({
+      id: '/basic/2021/05/02/python-function-mutable',
+      owner: 'DasolU',
+      repo: 'dasolu.github.io#"The repo to store comments"',
+      oauth: {
+        client_id: '9646d9e9ccfb6cddc18c#"Your client ID"',
+        client_secret: 'd12d773f3f365729fdb33dd3516498e93deeea19#"Your client secret"',
+      },
+    });
+    gitment.render('gitment_thread')
+  </script>
+</div></section>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 </style>
 
-<div class="container">
-  <h1>404</h1>
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
+</div>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>Try to check other pages through the menu. </p>
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
 </div>
 
       </div>

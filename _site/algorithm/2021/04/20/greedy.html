@@ -4,20 +4,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c"></meta><!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Dasol Yoo | Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</title>
+<title>Greedy | Dasol Yoo</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Dasol Yoo" />
+<meta property="og:title" content="Greedy" />
 <meta name="author" content="Dasol Yoo" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<link rel="canonical" href="http://localhost:4000/404.html" />
-<meta property="og:url" content="http://localhost:4000/404.html" />
+<meta name="description" content="알고리즘 공부가 처음이고, 구현 연습을 하고 싶다면?" />
+<meta property="og:description" content="알고리즘 공부가 처음이고, 구현 연습을 하고 싶다면?" />
+<link rel="canonical" href="http://localhost:4000/algorithm/2021/04/20/greedy.html" />
+<meta property="og:url" content="http://localhost:4000/algorithm/2021/04/20/greedy.html" />
 <meta property="og:site_name" content="Dasol Yoo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-20T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Dasol Yoo" />
+<meta property="twitter:title" content="Greedy" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/404.html","headline":"Dasol Yoo","@type":"WebPage","author":{"@type":"Person","name":"Dasol Yoo"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/algorithm/2021/04/20/greedy.html","headline":"Greedy","dateModified":"2021-04-20T00:00:00+09:00","datePublished":"2021-04-20T00:00:00+09:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/algorithm/2021/04/20/greedy.html"},"author":{"@type":"Person","name":"Dasol Yoo"},"description":"알고리즘 공부가 처음이고, 구현 연습을 하고 싶다면?","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="shortcut icon" href="">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -521,25 +523,246 @@ function googleTranslateElementInit() {
 </script>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">Greedy</h1>
+  <h3 class="post-subtitle"></h3>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2021-04-20T00:00:00+09:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Apr 20, 2021
+    </time>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+  </p><div class="post-tags"><a class="post-tag" href="/tags.html#Algorithm">#Algorithm</a></div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+
+      <p>알고리즘 공부가 처음이고, 구현 연습을 하고 싶다면?</p>
+
+<p>Greedy algorithm (탐욕 알고리즘)으로 시작해보세요!</p>
+
+<h2 id="필요성">필요성</h2>
+
+<ul>
+  <li>모든 경우를 고려해야해서 시간이 오래걸리는 문제를 만났을 때</li>
+  <li>정답에 가까운 꽤 괜찮은 답을 구하고 싶을 때</li>
+  <li>최대한 많은, 큰 … 정답을 구하고 싶을 때</li>
+</ul>
+
+<h2 id="정의">정의</h2>
+
+<p>Greedy algorithm (탐욕 알고리즘)은 approximation algorithm(근사 알고리즘)입니다.</p>
+
+<h3 id="성능">성능</h3>
+
+<p>두 가지 지표로 판단합니다.</p>
+
+<ol>
+  <li>얼마나 빠른가?</li>
+  <li>최적해에 얼마나 가까운가?</li>
+</ol>
+
+
+
+    </div>
+
+</article>
+<div class="post-nav"><a class="previous" href="/algorithm/2021/04/20/BFS.html" title="BFS (Breadth-First Search)알고리즘">BFS (Breadth-First Search)알고리즘</a><a class="next" href="/codingtest/2021/04/21/list-pop-vs-collections-deque.html" title="Queue 구현? list.pop(0) vs. deque.popleft()">Queue 구현? list.pop(0) vs. deque.popleft()</a></div><div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li><a class="post-link" href="/codingtest/2021/04/29/python-list-time-complexity.html" title="Queue 구현? list.pop(0) vs. deque.popleft()">python list 연산의 시간복잡도</a></li><li><a class="post-link" href="/codingtest/2021/04/30/backjoon-basic.html" title="Queue 구현? list.pop(0) vs. deque.popleft()">BAEKJOON 백준 시작 방법 초보자 길라잡이</a></li><li><a class="post-link" href="/basic/2021/04/13/big-o-notation.html" title="Queue 구현? list.pop(0) vs. deque.popleft()">Big O Notation</a></li><li><a class="post-link" href="/ai/2021/05/18/few-shot-learning.html" title="Queue 구현? list.pop(0) vs. deque.popleft()">Few-shot Learning 딥러닝 시 데이터 수가 매우 적을 때?</a></li></ul>
+    </div><div class="post-comments">  <div id="gitment_thread"></div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+  <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+  <script>
+    var gitment = new Gitment({
+      id: '/algorithm/2021/04/20/greedy',
+      owner: 'DasolU',
+      repo: 'dasolu.github.io#"The repo to store comments"',
+      oauth: {
+        client_id: '9646d9e9ccfb6cddc18c#"Your client ID"',
+        client_secret: 'd12d773f3f365729fdb33dd3516498e93deeea19#"Your client secret"',
+      },
+    });
+    gitment.render('gitment_thread')
+  </script>
+</div></section>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 </style>
 
-<div class="container">
-  <h1>404</h1>
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
+</div>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>Try to check other pages through the menu. </p>
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
 </div>
 
       </div>

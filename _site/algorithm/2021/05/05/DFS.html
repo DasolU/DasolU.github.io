@@ -4,20 +4,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c"></meta><!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Dasol Yoo | Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</title>
+<title>DFS (Depth-First Search) | Dasol Yoo</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Dasol Yoo" />
+<meta property="og:title" content="DFS (Depth-First Search)" />
 <meta name="author" content="Dasol Yoo" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<link rel="canonical" href="http://localhost:4000/404.html" />
-<meta property="og:url" content="http://localhost:4000/404.html" />
+<meta name="description" content="DFS (Depth-First-Search)은 깊이 우선 탐색 알고리즘의 줄임말입니다." />
+<meta property="og:description" content="DFS (Depth-First-Search)은 깊이 우선 탐색 알고리즘의 줄임말입니다." />
+<link rel="canonical" href="http://localhost:4000/algorithm/2021/05/05/DFS.html" />
+<meta property="og:url" content="http://localhost:4000/algorithm/2021/05/05/DFS.html" />
 <meta property="og:site_name" content="Dasol Yoo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-05T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Dasol Yoo" />
+<meta property="twitter:title" content="DFS (Depth-First Search)" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/404.html","headline":"Dasol Yoo","@type":"WebPage","author":{"@type":"Person","name":"Dasol Yoo"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/algorithm/2021/05/05/DFS.html","headline":"DFS (Depth-First Search)","dateModified":"2021-05-05T00:00:00+09:00","datePublished":"2021-05-05T00:00:00+09:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/algorithm/2021/05/05/DFS.html"},"author":{"@type":"Person","name":"Dasol Yoo"},"description":"DFS (Depth-First-Search)은 깊이 우선 탐색 알고리즘의 줄임말입니다.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="shortcut icon" href="">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -521,25 +523,278 @@ function googleTranslateElementInit() {
 </script>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">DFS (Depth-First Search)</h1>
+  <h3 class="post-subtitle"></h3>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2021-05-05T00:00:00+09:00" itemprop="datePublished"><i class="fa fa-calendar"></i> May 05, 2021
+    </time>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+  </p><div class="post-tags"><a class="post-tag" href="/tags.html#Algorithm">#Algorithm</a></div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+
+      <p>DFS (Depth-First-Search)은 깊이 우선 탐색 알고리즘의 줄임말입니다.</p>
+
+<h2 id="필요성">필요성</h2>
+
+<ul>
+  <li>한 node에서 <strong>목표 node로 도착할 수 있는 경로(short-path)</strong>를 찾을 때</li>
+  <li>예) 미로찾기</li>
+</ul>
+
+<h2 id="구현">구현</h2>
+
+<p>구현 방법은 두 가지만 기억하면 됩니다.</p>
+
+<ol>
+  <li>문제를 그래프로 구현한다.
+    <ul>
+      <li>해시 테이블을 사용해서 이웃 node와의 관계를 기록한다.</li>
+    </ul>
+  </li>
+  <li>깊이 우선 탐색 방법을 사용한다.
+    <ul>
+      <li>스택를 생성하고 스택에 첫 번째 노드 넣기</li>
+      <li>스택에서 노드 꺼내기</li>
+      <li>노드의 방문 여부를 조사
+        <ul>
+          <li>목적: 탐색 스택에 같은 노드가 반복해서 추가되어 무한 탐색되는 경우를 방지하기 위함</li>
+        </ul>
+      </li>
+      <li>노드를 방문하지 않았다면 노드를 방문한 것으로 표시하고 자식 노드 탐색 시작</li>
+      <li>자식 노드 중 방문하지 않은 자식 노드만을 탐색 스택에 추가</li>
+      <li>탐색 스택에 있는 노드가 없어지거나 답을 찾을 때까지 위의 과정 반복</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Make Graph
+</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span> <span class="c1"># n:node개수, m:edge개수, v:시작 node
+</span>
+<span class="n">graph</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">_in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>	<span class="c1"># node 개수 만큼 빈 list를 만들어준다.
+</span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+    <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span>
+    <span class="n">graph</span><span class="p">[</span><span class="n">n1</span><span class="p">].</span><span class="n">append</span><span class="p">(</span><span class="n">n2</span><span class="p">)</span>	<span class="c1"># node에 연결된 자식 node를 기록한다.
+</span>    <span class="n">graph</span><span class="p">[</span><span class="n">n2</span><span class="p">].</span><span class="n">append</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+    <span class="n">stack</span> <span class="o">=</span> <span class="n">deque</span><span class="p">([</span><span class="n">v</span><span class="p">])</span>
+    <span class="n">visited</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="n">stack</span><span class="p">:</span>  <span class="c1"># stack에 노드가 없을 때까지
+</span>        <span class="n">node</span> <span class="o">=</span> <span class="n">stack</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">:</span>  <span class="c1">#방문하지 않은 노드만 방문한다.
+</span>          	<span class="n">visited</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>	<span class="c1">#노드를 방문한 것으로 기록한다.
+</span>            <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">graph</span><span class="p">[</span><span class="n">node</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span> <span class="c1"># pop은 오른쪽 원소부터 꺼내므로 내림차순 정렬해준다.
+</span>                <span class="k">if</span> <span class="n">child</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">:</span>  <span class="c1"># 방문하지 않은 자식 노드를 큐에 추가한다.
+</span>                    <span class="n">stack</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">visited</span>
+</code></pre></div></div>
+
+
+
+    </div>
+
+</article>
+<div class="post-nav"><a class="previous" href="/basic/2021/05/02/python-function-mutable.html" title="python 함수 밖 list와 integer를 가져와서 연산하는 방법">python 함수 밖 list와 integer를 가져와서...</a><a class="next" href="/ai/2021/05/18/few-shot-learning.html" title="Few-shot Learning 딥러닝 시 데이터 수가 매우 적을 때?">Few-shot Learning 딥러닝 시 데이터 수가...</a></div><div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li><a class="post-link" href="/codingtest/2021/04/30/backjoon-basic.html" title="Few-shot Learning 딥러닝 시 데이터 수가 매우 적을 때?">BAEKJOON 백준 시작 방법 초보자 길라잡이</a></li><li><a class="post-link" href="/algorithm/2021/04/15/recursion.html" title="Few-shot Learning 딥러닝 시 데이터 수가 매우 적을 때?">Recursion</a></li><li><a class="post-link" href="/ai/2021/05/18/ml-vailidation.html" title="Few-shot Learning 딥러닝 시 데이터 수가 매우 적을 때?">모델 성능 평가 지표</a></li><li><a class="post-link" href="/career/2021/04/15/data-analyst-engineer-scientist.html" title="Few-shot Learning 딥러닝 시 데이터 수가 매우 적을 때?">Data Analyst? Data Engineer? Data Scientist?</a></li></ul>
+    </div><div class="post-comments">  <div id="gitment_thread"></div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+  <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+  <script>
+    var gitment = new Gitment({
+      id: '/algorithm/2021/05/05/DFS',
+      owner: 'DasolU',
+      repo: 'dasolu.github.io#"The repo to store comments"',
+      oauth: {
+        client_id: '9646d9e9ccfb6cddc18c#"Your client ID"',
+        client_secret: 'd12d773f3f365729fdb33dd3516498e93deeea19#"Your client secret"',
+      },
+    });
+    gitment.render('gitment_thread')
+  </script>
+</div></section>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 </style>
 
-<div class="container">
-  <h1>404</h1>
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
+</div>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>Try to check other pages through the menu. </p>
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
 </div>
 
       </div>

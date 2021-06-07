@@ -4,20 +4,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c"></meta><!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Dasol Yoo | Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</title>
+<title>Few-shot Learning 딥러닝 시 데이터 수가 매우 적을 때? | Dasol Yoo</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Dasol Yoo" />
+<meta property="og:title" content="Few-shot Learning 딥러닝 시 데이터 수가 매우 적을 때?" />
 <meta name="author" content="Dasol Yoo" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<link rel="canonical" href="http://localhost:4000/404.html" />
-<meta property="og:url" content="http://localhost:4000/404.html" />
+<meta name="description" content="Reference" />
+<meta property="og:description" content="Reference" />
+<link rel="canonical" href="http://localhost:4000/ai/2021/05/18/few-shot-learning.html" />
+<meta property="og:url" content="http://localhost:4000/ai/2021/05/18/few-shot-learning.html" />
 <meta property="og:site_name" content="Dasol Yoo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-18T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Dasol Yoo" />
+<meta property="twitter:title" content="Few-shot Learning 딥러닝 시 데이터 수가 매우 적을 때?" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/404.html","headline":"Dasol Yoo","@type":"WebPage","author":{"@type":"Person","name":"Dasol Yoo"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/ai/2021/05/18/few-shot-learning.html","headline":"Few-shot Learning 딥러닝 시 데이터 수가 매우 적을 때?","dateModified":"2021-05-18T00:00:00+09:00","datePublished":"2021-05-18T00:00:00+09:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ai/2021/05/18/few-shot-learning.html"},"author":{"@type":"Person","name":"Dasol Yoo"},"description":"Reference","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="shortcut icon" href="">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -521,25 +523,317 @@ function googleTranslateElementInit() {
 </script>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">Few-shot Learning 딥러닝 시 데이터 수가 매우 적을 때?</h1>
+  <h3 class="post-subtitle"></h3>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2021-05-18T00:00:00+09:00" itemprop="datePublished"><i class="fa fa-calendar"></i> May 18, 2021
+    </time>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+  </p><div class="post-tags"><a class="post-tag" href="/tags.html#Deep Learning">#Deep Learning</a></div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+
+      <h2 id="reference">Reference</h2>
+
+<p>이 글은 <a href="https://www.kakaobrain.com/blog/106">카카오브레인 AutoLearn 연구팀의 퓨샷 러닝 연구</a>를 참고 요약한 것입니다.</p>
+
+<h3 id="논문">논문</h3>
+
+<p>https://arxiv.org/pdf/1905.01436.pdf @ CVPR 2019</p>
+
+<h2 id="egnn">EGNN</h2>
+
+<p>Edge-Labeling Graph Neural Network for Few-shot Learning</p>
+
+<h3 id="필요성">필요성</h3>
+
+<ul>
+  <li>
+    <p>딥러닝 시 데이터 수가 매우 적을 때</p>
+  </li>
+  <li>
+    <p>{러시안블루, 페르시안, 먼치킨}처럼 고양이의 종류를 구분하는 태스크를 풀 때</p>
+    <ul>
+      <li>같은 범주의 데이터를 더 가깝게, 다른 범주의 데이터를 더 멀게 할 정도로 충분히 복잡하지 않을 때</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="방법">방법</h3>
+
+<p><strong>데이터셋</strong>을 <strong>훈련</strong>에 사용하는 <strong>서포트 데이터(support data)</strong>와 <strong>테스트</strong>에 사용하는 <strong>쿼리 데이터(query data)</strong>로 구성</p>
+
+<h4 id="퓨샷-러닝-태스크-n-way-k-shot-문제">퓨샷 러닝 태스크: ’<strong>N-way K-shot 문제</strong>’</h4>
+
+<ul>
+  <li>N은 범주의 수, K는 범주별 서포트 데이터의 수</li>
+  <li>퓨샷 러닝은 이 K가 매우 작은 상황에서의 모델 학습을 가리킵니다</li>
+  <li>퓨샷 러닝 모델의 성능은 N과 반비례하며 K와는 비례하는 관계
+    <ul>
+      <li>K가 많을수록 이 범주에 해당하는 데이터를 예측하는 모델의 성능(추론 정확도)은 높아진다</li>
+      <li>반면, N의 값이 커질수록 모델 성능은 낮아진다</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="특장점">특장점</h3>
+
+<ul>
+  <li>
+    <p>거리 학습과 그래프 신경망의 장점을 합쳤다.</p>
+
+    <p>EGNN은 퓨샷 러닝 문제가 주어졌을 때 쿼리 데이터와 서포트 데이터가 그래프 구조 상에서 상호 작용하며 데이터 간 거리를 계산</p>
+  </li>
+</ul>
+
+<h2 id="사이드-프로젝트-적용-포인트">사이드 프로젝트 적용 포인트</h2>
+
+<ul>
+  <li>
+    <p>benchmark 실험: 범주(N)가 10개 이하이며, 서포트 데이터(K)가 1 또는 5개, 쿼리 데이터는 범주당 15개</p>
+  </li>
+  <li>
+    <p>5-way 10-shot 모델의 정확도 80% 수준</p>
+  </li>
+</ul>
+
+<h2 id="관련-개념">관련 개념</h2>
+
+<ul>
+  <li>Siamese network</li>
+  <li>DNN (딥뉴럴넷)
+    <ul>
+      <li>CNN(convolutional neural networks)은 대표적인 DNN 응용 알고리즘이다.
+        <ul>
+          <li>CNN은 검증 손실 함수(verification loss function) 값을 최소화할 때까지 훈련</li>
+          <li>두 입력 데이터의 범주가 같은 상황에서 특징 공간상 거리가 멀면 커집니다.</li>
+          <li>두 데이터의 범주가 다른 상황에서 거리가 가까워져도 마찬가지고요.</li>
+          <li>이런 검증 손실 값을 최소화함으로써 모델은 범주가 같은 두 데이터의 거리가 가까워질수록 또는 범주가 다른 데이터의 거리가 멀어지게 하는 특징을 획득하게 됩니다.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>GNN
+    <ul>
+      <li>인공 신경망으로 Dense graph(밀집 그래프) 구조 사용 (백터나 행렬이 아닌)
+        <ul>
+          <li>Dense graph(밀집 그래프)란? 모든 노드가 서로 완전히 연결된 것</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Meta learning (메타러닝)
+    <ul>
+      <li>기계 스스로 무엇인가를 배우는 ‘방법’ 또는 ‘지식’을 습득하는 기계학습 이론</li>
+    </ul>
+  </li>
+</ul>
+
+
+
+    </div>
+
+</article>
+<div class="post-nav"><a class="previous" href="/algorithm/2021/05/05/DFS.html" title="DFS (Depth-First Search)">DFS (Depth-First Search)</a><a class="next" href="/ai/2021/05/18/ml-vailidation.html" title="모델 성능 평가 지표">모델 성능 평가 지표</a></div><div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li><a class="post-link" href="/codingtest/2021/04/21/list-pop-vs-collections-deque.html" title="모델 성능 평가 지표">Queue 구현? list.pop(0) vs. deque.popleft()</a></li><li><a class="post-link" href="/codingtest/2021/04/25/programmers-network.html" title="모델 성능 평가 지표">Programmers 네트워크 문제</a></li><li><a class="post-link" href="/basic/2021/05/02/python-function-mutable.html" title="모델 성능 평가 지표">python 함수 밖 list와 integer를 가져와서 연산하는 방법</a></li><li><a class="post-link" href="/ai/2021/05/25/naver-ai-now.html" title="모델 성능 평가 지표">NAVER AI Now</a></li></ul>
+    </div><div class="post-comments">  <div id="gitment_thread"></div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+  <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+  <script>
+    var gitment = new Gitment({
+      id: '/ai/2021/05/18/few-shot-learning',
+      owner: 'DasolU',
+      repo: 'dasolu.github.io#"The repo to store comments"',
+      oauth: {
+        client_id: '9646d9e9ccfb6cddc18c#"Your client ID"',
+        client_secret: 'd12d773f3f365729fdb33dd3516498e93deeea19#"Your client secret"',
+      },
+    });
+    gitment.render('gitment_thread')
+  </script>
+</div></section>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 </style>
 
-<div class="container">
-  <h1>404</h1>
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
+</div>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>Try to check other pages through the menu. </p>
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
 </div>
 
       </div>

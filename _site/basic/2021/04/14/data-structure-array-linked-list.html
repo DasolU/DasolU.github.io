@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c"></meta><!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Data Structure Array &amp; Linked List | Dasol Yoo</title>
+<title>Data Structure Array vs. Linked List | Dasol Yoo</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Data Structure Array &amp; Linked List" />
+<meta property="og:title" content="Data Structure Array vs. Linked List" />
 <meta name="author" content="Dasol Yoo" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="List-&gt;Array-&gt;List-&gt;Array…… 에러가 날때마다 영문도 모른체 데이터의 자료형을 변환하는데 급급했나요? 두 자료구조의 차이점을 몰라서 에러가 날때마다 적당히 자료형을 바꾸며 돌려막기한다면, 계산 시간과 한숨을 엄청나게 낭비하게 됩니다. 이제 이 답답함에서 벗어나보자구요!" />
@@ -17,9 +17,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-04-14T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Data Structure Array &amp; Linked List" />
+<meta property="twitter:title" content="Data Structure Array vs. Linked List" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/basic/2021/04/14/data-structure-array-linked-list.html","headline":"Data Structure Array &amp; Linked List","dateModified":"2021-04-14T00:00:00+09:00","datePublished":"2021-04-14T00:00:00+09:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/basic/2021/04/14/data-structure-array-linked-list.html"},"author":{"@type":"Person","name":"Dasol Yoo"},"description":"List-&gt;Array-&gt;List-&gt;Array…… 에러가 날때마다 영문도 모른체 데이터의 자료형을 변환하는데 급급했나요? 두 자료구조의 차이점을 몰라서 에러가 날때마다 적당히 자료형을 바꾸며 돌려막기한다면, 계산 시간과 한숨을 엄청나게 낭비하게 됩니다. 이제 이 답답함에서 벗어나보자구요!","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/basic/2021/04/14/data-structure-array-linked-list.html","headline":"Data Structure Array vs. Linked List","dateModified":"2021-04-14T00:00:00+09:00","datePublished":"2021-04-14T00:00:00+09:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/basic/2021/04/14/data-structure-array-linked-list.html"},"author":{"@type":"Person","name":"Dasol Yoo"},"description":"List-&gt;Array-&gt;List-&gt;Array…… 에러가 날때마다 영문도 모른체 데이터의 자료형을 변환하는데 급급했나요? 두 자료구조의 차이점을 몰라서 에러가 날때마다 적당히 자료형을 바꾸며 돌려막기한다면, 계산 시간과 한숨을 엄청나게 낭비하게 됩니다. 이제 이 답답함에서 벗어나보자구요!","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="shortcut icon" href="">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -373,6 +373,7 @@ function googleTranslateElementInit() {
 <script>
   function hashLocate(hashValue) {
     hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
     var element = document.getElementById(hashValue);
 
     if (!element) {
@@ -537,7 +538,7 @@ function googleTranslateElementInit() {
 
 
 <header class="post-header">
-  <h1 class="post-title p-name" itemprop="name headline">Data Structure Array &amp; Linked List</h1>
+  <h1 class="post-title p-name" itemprop="name headline">Data Structure Array vs. Linked List</h1>
   <h3 class="post-subtitle">List 쓰다가 안되면 np.array()로 바꿔쓰다가 안되면 다시 list()로 바꾸고 있다면?</h3>
 
   <p class="post-meta">
@@ -578,7 +579,7 @@ function googleTranslateElementInit() {
 
 
 
-    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
   </p><div class="post-tags"><a class="post-tag" href="/tags.html#Basic">#Basic</a><a class="post-tag" href="/tags.html#Efficiency">#Efficiency</a><a class="post-tag" href="/tags.html#Data Structure">#Data Structure</a></div></header>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -652,31 +653,36 @@ Array는 정적인 자료 구조이므로 계속해서 데이터 늘어난다면
 <strong>2. Array와 달리 각 노드에 data뿐만아니라 포인터 부분을 저장하므로 메모리 이용 효율이 나쁘다.</strong>  <br />
 <strong>3. 데이터에 임의 접근이 불가능하다.</strong></p>
 
-<h2 id="연산-시간-비교">연산 시간 비교</h2>
-<p>Array 와 Linked list의 연산 시간을 Big O notation으로 표현한다면?</p>
+<h2 id="시간-복잡도-비교">시간 복잡도 비교</h2>
+<p>Array 와 Linked list의 시간 복잡도를 Big O notation으로 표현한다면?</p>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: right"> </th>
+      <th style="text-align: left"> </th>
       <th style="text-align: right">Array</th>
       <th style="text-align: right">Linked list</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: right">읽기</td>
+      <td style="text-align: left">읽기</td>
       <td style="text-align: right">O(1)</td>
       <td style="text-align: right">O(n)</td>
     </tr>
     <tr>
-      <td style="text-align: right">삽입</td>
+      <td style="text-align: left">앞에 삽입/삭제</td>
       <td style="text-align: right">O(n)</td>
       <td style="text-align: right">O(1)</td>
     </tr>
     <tr>
-      <td style="text-align: right">삭제</td>
+      <td style="text-align: left">뒤에 삽입/삭제</td>
       <td style="text-align: right">O(1)</td>
+      <td style="text-align: right">O(n)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">중간에 삽입/삭제</td>
+      <td style="text-align: right">O(n)</td>
       <td style="text-align: right">O(n)</td>
     </tr>
   </tbody>
@@ -685,13 +691,14 @@ Array는 정적인 자료 구조이므로 계속해서 데이터 늘어난다면
 <p>Array에서 삽입이 O(n)인 이유? 뒤에 오는 모든 원소들의 위치를 바꿔야하기 때문입니다.</p>
 
 
+
     </div>
 
 </article>
 <div class="post-nav"><a class="previous" href="/basic/2021/04/13/big-o-notation.html" title="Big O Notation">Big O Notation</a><a class="next" href="/career/2021/04/15/data-analyst-engineer-scientist.html" title="Data Analyst? Data Engineer? Data Scientist?">Data Analyst? Data Engineer? Data Scientist?...</a></div><div class="post-related">
       <div>Related Articles</div>
       <ul>
-        <li><a class="post-link" href="/basic/2021/04/13/big-o-notation.html" title="Data Analyst? Data Engineer? Data Scientist?">Big O Notation</a></li><li><a class="post-link" href="/career/2021/04/15/data-analyst-engineer-scientist.html" title="Data Analyst? Data Engineer? Data Scientist?">Data Analyst? Data Engineer? Data Scientist?</a></li><li><a class="post-link" href="/basic/2021/04/14/data-structure-array-linked-list.html" title="Data Analyst? Data Engineer? Data Scientist?">Data Structure Array &amp; Linked List</a></li><li><a class="post-link" href="/basic/2021/04/15/data-structure-stack.html" title="Data Analyst? Data Engineer? Data Scientist?">Data Structure Stack</a></li></ul>
+        <li><a class="post-link" href="/basic/2021/04/15/data-structure-stack.html" title="Data Analyst? Data Engineer? Data Scientist?">Data Structure Stack</a></li><li><a class="post-link" href="/codingtest/2021/04/25/programmers-network.html" title="Data Analyst? Data Engineer? Data Scientist?">Programmers 네트워크 문제</a></li><li><a class="post-link" href="/ai/2021/05/18/ml-vailidation.html" title="Data Analyst? Data Engineer? Data Scientist?">모델 성능 평가 지표</a></li><li><a class="post-link" href="/career/2021/04/15/data-analyst-engineer-scientist.html" title="Data Analyst? Data Engineer? Data Scientist?">Data Analyst? Data Engineer? Data Scientist?</a></li></ul>
     </div><div class="post-comments">  <div id="gitment_thread"></div>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
   <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
@@ -699,10 +706,10 @@ Array는 정적인 자료 구조이므로 계속해서 데이터 늘어난다면
     var gitment = new Gitment({
       id: '/basic/2021/04/14/data-structure-array-linked-list',
       owner: 'DasolU',
-      repo: '',
+      repo: 'dasolu.github.io#"The repo to store comments"',
       oauth: {
-        client_id: '',
-        client_secret: '',
+        client_id: '9646d9e9ccfb6cddc18c#"Your client ID"',
+        client_secret: 'd12d773f3f365729fdb33dd3516498e93deeea19#"Your client secret"',
       },
     });
     gitment.render('gitment_thread')

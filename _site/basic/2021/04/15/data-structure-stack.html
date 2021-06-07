@@ -373,6 +373,7 @@ function googleTranslateElementInit() {
 <script>
   function hashLocate(hashValue) {
     hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
     var element = document.getElementById(hashValue);
 
     if (!element) {
@@ -626,7 +627,7 @@ add 함수가 먼저 실행되어 1*100 계산 결과를 반환하고 나서야
 <div class="post-nav"><a class="previous" href="/career/2021/04/15/data-analyst-engineer-scientist.html" title="Data Analyst? Data Engineer? Data Scientist?">Data Analyst? Data Engineer? Data Scientist?...</a><a class="next" href="/algorithm/2021/04/15/recursion.html" title="Recursion">Recursion</a></div><div class="post-related">
       <div>Related Articles</div>
       <ul>
-        <li><a class="post-link" href="/algorithm/2021/04/16/sort.html" title="Recursion">Sort</a></li><li><a class="post-link" href="/basic/2021/04/14/data-structure-array-linked-list.html" title="Recursion">Data Structure Array &amp; Linked List</a></li><li><a class="post-link" href="/career/2021/04/15/data-analyst-engineer-scientist.html" title="Recursion">Data Analyst? Data Engineer? Data Scientist?</a></li><li><a class="post-link" href="/basic/2021/04/15/data-structure-stack.html" title="Recursion">Data Structure Stack</a></li></ul>
+        <li><a class="post-link" href="/algorithm/2021/04/15/recursion.html" title="Recursion">Recursion</a></li><li><a class="post-link" href="/algorithm/2021/04/16/sort.html" title="Recursion">Sort</a></li><li><a class="post-link" href="/algorithm/2021/05/05/DFS.html" title="Recursion">DFS (Depth-First Search)</a></li><li><a class="post-link" href="/codingtest/2021/04/21/programmers-stock-price.html" title="Recursion">Programmers 주식가격 문제</a></li></ul>
     </div><div class="post-comments">  <div id="gitment_thread"></div>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
   <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
@@ -634,10 +635,10 @@ add 함수가 먼저 실행되어 1*100 계산 결과를 반환하고 나서야
     var gitment = new Gitment({
       id: '/basic/2021/04/15/data-structure-stack',
       owner: 'DasolU',
-      repo: '',
+      repo: 'dasolu.github.io#"The repo to store comments"',
       oauth: {
-        client_id: '',
-        client_secret: '',
+        client_id: '9646d9e9ccfb6cddc18c#"Your client ID"',
+        client_secret: 'd12d773f3f365729fdb33dd3516498e93deeea19#"Your client secret"',
       },
     });
     gitment.render('gitment_thread')
