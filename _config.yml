@@ -150,14 +150,11 @@ defaults:
 
 # Gitment comments
 gitment:
-   enable: true
-   owner: dasolu
-   githubID: dasolu
-   username: dasolu #"Your GitHub username"
-   repo: dasolu.github.io#"The repo to store comments"
-   client_id: 9646d9e9ccfb6cddc18c#"Your client ID"
-   client_secret: d12d773f3f365729fdb33dd3516498e93deeea19#"Your client secret"
-#   redirect_uri: "Your redirect url"   # If you use a custom domain name
+   username: Dasol Yoo
+   repo: dasolu.github.io
+   client_id: 9646d9e9ccfb6cddc18c
+   client_secret: d12d773f3f365729fdb33dd3516498e93deeea19
+   redirect_uri: https://dasolu.github.io/
 
 # Build settings
 # highlighter: none
