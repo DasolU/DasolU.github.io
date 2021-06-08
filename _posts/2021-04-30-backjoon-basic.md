@@ -76,5 +76,21 @@ for _ in range(m):
     a, b= map(int, input().split())
 ```
 
+### print 시간 단축 방법
+
+#### integer
+
+```python
+sys.stdout.write(str(answer))
+```
+
+#### list
+
+시간은 단축되지만 메모리 사용은 증가한다.
+
+```python
+print(' '.join(map(str, list)))
+```
+
 [1]: https://www.acmicpc.net/problem/13023
 
