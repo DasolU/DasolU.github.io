@@ -653,6 +653,20 @@ function googleTranslateElementInit() {
     <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span>
 </code></pre></div></div>
 
+<h3 id="print-시간-단축-방법">print 시간 단축 방법</h3>
+
+<h4 id="integer">integer</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sys</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">answer</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h4 id="list">list</h4>
+
+<p>시간은 단축되지만 메모리 사용은 증가한다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">' '</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">list</span><span class="p">)))</span>
+</code></pre></div></div>
+
 
 
     </div>
@@ -661,7 +675,7 @@ function googleTranslateElementInit() {
 <div class="post-nav"><a class="previous" href="/codingtest/2021/04/29/python-list-time-complexity.html" title="python list 연산의 시간복잡도">python list 연산의 시간복잡도</a><a class="next" href="/basic/2021/05/02/python-function-mutable.html" title="python 함수 밖 list와 integer를 가져와서 연산하는 방법">python 함수 밖 list와 integer를 가져와서...</a></div><div class="post-related">
       <div>Related Articles</div>
       <ul>
-        <li><a class="post-link" href="/algorithm/2021/05/05/DFS.html" title="python 함수 밖 list와 integer를 가져와서 연산하는 방법">DFS (Depth-First Search)</a></li><li><a class="post-link" href="/codingtest/2021/04/29/python-list-time-complexity.html" title="python 함수 밖 list와 integer를 가져와서 연산하는 방법">python list 연산의 시간복잡도</a></li><li><a class="post-link" href="/ai/2021/05/18/ml-vailidation.html" title="python 함수 밖 list와 integer를 가져와서 연산하는 방법">모델 성능 평가 지표</a></li><li><a class="post-link" href="/algorithm/2021/04/20/greedy.html" title="python 함수 밖 list와 integer를 가져와서 연산하는 방법">Greedy</a></li></ul>
+        <li><a class="post-link" href="/ai/2021/05/25/naver-ai-now.html" title="python 함수 밖 list와 integer를 가져와서 연산하는 방법">NAVER AI Now</a></li><li><a class="post-link" href="/codingtest/2021/04/21/programmers-stock-price.html" title="python 함수 밖 list와 integer를 가져와서 연산하는 방법">Programmers 주식가격 문제</a></li><li><a class="post-link" href="/basic/2021/04/13/big-o-notation.html" title="python 함수 밖 list와 integer를 가져와서 연산하는 방법">Big O Notation</a></li><li><a class="post-link" href="/algorithm/2021/04/20/BFS.html" title="python 함수 밖 list와 integer를 가져와서 연산하는 방법">BFS (Breadth-First Search)알고리즘</a></li></ul>
     </div><div class="post-comments">  <div id="gitment_thread"></div>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
   <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>

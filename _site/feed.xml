@@ -1,20 +1,248 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-08T19:51:00+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dasol Yoo</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Dasol Yoo</name></author><entry><title type="html">Summary for BFS Algorithm</title><link href="http://localhost:4000/codingtest/2021/06/08/summary-bfs.html" rel="alternate" type="text/html" title="Summary for BFS Algorithm" /><published>2021-06-08T00:00:00+09:00</published><updated>2021-06-08T00:00:00+09:00</updated><id>http://localhost:4000/codingtest/2021/06/08/summary-bfs</id><content type="html" xml:base="http://localhost:4000/codingtest/2021/06/08/summary-bfs.html">&lt;p&gt;🌟코딩테스트에서 &lt;strong&gt;BFS&lt;/strong&gt; 문제를 풀기 위해 꼭 필요한 함수 총 정리!!!!!🌟&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-15T20:45:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dasol Yoo</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Dasol Yoo</name></author><entry><title type="html">Summary for BFS Algorithm</title><link href="http://localhost:4000/codingtest/2021/06/08/summary-bfs.html" rel="alternate" type="text/html" title="Summary for BFS Algorithm" /><published>2021-06-08T00:00:00+09:00</published><updated>2021-06-08T00:00:00+09:00</updated><id>http://localhost:4000/codingtest/2021/06/08/summary-bfs</id><content type="html" xml:base="http://localhost:4000/codingtest/2021/06/08/summary-bfs.html">&lt;p&gt;🌟코딩테스트에서 &lt;strong&gt;BFS&lt;/strong&gt; 문제를 풀기 위해 꼭 필요한 함수 총 정리!!!!!🌟&lt;/p&gt;
 
 &lt;p&gt;코테 전에 &lt;strong&gt;BFS 알고리즘 필수 요약&lt;/strong&gt; 보고 들어가세요!&lt;/p&gt;
 
 &lt;p&gt;계속 업데이트 합니다.&lt;/p&gt;
 
+&lt;h2 id=&quot;queue-만드는-방법&quot;&gt;Queue 만드는 방법&lt;/h2&gt;
+
+&lt;p&gt;queue에 2D node를 추가할 때 시공간 복잡도가 가장 낮은 방법.&lt;/p&gt;
+
+&lt;p&gt;(현재까지 진행한 여러가지 테스트롤 통해 내린 결론이며, 향후 변경될 수 있다.)&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;q = deque()&lt;/li&gt;
+  &lt;li&gt;q.append((sy, sx))&lt;/li&gt;
+  &lt;li&gt;(y, x) = q.popleft()&lt;/li&gt;
+  &lt;li&gt;q.append((ny, nx))&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;graph-만드는-방법&quot;&gt;Graph 만드는 방법&lt;/h2&gt;
+
+&lt;h3 id=&quot;node와-edge가-주어질-때&quot;&gt;node와 edge가 주어질 때&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/13023&quot;&gt;13023번 - ABCDE&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1260&quot;&gt;1260번 - DFS와 BFS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/11724&quot;&gt;11724번 - 연결 요소의 개수&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1707&quot;&gt;1707번 - 이분 그래프&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Make Graph
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[[]&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;edge&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;node1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;n-x-m-인접-행렬adjacency-matrix이-주어질-때&quot;&gt;N X M 인접 행렬(adjacency matrix)이 주어질 때&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2667&quot;&gt;2667번 - 단지번호붙이기&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2178&quot;&gt;2178번 - 미로 탐색&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/7576&quot;&gt;7576번 - 토마토&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/7562&quot;&gt;7562번 - 나이트의 이동&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readline&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# returns list ex&amp;gt;[&apos;0110100&apos;]
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([])&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;h2 id=&quot;문제-유형&quot;&gt;문제 유형&lt;/h2&gt;
 
-&lt;p&gt;자식 노드마다 탐색 비용이 다를 때&lt;/p&gt;
+&lt;h3 id=&quot;모든-노드-방문할-때&quot;&gt;모든 노드 방문할 때&lt;/h3&gt;
 
-&lt;p&gt;​	탐색 비용이 작은 자식 노드를 queue의 앞에 추가하고, 탐색 비용이 큰 자식 노드는 뒤에 추가한다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;노드 n개가 연결된 경로가 존재하는지 구하기&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;​	비용이 적은 경로부터 우선적으로 탐색하고, 가장 적은 비용에 대한 탐색이 끝나고 나서야 비로소 더 큰 비용의 경로를 탐색하기 시작하기 때문에&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/13023&quot;&gt;13023번 - ABCDE&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;​	이 방법을 통해 탐색 비용과 길이가 이 최소인 경로를 찾을 수 있다.&lt;/p&gt;
+ 	1. for문 사용하여 모든 노드 방문
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  	1. DFS: level == n-1일 때 return
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;​	백준 예시 문제&amp;gt; &lt;a href=&quot;https://www.acmicpc.net/problem/1261&quot;&gt;1261 알고스팟&lt;/a&gt;, &lt;a href=&quot;https://www.acmicpc.net/problem/13549&quot;&gt;13549 숨바꼭질 3&lt;/a&gt;,&lt;/p&gt;</content><author><name>Dasol Yoo</name></author><category term="CodingTest" /><category term="CodingTest" /><category term="Summary" /><summary type="html">🌟코딩테스트에서 BFS 문제를 풀기 위해 꼭 필요한 함수 총 정리!!!!!🌟</summary></entry><entry><title type="html">NAVER AI Now</title><link href="http://localhost:4000/ai/2021/05/25/naver-ai-now.html" rel="alternate" type="text/html" title="NAVER AI Now" /><published>2021-05-25T00:00:00+09:00</published><updated>2021-05-25T00:00:00+09:00</updated><id>http://localhost:4000/ai/2021/05/25/naver-ai-now</id><content type="html" xml:base="http://localhost:4000/ai/2021/05/25/naver-ai-now.html">&lt;h2 id=&quot;기존-ai-시대&quot;&gt;기존 AI 시대&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;모든 노드 방문하며 그 순서 출력하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1260&quot;&gt;1260번 - DFS와 BFS&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;visited = []에 pop한 node를 추가한다&lt;/li&gt;
+  &lt;li&gt;visited를 return한다&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;연결 요소(connected component)의 개수 구하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/11724&quot;&gt;11724번 - 연결 요소의 개수&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;for문 사용하여 모든 노드 방문
+    &lt;ol&gt;
+      &lt;li&gt;방문하지 않은 노드만 방문한다
+        &lt;ol&gt;
+          &lt;li&gt;BFS&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;일부-노드만-선택적으로-방문할-때-2d&quot;&gt;일부 노드만 선택적으로 방문할 때: 2D&lt;/h3&gt;
+
+&lt;p&gt;📌 1. 먼저 자식 노드의 위치가 2D array index 범위 안에 위치하는지 조사하기&lt;/p&gt;
+
+&lt;p&gt;​	✔️ 가능한 &amp;lt; 또는 &amp;gt;을 사용하자‼️ &amp;lt;= 또는 &amp;gt;= 사용을 피하자‼️&lt;/p&gt;
+
+&lt;p&gt;​		 예를들어 0&amp;lt;=ny &amp;lt;= n - 1 을 사용하지 말고, 예를들어 0&amp;lt;=ny &amp;lt; n 을 사용하자.&lt;/p&gt;
+
+&lt;p&gt;​		 이유)  &amp;lt;=을 사용하는 경우 -1 연산을 추가로 하게 되므로 ~ 효율성이 낮아진다.&lt;/p&gt;
+
+&lt;p&gt;​	✔️이 과정이 선행되어야 방문 여부를 확인할 때 2D array index 범위를 벗어나는 error가 발생하지 않는다.&lt;/p&gt;
+
+&lt;p&gt;📌 2. 이후 자식 노드의 방문 여부를 조사하고, 동시에 방문 여부 리스트에 탐색 비용을 저장하자‼️&lt;/p&gt;
+
+&lt;h4 id=&quot;자식-노드의-탐색-비용이-동일할-때&quot;&gt;자식 노드의 탐색 비용이 동일할 때&lt;/h4&gt;
+
+&lt;p&gt;📌 목표 node까지 도달하는데 필요한 최소한의 edge개수/시간/이동/거리를 구하는 방법은?&lt;/p&gt;
+
+&lt;p&gt;즉, 탐색 깊이를 count할 때&lt;/p&gt;
+
+&lt;p&gt;➡️ 동일한 부모 노드와 연결된 자식 노드라면 같은 level을 가지도록 한다.&lt;/p&gt;
+
+&lt;p&gt;즉, 모든 자식 노드의 visited 값에 부모 노드의 visited 값에 1을 추가한다.&lt;/p&gt;
+
+&lt;p&gt;이 방법을 사용하면 목표 node에 도달했을 때 visitied에 저장된 level이 자연스럽게 최소 edge개수/시간/이동/거리가 된다.&lt;/p&gt;
+
+&lt;h5 id=&quot;1d-다양한-방향&quot;&gt;1D: 다양한 방향&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;최단 경로로 이동할 때 지나가는 노드를 print 하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/13913&quot;&gt;13913번 - 숨바꼭질 4&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;BFS 방법을 사용하면 같은 level의 자식 노드를 node를 방문한다.&lt;/p&gt;
+
+&lt;p&gt;따라서 node를 pop하여 모두 저장하는 방법으로는 최단 경로를 print 할 수 없다.&lt;/p&gt;
+
+&lt;p&gt;➡️ parent list를 만들어서, 자식 노드 방문시 부모 노드를 저장한다.&lt;/p&gt;
+
+&lt;p&gt;BFS를 마치고 도착한 노드의 parent list 값을 확인하여 이전에 방문한 노드를 알아내는 것을 반복한다.&lt;/p&gt;
+
+&lt;h5 id=&quot;2d-좌-우-상-하&quot;&gt;2D: 좌 우 상 하&lt;/h5&gt;
+
+&lt;p&gt;목적지에 도달하기 위한 최소의 칸 수 구하기&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;목적지에 도달하는 최소 이동 거리 구하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2178&quot;&gt;2178번 - 미로 탐색&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;visited = [[0]*node for _ in range(node)]&lt;/li&gt;
+  &lt;li&gt;for 문으로 가능한 모든 자식 노드 조사 (if 문으로 각 경우를 조사하는 것이 더 빠르지만 코드가 길어져서 작성 시간이 더 오래 걸린다.)
+    &lt;ol&gt;
+      &lt;li&gt;자식 노드의 row와 column이 2D array의 Index 범위를 벗어나지 않는지 조사
+        &lt;ol&gt;
+          &lt;li&gt;방문하지 않은 자식 노드만 방문
+            &lt;ol&gt;
+              &lt;li&gt;visited[child_y][child_x] = visited[parent_y][parent_x] + 1&lt;/li&gt;
+              &lt;li&gt;&lt;/li&gt;
+            &lt;/ol&gt;
+          &lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;연결 요소(connected component)의 개수 구하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2667&quot;&gt;2667번 - 단지번호붙이기&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;시작 노드가 여러 개인 경우, 가능한 모든 시작 노드에서 동시에 BFS 탐색하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;➡️ Queue안에 모든 시작 노드를 추가한다. 이 방법으로 차례로 BFS를 진행하게 된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/7576&quot;&gt;7576번 - 토마토&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;예를 들어 이 문제에선 [0,0]과 [3,5]에 토마토가 존재하므로, 탐색 시작 노드가 2개가 된다.&lt;/p&gt;
+
+&lt;p&gt;따라서 두 노드를 queue에 올려서 BFS를 진행하면서, 자식 토마토가 익는데 걸리는 시간을 채워준다.&lt;/p&gt;
+
+&lt;p&gt;그 결과는 다음과 같다.&lt;/p&gt;
+
+&lt;p&gt;[[ 1 -1  7  6  5  4]
+ [ 2 -1  6  5  4  3]
+ [ 3  4  5  6 -1  2]
+ [ 4  5  6  7 -1  1]]&lt;/p&gt;
+
+&lt;h5 id=&quot;2d-다양한-방향&quot;&gt;2D: 다양한 방향&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;목적지에 도달하는 최소 이동 거리 구하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/7562&quot;&gt;7562번 - 나이트의 이동&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;ny&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ny&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ny&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ny&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ny&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;자식-노드의-탐색-비용이-서로-다를-때&quot;&gt;자식 노드의 탐색 비용이 서로 다를 때&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;최단 경로이면서 탐색 비용이 최소인 경로 구하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1261&quot;&gt;1261 알고스팟&lt;/a&gt;, &lt;a href=&quot;https://www.acmicpc.net/problem/13549&quot;&gt;13549 숨바꼭질 3&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;➡️ 탐색 비용이 작은 자식 노드를 queue의 앞에 추가하고, 탐색 비용이 큰 자식 노드는 뒤에 추가한다.&lt;/p&gt;
+
+&lt;p&gt;​	✔️ q.appendleft(), q.append() 를 사용한다.&lt;/p&gt;
+
+&lt;p&gt;이 방법은 비용이 적은 경로부터 우선적으로 탐색하고, 가장 적은 비용에 대한 탐색이 끝나고 나서야 비로소 더 큰 비용의 경로를 탐색하기 시작한다.&lt;/p&gt;
+
+&lt;p&gt;따라서 이 방법을 통해 탐색 비용과 길이가 이 최소인 경로를 찾을 수 있다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;이분 그래프 (Bipartite Graph) 판별하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이분 그래프란? 그래프의 정점의 집합을 둘로 분할하여, 각 집합에 속한 정점끼리는 서로 인접하지 않는 그래프이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1707&quot;&gt;1707번 - 이분 그래프&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;➡️ 방문하지 않은 자식 노드의 탐색 비용 저장시, 부모 노드의 값에 -1을 곱하여 서로 다른 집합임을 표시한다.&lt;/p&gt;
+
+&lt;p&gt;만약 자식 노드를 이미 방문했으며, 부모 노드와 탐색 비용이 동일하다면 return false&lt;/p&gt;</content><author><name>Dasol Yoo</name></author><category term="CodingTest" /><category term="CodingTest" /><category term="Summary" /><summary type="html">🌟코딩테스트에서 BFS 문제를 풀기 위해 꼭 필요한 함수 총 정리!!!!!🌟</summary></entry><entry><title type="html">NAVER AI Now</title><link href="http://localhost:4000/ai/2021/05/25/naver-ai-now.html" rel="alternate" type="text/html" title="NAVER AI Now" /><published>2021-05-25T00:00:00+09:00</published><updated>2021-05-25T00:00:00+09:00</updated><id>http://localhost:4000/ai/2021/05/25/naver-ai-now</id><content type="html" xml:base="http://localhost:4000/ai/2021/05/25/naver-ai-now.html">&lt;h2 id=&quot;기존-ai-시대&quot;&gt;기존 AI 시대&lt;/h2&gt;
 
 &lt;p&gt;각 문제별로 데이터 확보-&amp;gt;정제-&amp;gt;모델개발-&amp;gt;서비스&lt;/p&gt;
 
@@ -548,6 +776,20 @@
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;print-시간-단축-방법&quot;&gt;print 시간 단축 방법&lt;/h3&gt;
+
+&lt;h4 id=&quot;integer&quot;&gt;integer&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;list&quot;&gt;list&lt;/h4&gt;
+
+&lt;p&gt;시간은 단축되지만 메모리 사용은 증가한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos; &apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Dasol Yoo</name></author><category term="CodingTest" /><category term="CodingTest" /><category term="BAEKJOON" /><summary type="html">프로그래머스만 사용하다가 백준을 시작하면 테스트 값 입력 방식이 달라서 당황스러울 수 있습니다.</summary></entry><entry><title type="html">python list 연산의 시간복잡도</title><link href="http://localhost:4000/codingtest/2021/04/29/python-list-time-complexity.html" rel="alternate" type="text/html" title="python list 연산의 시간복잡도" /><published>2021-04-29T00:00:00+09:00</published><updated>2021-04-29T00:00:00+09:00</updated><id>http://localhost:4000/codingtest/2021/04/29/python-list-time-complexity</id><content type="html" xml:base="http://localhost:4000/codingtest/2021/04/29/python-list-time-complexity.html">&lt;p&gt;요즘은 코딩테스트 준비를 위해 솔루션을 여러가지로 작성해보며 계산 시간과 메모리 효율성에 대해서 테스트 해보고 있습니다.&lt;/p&gt;
 
 &lt;p&gt;백준을 돌아다니던 와중에 &lt;strong&gt;&lt;a href=&quot;https://www.acmicpc.net/blog/view/70&quot;&gt;자주 틀리는 요인에 대한 글&lt;/a&gt;&lt;/strong&gt;을 읽으면서, list 자료형 사용시 조심해야겠다고 생각한 부분들이 나와서 반가웠습니다.&lt;/p&gt;

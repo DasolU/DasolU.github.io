@@ -579,7 +579,7 @@ function googleTranslateElementInit() {
 
 
 
-    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 6 mins</span>
   </p><div class="post-tags"><a class="post-tag" href="/tags.html#CodingTest">#CodingTest</a><a class="post-tag" href="/tags.html#Summary">#Summary</a></div></header>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -591,17 +591,245 @@ function googleTranslateElementInit() {
 
 <p>계속 업데이트 합니다.</p>
 
+<h2 id="queue-만드는-방법">Queue 만드는 방법</h2>
+
+<p>queue에 2D node를 추가할 때 시공간 복잡도가 가장 낮은 방법.</p>
+
+<p>(현재까지 진행한 여러가지 테스트롤 통해 내린 결론이며, 향후 변경될 수 있다.)</p>
+
+<ol>
+  <li>q = deque()</li>
+  <li>q.append((sy, sx))</li>
+  <li>(y, x) = q.popleft()</li>
+  <li>q.append((ny, nx))</li>
+</ol>
+
+<h2 id="graph-만드는-방법">Graph 만드는 방법</h2>
+
+<h3 id="node와-edge가-주어질-때">node와 edge가 주어질 때</h3>
+
+<p><a href="https://www.acmicpc.net/problem/13023">13023번 - ABCDE</a></p>
+
+<p><a href="https://www.acmicpc.net/problem/1260">1260번 - DFS와 BFS</a></p>
+
+<p><a href="https://www.acmicpc.net/problem/11724">11724번 - 연결 요소의 개수</a></p>
+
+<p><a href="https://www.acmicpc.net/problem/1707">1707번 - 이분 그래프</a></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Make Graph
+</span><span class="n">graph</span><span class="o">=</span><span class="p">[[]</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">node</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">edge</span><span class="p">):</span>
+    <span class="n">node1</span><span class="p">,</span> <span class="n">node2</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span><span class="p">().</span><span class="n">split</span><span class="p">())</span>
+    <span class="n">graph</span><span class="p">[</span><span class="n">node1</span><span class="p">].</span><span class="n">append</span><span class="p">(</span><span class="n">node2</span><span class="p">)</span>
+    <span class="n">graph</span><span class="p">[</span><span class="n">node2</span><span class="p">].</span><span class="n">append</span><span class="p">(</span><span class="n">node1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="n-x-m-인접-행렬adjacency-matrix이-주어질-때">N X M 인접 행렬(adjacency matrix)이 주어질 때</h3>
+
+<p><a href="https://www.acmicpc.net/problem/2667">2667번 - 단지번호붙이기</a></p>
+
+<p><a href="https://www.acmicpc.net/problem/2178">2178번 - 미로 탐색</a></p>
+
+<p><a href="https://www.acmicpc.net/problem/7576">7576번 - 토마토</a></p>
+
+<p><a href="https://www.acmicpc.net/problem/7562">7562번 - 나이트의 이동</a></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">input</span> <span class="o">=</span> <span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="n">graph</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">()</span> <span class="c1"># returns list ex&gt;['0110100']
+</span>    <span class="n">graph</span><span class="p">.</span><span class="n">append</span><span class="p">([])</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+        <span class="n">graph</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
+
+<span class="n">visited</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">column</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">row</span><span class="p">)]</span>
+</code></pre></div></div>
+
 <h2 id="문제-유형">문제 유형</h2>
 
-<p>자식 노드마다 탐색 비용이 다를 때</p>
+<h3 id="모든-노드-방문할-때">모든 노드 방문할 때</h3>
 
-<p>​	탐색 비용이 작은 자식 노드를 queue의 앞에 추가하고, 탐색 비용이 큰 자식 노드는 뒤에 추가한다.</p>
+<ul>
+  <li>노드 n개가 연결된 경로가 존재하는지 구하기</li>
+</ul>
 
-<p>​	비용이 적은 경로부터 우선적으로 탐색하고, 가장 적은 비용에 대한 탐색이 끝나고 나서야 비로소 더 큰 비용의 경로를 탐색하기 시작하기 때문에</p>
+<p><a href="https://www.acmicpc.net/problem/13023">13023번 - ABCDE</a></p>
 
-<p>​	이 방법을 통해 탐색 비용과 길이가 이 최소인 경로를 찾을 수 있다.</p>
+ 	1. for문 사용하여 모든 노드 방문
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  	1. DFS: level == n-1일 때 return
+</code></pre></div></div>
 
-<p>​	백준 예시 문제&gt; <a href="https://www.acmicpc.net/problem/1261">1261 알고스팟</a>, <a href="https://www.acmicpc.net/problem/13549">13549 숨바꼭질 3</a>,</p>
+<ul>
+  <li>모든 노드 방문하며 그 순서 출력하기</li>
+</ul>
+
+<p><a href="https://www.acmicpc.net/problem/1260">1260번 - DFS와 BFS</a></p>
+
+<ol>
+  <li>visited = []에 pop한 node를 추가한다</li>
+  <li>visited를 return한다</li>
+</ol>
+
+<ul>
+  <li>연결 요소(connected component)의 개수 구하기</li>
+</ul>
+
+<p><a href="https://www.acmicpc.net/problem/11724">11724번 - 연결 요소의 개수</a></p>
+
+<ol>
+  <li>for문 사용하여 모든 노드 방문
+    <ol>
+      <li>방문하지 않은 노드만 방문한다
+        <ol>
+          <li>BFS</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="일부-노드만-선택적으로-방문할-때-2d">일부 노드만 선택적으로 방문할 때: 2D</h3>
+
+<p>📌 1. 먼저 자식 노드의 위치가 2D array index 범위 안에 위치하는지 조사하기</p>
+
+<p>​	✔️ 가능한 &lt; 또는 &gt;을 사용하자‼️ &lt;= 또는 &gt;= 사용을 피하자‼️</p>
+
+<p>​		 예를들어 0&lt;=ny &lt;= n - 1 을 사용하지 말고, 예를들어 0&lt;=ny &lt; n 을 사용하자.</p>
+
+<p>​		 이유)  &lt;=을 사용하는 경우 -1 연산을 추가로 하게 되므로 ~ 효율성이 낮아진다.</p>
+
+<p>​	✔️이 과정이 선행되어야 방문 여부를 확인할 때 2D array index 범위를 벗어나는 error가 발생하지 않는다.</p>
+
+<p>📌 2. 이후 자식 노드의 방문 여부를 조사하고, 동시에 방문 여부 리스트에 탐색 비용을 저장하자‼️</p>
+
+<h4 id="자식-노드의-탐색-비용이-동일할-때">자식 노드의 탐색 비용이 동일할 때</h4>
+
+<p>📌 목표 node까지 도달하는데 필요한 최소한의 edge개수/시간/이동/거리를 구하는 방법은?</p>
+
+<p>즉, 탐색 깊이를 count할 때</p>
+
+<p>➡️ 동일한 부모 노드와 연결된 자식 노드라면 같은 level을 가지도록 한다.</p>
+
+<p>즉, 모든 자식 노드의 visited 값에 부모 노드의 visited 값에 1을 추가한다.</p>
+
+<p>이 방법을 사용하면 목표 node에 도달했을 때 visitied에 저장된 level이 자연스럽게 최소 edge개수/시간/이동/거리가 된다.</p>
+
+<h5 id="1d-다양한-방향">1D: 다양한 방향</h5>
+
+<ul>
+  <li>최단 경로로 이동할 때 지나가는 노드를 print 하기</li>
+</ul>
+
+<p><a href="https://www.acmicpc.net/problem/13913">13913번 - 숨바꼭질 4</a></p>
+
+<p>BFS 방법을 사용하면 같은 level의 자식 노드를 node를 방문한다.</p>
+
+<p>따라서 node를 pop하여 모두 저장하는 방법으로는 최단 경로를 print 할 수 없다.</p>
+
+<p>➡️ parent list를 만들어서, 자식 노드 방문시 부모 노드를 저장한다.</p>
+
+<p>BFS를 마치고 도착한 노드의 parent list 값을 확인하여 이전에 방문한 노드를 알아내는 것을 반복한다.</p>
+
+<h5 id="2d-좌-우-상-하">2D: 좌 우 상 하</h5>
+
+<p>목적지에 도달하기 위한 최소의 칸 수 구하기</p>
+
+<ul>
+  <li>목적지에 도달하는 최소 이동 거리 구하기</li>
+</ul>
+
+<p><a href="https://www.acmicpc.net/problem/2178">2178번 - 미로 탐색</a></p>
+
+<ol>
+  <li>visited = [[0]*node for _ in range(node)]</li>
+  <li>for 문으로 가능한 모든 자식 노드 조사 (if 문으로 각 경우를 조사하는 것이 더 빠르지만 코드가 길어져서 작성 시간이 더 오래 걸린다.)
+    <ol>
+      <li>자식 노드의 row와 column이 2D array의 Index 범위를 벗어나지 않는지 조사
+        <ol>
+          <li>방문하지 않은 자식 노드만 방문
+            <ol>
+              <li>visited[child_y][child_x] = visited[parent_y][parent_x] + 1</li>
+              <li></li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<ul>
+  <li>연결 요소(connected component)의 개수 구하기</li>
+</ul>
+
+<p><a href="https://www.acmicpc.net/problem/2667">2667번 - 단지번호붙이기</a></p>
+
+<ul>
+  <li>시작 노드가 여러 개인 경우, 가능한 모든 시작 노드에서 동시에 BFS 탐색하기</li>
+</ul>
+
+<p>➡️ Queue안에 모든 시작 노드를 추가한다. 이 방법으로 차례로 BFS를 진행하게 된다.</p>
+
+<p><a href="https://www.acmicpc.net/problem/7576">7576번 - 토마토</a></p>
+
+<p>예를 들어 이 문제에선 [0,0]과 [3,5]에 토마토가 존재하므로, 탐색 시작 노드가 2개가 된다.</p>
+
+<p>따라서 두 노드를 queue에 올려서 BFS를 진행하면서, 자식 토마토가 익는데 걸리는 시간을 채워준다.</p>
+
+<p>그 결과는 다음과 같다.</p>
+
+<p>[[ 1 -1  7  6  5  4]
+ [ 2 -1  6  5  4  3]
+ [ 3  4  5  6 -1  2]
+ [ 4  5  6  7 -1  1]]</p>
+
+<h5 id="2d-다양한-방향">2D: 다양한 방향</h5>
+
+<ul>
+  <li>목적지에 도달하는 최소 이동 거리 구하기</li>
+</ul>
+
+<p><a href="https://www.acmicpc.net/problem/7562">7562번 - 나이트의 이동</a></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dx</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">dy</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+    <span class="n">ny</span><span class="p">,</span> <span class="n">nx</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">dy</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">x</span> <span class="o">+</span> <span class="n">dx</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">nx</span> <span class="o">&lt;</span> <span class="n">l</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">ny</span> <span class="o">&lt;</span> <span class="n">l</span> <span class="ow">and</span> <span class="n">visited</span><span class="p">[</span><span class="n">ny</span><span class="p">][</span><span class="n">nx</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">q</span><span class="p">.</span><span class="n">append</span><span class="p">((</span><span class="n">ny</span><span class="p">,</span> <span class="n">nx</span><span class="p">))</span>
+        <span class="n">visited</span><span class="p">[</span><span class="n">ny</span><span class="p">][</span><span class="n">nx</span><span class="p">]</span> <span class="o">=</span> <span class="n">visited</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+<h4 id="자식-노드의-탐색-비용이-서로-다를-때">자식 노드의 탐색 비용이 서로 다를 때</h4>
+
+<ul>
+  <li>최단 경로이면서 탐색 비용이 최소인 경로 구하기</li>
+</ul>
+
+<p><a href="https://www.acmicpc.net/problem/1261">1261 알고스팟</a>, <a href="https://www.acmicpc.net/problem/13549">13549 숨바꼭질 3</a></p>
+
+<p>➡️ 탐색 비용이 작은 자식 노드를 queue의 앞에 추가하고, 탐색 비용이 큰 자식 노드는 뒤에 추가한다.</p>
+
+<p>​	✔️ q.appendleft(), q.append() 를 사용한다.</p>
+
+<p>이 방법은 비용이 적은 경로부터 우선적으로 탐색하고, 가장 적은 비용에 대한 탐색이 끝나고 나서야 비로소 더 큰 비용의 경로를 탐색하기 시작한다.</p>
+
+<p>따라서 이 방법을 통해 탐색 비용과 길이가 이 최소인 경로를 찾을 수 있다.</p>
+
+<ul>
+  <li>이분 그래프 (Bipartite Graph) 판별하기</li>
+</ul>
+
+<p>이분 그래프란? 그래프의 정점의 집합을 둘로 분할하여, 각 집합에 속한 정점끼리는 서로 인접하지 않는 그래프이다.</p>
+
+<p><a href="https://www.acmicpc.net/problem/1707">1707번 - 이분 그래프</a></p>
+
+<p>➡️ 방문하지 않은 자식 노드의 탐색 비용 저장시, 부모 노드의 값에 -1을 곱하여 서로 다른 집합임을 표시한다.</p>
+
+<p>만약 자식 노드를 이미 방문했으며, 부모 노드와 탐색 비용이 동일하다면 return false</p>
 
 
 
@@ -611,7 +839,7 @@ function googleTranslateElementInit() {
 <div class="post-nav"><a class="previous" href="/ai/2021/05/25/naver-ai-now.html" title="NAVER AI Now">NAVER AI Now</a><span></span></div><div class="post-related">
       <div>Related Articles</div>
       <ul>
-        <li><a class="post-link" href="/algorithm/2021/04/15/recursion.html" title="">Recursion</a></li><li><a class="post-link" href="/algorithm/2021/04/20/BFS.html" title="">BFS (Breadth-First Search)알고리즘</a></li><li><a class="post-link" href="/codingtest/2021/04/25/programmers-network.html" title="">Programmers 네트워크 문제</a></li><li><a class="post-link" href="/basic/2021/04/14/data-structure-array-linked-list.html" title="">Data Structure Array vs. Linked List</a></li></ul>
+        <li><a class="post-link" href="/ai/2021/05/18/few-shot-learning.html" title="">Few-shot Learning 딥러닝 시 데이터 수가 매우 적을 때?</a></li><li><a class="post-link" href="/algorithm/2021/04/20/greedy.html" title="">Greedy</a></li><li><a class="post-link" href="/algorithm/2021/04/20/BFS.html" title="">BFS (Breadth-First Search)알고리즘</a></li><li><a class="post-link" href="/basic/2021/04/14/data-structure-array-linked-list.html" title="">Data Structure Array vs. Linked List</a></li></ul>
     </div><div class="post-comments">  <div id="gitment_thread"></div>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
   <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
