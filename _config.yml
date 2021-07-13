@@ -151,7 +151,7 @@ defaults:
 # Gitment comments
 gitment:
    username: DasolU
-   repo: Dasolu.github.io
+   repo: DasolU.github.io
    client_id: 9646d9e9ccfb6cddc18c
    client_secret: d12d773f3f365729fdb33dd3516498e93deeea19
    redirect_uri: https://dasolu.github.io/
