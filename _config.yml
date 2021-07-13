@@ -135,7 +135,7 @@ yat:
 defaults:
    home:
      heading: "Life without Fear"
-     subheading: "Calmly & Confidently"
+     subheading: "Having the time of my life"
 #     banner: "/Users/dasol/Documents/vlog/Branding/SAM_1543.JPG"
 
 # Excerpt size setting
@@ -150,8 +150,8 @@ defaults:
 
 # Gitment comments
 gitment:
-   username: Dasol Yoo
-   repo: dasolu.github.io
+   username:Dasol Yoo
+   repo: Dasolu.github.io
    client_id: 9646d9e9ccfb6cddc18c
    client_secret: d12d773f3f365729fdb33dd3516498e93deeea19
    redirect_uri: https://dasolu.github.io/

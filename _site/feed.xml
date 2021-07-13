@@ -1,4 +1,348 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-15T20:45:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dasol Yoo</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Dasol Yoo</name></author><entry><title type="html">Summary for BFS Algorithm</title><link href="http://localhost:4000/codingtest/2021/06/08/summary-bfs.html" rel="alternate" type="text/html" title="Summary for BFS Algorithm" /><published>2021-06-08T00:00:00+09:00</published><updated>2021-06-08T00:00:00+09:00</updated><id>http://localhost:4000/codingtest/2021/06/08/summary-bfs</id><content type="html" xml:base="http://localhost:4000/codingtest/2021/06/08/summary-bfs.html">&lt;p&gt;🌟코딩테스트에서 &lt;strong&gt;BFS&lt;/strong&gt; 문제를 풀기 위해 꼭 필요한 함수 총 정리!!!!!🌟&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-13T21:57:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dasol Yoo</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Dasol Yoo</name></author><entry><title type="html">선형대수 기초 개념 정리</title><link href="http://localhost:4000/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98/2021/07/08/linear-algebra.html" rel="alternate" type="text/html" title="선형대수 기초 개념 정리" /><published>2021-07-08T00:00:00+09:00</published><updated>2021-07-08T00:00:00+09:00</updated><id>http://localhost:4000/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98/2021/07/08/linear-algebra</id><content type="html" xml:base="http://localhost:4000/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98/2021/07/08/linear-algebra.html">&lt;p&gt;이 글은 포스코 AI・BigData 아카데미 교육과정에서 추천하는 &lt;a href=&quot;https://www.youtube.com/playlist?list=PLxMkK1K0XECOj2sZG-gCk-CjvZhJ_75I4&quot;&gt;선형대수 온라인 강의&lt;/a&gt;를 요약한 것입니다.&lt;/p&gt;
+
+&lt;p&gt;향후 내용이 추가될 예정입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;2-일차종속-및-독립&quot;&gt;&lt;strong&gt;[2. 일차종속 및 독립]&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;일차-결합&quot;&gt;&lt;strong&gt;일차 결합&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;벡터와 상수의 곱의 결합&lt;/p&gt;
+
+&lt;p&gt;예시) $a1&lt;em&gt;v1+a2&lt;/em&gt;v2+…$&lt;/p&gt;
+
+&lt;h3 id=&quot;생성&quot;&gt;&lt;strong&gt;생성&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;일차 결합 계산 결과를 말한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;일차종속-및-독립&quot;&gt;일차종속 및 독립&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;일차(선형)독립?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;한 백터에 실수배 해서 다른 벡터를 하나라도 만들어 낼 수 없다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;일차(선형)종속?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;한 백터에 실수배 해서 다른 벡터를 하나라도 만들어 낼 수 있다.&lt;/p&gt;
+
+&lt;p&gt;예시)&lt;/p&gt;
+
+&lt;p&gt;(1,1)과 (2,2)&lt;/p&gt;
+
+&lt;h3 id=&quot;독립-vs-종속-판별-방법&quot;&gt;&lt;strong&gt;독립 VS. 종속 판별 방법&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;정방행렬인 경우&amp;gt;&lt;/strong&gt; 행렬식으로 판별&lt;/p&gt;
+
+    &lt;p&gt;행렬식이 0이면 종속/ 0이 아니면 독립&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;정방행렬이&lt;/strong&gt; &lt;strong&gt;아닌 경우&amp;gt;&lt;/strong&gt; 랭크로 독립과 선형을 구분하는 방법&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;strong&gt;랭크 A?&lt;/strong&gt;&lt;/p&gt;
+
+        &lt;p&gt;&lt;strong&gt;A행렬의 열들 중에서 일차 독립인 열들의 최대 개수&lt;/strong&gt;&lt;/p&gt;
+
+        &lt;p&gt;=행렬의 열들로 생성될 수 있는 백터 공간의 차원&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;strong&gt;랭크로 독립과 선형을 구분하는 방법?&lt;/strong&gt;&lt;/p&gt;
+
+        &lt;p&gt;각 열에 실수배를 하고 더하는 과정을 거쳤을 때,&lt;/p&gt;
+
+        &lt;p&gt;맨 마지막 열이 0으로 구성될 경우 실수배해서 생성할 수 있으므로 종속이다.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3-기저-및-차원&quot;&gt;&lt;strong&gt;[3. 기저 및 차원]&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;기저basis&quot;&gt;&lt;strong&gt;기저(basis)&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;h4 id=&quot;정의&quot;&gt;정의&lt;/h4&gt;
+
+&lt;p&gt;백터 공간 v에 대해 s가 부분집합일 때,&lt;/p&gt;
+
+&lt;p&gt;집합 s가&lt;/p&gt;
+
+&lt;p&gt;1.v를 생성하고&lt;/p&gt;
+
+&lt;p&gt;2.선형독립이라면&lt;/p&gt;
+
+&lt;p&gt;s를 v의 기저(basis)라고 한다.&lt;/p&gt;
+
+&lt;p&gt;예시) 음악이라는 벡터 공간의 기저는 “도레미파솔라시도”음계이다.&lt;/p&gt;
+
+&lt;p&gt;흑백 공간이라는 벡터 공간의 기저는 “종이, 연필, 지우개”이다.&lt;/p&gt;
+
+&lt;p&gt;즉 흑백 &lt;strong&gt;공간을 만들기 위한 최소의 엑기스&lt;/strong&gt;는 “종이, 연필, 지우개”이다.&lt;/p&gt;
+
+&lt;h4 id=&quot;특징&quot;&gt;특징&lt;/h4&gt;
+
+&lt;p&gt;“&lt;strong&gt;기저는 여러개일 수 있다. 하지만 차원(기저의 개수)는 변하지 않는다.&lt;/strong&gt;”&lt;/p&gt;
+
+&lt;h3 id=&quot;표준-기저&quot;&gt;&lt;strong&gt;표준 기저&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;기저 중에 표준인 것을 의미한다.&lt;/p&gt;
+
+&lt;p&gt;예시)&lt;/p&gt;
+
+&lt;p&gt;R^2: {(1,0), (0,1)} , R2의 기저의 개수, 즉 차원은 2이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;기저의-좌표&quot;&gt;&lt;strong&gt;기저의 좌표&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;(3,4) = &lt;strong&gt;3&lt;/strong&gt;&lt;em&gt;(1,0)+&lt;strong&gt;4&lt;/strong&gt;&lt;/em&gt;(0,1)이므로&lt;/p&gt;
+
+&lt;p&gt;이때 &lt;strong&gt;좌표 벡터(상대좌표, 좌표행렬)&lt;/strong&gt;은 &lt;strong&gt;[3,4]&lt;/strong&gt;이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;4-고유치-및-고유벡터&quot;&gt;&lt;strong&gt;[4. 고유치 및 고유벡터]&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;-정의&quot;&gt;📌 정의&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/linearalgebra/linearalgebra-1.tiff&quot; alt=&quot;linearalgebra-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A행렬에 어떤 백터 v를 곱한 결과가&lt;/strong&gt;
+&lt;strong&gt;v에 어떤 실수 λ배 한 것과 같을 때,&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;v를 고유 벡터,λ를 고유치라 한다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;고유벡터는 0이 아닌 벡터이기 때문에, A-λI의 역행렬이 존재하면 안된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;따라서 A-λI의 행렬식이 0이어야 한다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;(즉, 고유 방정식이 0이어야 한다.)&lt;/p&gt;
+
+&lt;h3 id=&quot;고유치-계산-방법&quot;&gt;&lt;strong&gt;고유치 계산 방법&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;고유 방정식을 계산한다.&lt;/p&gt;
+
+&lt;p&gt;즉, 대각 성분에 λ를 빼준 뒤 행렬식 값을 구한다.&lt;/p&gt;
+
+&lt;p&gt;# 3X3이상 큰 행렬의 행렬식을 구할 때,&lt;/p&gt;
+
+&lt;p&gt;어떤 행 또는 열에 0을 포함하고 있다면,&lt;/p&gt;
+
+&lt;p&gt;0을 포함하는 행 또는 열의 다른 원소를 0으로 만들어준다.&lt;/p&gt;
+
+&lt;p&gt;이때 방법은 행 또는 열에 실수배를 하여 더하거나 빼준다.&lt;/p&gt;
+
+&lt;p&gt;이러한 방법으로 행렬식 원소를 0으로 만들어서 계산을 간소화 할 수 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;고유벡터-계산-방법&quot;&gt;&lt;strong&gt;고유벡터 계산 방법&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;구한 고유치 값을 대각성분에서 빼준다.&lt;/p&gt;
+
+&lt;p&gt;(A-λI)v=0을 만족하는 x,y를 아무거나 찾아준다.&lt;/p&gt;
+
+&lt;h2 id=&quot;5-고유치-및-고유벡터의-성질&quot;&gt;&lt;strong&gt;[5. 고유치 및 고유벡터의 성질]&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;trace&quot;&gt;📌&lt;strong&gt;Trace&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Tr(A)=A행렬의 대각 행렬들을 모두 더한 것&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;-성질-1&quot;&gt;&lt;strong&gt;📌 [성질 1]&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;A행렬의&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1.고유치의 합은 trace(A)와 같다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.고유치의 곱은 A의 행렬식 값과 같다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;성질-2&quot;&gt;&lt;strong&gt;📌[성질 2]&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;1.A^T와 A의 고유치는 같다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;​	&lt;strong&gt;(단, 고유벡터는 같다고 보장할 수 없다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.A의 고유치가 lambda이면,&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;​	A^n의 고유치는 lambda^n이다.&lt;/p&gt;
+
+&lt;p&gt;​	A^(-1)의 고유치는 lambda^(-1)이다.&lt;/p&gt;
+
+&lt;p&gt;​	a&lt;em&gt;A의 고유치는 a&lt;/em&gt;lambda이다.&lt;/p&gt;
+
+&lt;p&gt;​	A+a*I의 고유치는 lambda+a이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;성질-3&quot;&gt;&lt;strong&gt;📌[성질 3]&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;1.대칭행렬의 고유치는 항상 실수이며,&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;서로 다른 고유치에 해당하는 각각의 고유벡터는 수직관계를 갖는다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(즉, 두 벡터를 내적하면 0이다.)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/linearalgebra/linearalgebra-2.tiff&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;# 팁: 내적계산은 전치와 같다.&lt;/p&gt;
+
+&lt;p&gt;# 이유: 원래 벡터는 세워서 쓴느게 원칙이기 때문에, 전치를 하면 눕혀진다. 그 결과 내적 계산과 같아진다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.교대행렬의 고유치는 0 또는 순허수이다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3.직교 행렬의 고유치는 1 또는 -1 및 켤례복소수이며, 그 절댓값은 항상 1이다.( 즉 $a^{2}+b^{2}=1$)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;6-닮은-행렬과-대각화-행렬&quot;&gt;&lt;strong&gt;[6. 닮은 행렬과 대각화 행렬]&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;닮은-행렬&quot;&gt;닮은 행렬&lt;/h3&gt;
+
+&lt;h3 id=&quot;정의-1&quot;&gt;📌정의&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;$Q^{-1}AQ = B$ 일 때, (단,&lt;/strong&gt; &lt;strong&gt;Q가 역행렬이 존재할 때)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A와 B는 닮은 행렬이다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;이는 &lt;strong&gt;“행렬의 성질이 같음을 의미한다.”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1)행렬식 값이 같다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2)Rank값이 같다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3)Tr(A)=Tr(B)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4)고유치가 서로 같다.(고유 벡터가 같다고 보장할 수는 없다.)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;대각화-행렬&quot;&gt;&lt;strong&gt;대각화 행렬&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;$P^{-1}AP = D$&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;P: 대각화 시키는 행렬 (이때, P는 A의 고유벡터로 이루어진 행렬)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;D: 대각화 행렬 (A의 고유치로 이루어진 행렬)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;대각화-시키는-행렬과-대각화-행렬을-구하는-방법&quot;&gt;&lt;strong&gt;대각화 시키는 행렬과 대각화 행렬을 구하는 방법&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;먼저 A행렬의 고유치와 그에 해당하는 고유 벡터를 구한다.&lt;/p&gt;
+
+&lt;p&gt;이때 P는 고유벡터를 세로로 놓으면 되며,&lt;/p&gt;
+
+&lt;p&gt;D는 대각 부분에 고유 고유벡터에 해당하는 고유치를 순서대로 넣어주면 된다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;D는 항상 존재하는가? =A 행렬은 대각화 가능한가?&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;무조건 존재하지는 않는다. P의 역행렬이 존재할 때만 존재한댜.&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;P의 역행렬이 존재하면 P의 행렬식 값이 0이 아니다.&lt;/p&gt;
+
+    &lt;p&gt;이는 P를 이루는 고유벡터 열들이 일차독립이어야 함을 의미한다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;방법&amp;gt;&lt;/p&gt;
+
+        &lt;p&gt;&lt;strong&gt;1.서로 다른 고유치가 N개 존재해야한다.&lt;/strong&gt;&lt;/p&gt;
+
+        &lt;p&gt;​	만약 &lt;strong&gt;중근&lt;/strong&gt;을 갖는 경우, 대각화는 가능할 수도 불가능 할 수도 있다.&lt;/p&gt;
+
+        &lt;p&gt;​	따라서 2번째 조건을 추가로 확인한다.&lt;/p&gt;
+
+        &lt;p&gt;2.&lt;strong&gt;대각화가 가능하려면 일차독립인 고유벡터의 개수가 N개 존재해야한다.&lt;/strong&gt;&lt;/p&gt;
+
+        &lt;p&gt;​	중근인 고유치에 해당하는 고유 벡터가 서로 다른지 확인한다.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;7-벡터&quot;&gt;&lt;strong&gt;[7. 벡터]&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;벡터-표현&quot;&gt;&lt;strong&gt;벡터 표현&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;시점에서 종점으로 방향과 힘이 제시된 수학적 연산이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;벡터의-상등&quot;&gt;벡터의 상등&lt;/h3&gt;
+
+&lt;p&gt;크키와 방향이 같은 벡터.&lt;/p&gt;
+
+&lt;p&gt;이러한 벡터는 이동이 가능하다.&lt;/p&gt;
+
+&lt;h3 id=&quot;벡터의-실수배&quot;&gt;&lt;strong&gt;벡터의 실수배&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;방향은 그대로이지만 크기가 실수배 된다.&lt;/p&gt;
+
+&lt;p&gt;음수를 곱할 경우 방향이 반대가 된다.&lt;/p&gt;
+
+&lt;h3 id=&quot;단위벡터&quot;&gt;단위벡터&lt;/h3&gt;
+
+&lt;p&gt;크기가 1인 벡터.&lt;/p&gt;
+
+&lt;p&gt;단위 벡터 만드는 방법:벡터 자기 자신의 크기로 나눈다.&lt;/p&gt;
+
+&lt;h3 id=&quot;벡터의-사칙연산&quot;&gt;&lt;strong&gt;벡터의 사칙연산&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;덧셈, 뺄셈, 곱셈만 존재한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;8-벡터의-내적&quot;&gt;&lt;strong&gt;[8. 벡터의 내적]&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;내적의-성질&quot;&gt;&lt;strong&gt;내적의 성질&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/linearalgebra/linearalgebra-4.tiff&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;#중요: 수직인 두 벡터의 내적은 0이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;9-랭크-1&quot;&gt;&lt;strong&gt;[9. 랭크 1]&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;랭크-연산법&quot;&gt;&lt;strong&gt;랭크 연산법&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;=연립방정식을 푸는 방법과 완전히 동일하다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/linearalgebra/linearalgebra-5.tiff&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;행 작업만 가능하다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;행과 행을 바꿔도 된다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;행에 실수배를 해도 된다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;[가우스 소거법]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;첫번째 행의 선두(0이 아닌 숫자) 밑에를 0으로 만든다.&lt;/p&gt;
+
+&lt;p&gt;두번째 행의 선두 밑을 0으로 만든다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/linearalgebra/linearalgebra-6.tiff&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;이때 랭크는 행이 0으로 이루어지지 않은 행의 개수이다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/linearalgebra/linearalgebra-7.tiff&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;10-랭크의-활용&quot;&gt;&lt;strong&gt;[10. 랭크의 활용]&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/linearalgebra/linearalgebra-8.tiff&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/linearalgebra/linearalgebra-9.tiff&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/linearalgebra/linearalgebra-10.tiff&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;p&gt;포스코 AI・BigData 아카데미 교육과정에서 추천하는 선형대수 온라인 강의와,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;https://www.youtube.com/playlist?list=PLxMkK1K0XECOj2sZG-gCk-CjvZhJ_75I4&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;추가적인 개념 이해에 도움 받은 블로그들입니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&amp;amp;blogId=sw4r&amp;amp;logNo=221921810588&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;https://angeloyeo.github.io/2019/07/17/eigen_vector.html&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Dasol Yoo</name></author><category term="선형대수" /><category term="Linear Algebra" /><summary type="html">이 글은 포스코 AI・BigData 아카데미 교육과정에서 추천하는 선형대수 온라인 강의를 요약한 것입니다.</summary></entry><entry><title type="html">Summary for BFS Algorithm</title><link href="http://localhost:4000/codingtest/2021/06/08/summary-bfs.html" rel="alternate" type="text/html" title="Summary for BFS Algorithm" /><published>2021-06-08T00:00:00+09:00</published><updated>2021-06-08T00:00:00+09:00</updated><id>http://localhost:4000/codingtest/2021/06/08/summary-bfs</id><content type="html" xml:base="http://localhost:4000/codingtest/2021/06/08/summary-bfs.html">&lt;p&gt;🌟코딩테스트에서 &lt;strong&gt;BFS&lt;/strong&gt; 문제를 풀기 위해 꼭 필요한 함수 총 정리!!!!!🌟&lt;/p&gt;
 
 &lt;p&gt;코테 전에 &lt;strong&gt;BFS 알고리즘 필수 요약&lt;/strong&gt; 보고 들어가세요!&lt;/p&gt;
 
@@ -1086,123 +1430,4 @@ if visited[node] == False: 처럼
 해당 node의 값이 False인 경우 조사하면 시간 복잡도가 O(1)이므로
 시간이 단축된다.&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Dasol Yoo</name></author><category term="CodingTest" /><category term="CodingTest" /><category term="Efficiency" /><summary type="html">프로그래머스 깊이/너비 우선 탐색(DFS/BFS) 카테고리의 네트워크 문제의 솔루션 3 가지를 비교하고 시간 단축 방법을 정리했습니다.</summary></entry><entry><title type="html">Programmers 주식가격 문제</title><link href="http://localhost:4000/codingtest/2021/04/21/programmers-stock-price.html" rel="alternate" type="text/html" title="Programmers 주식가격 문제" /><published>2021-04-21T00:00:00+09:00</published><updated>2021-04-21T00:00:00+09:00</updated><id>http://localhost:4000/codingtest/2021/04/21/programmers-stock-price</id><content type="html" xml:base="http://localhost:4000/codingtest/2021/04/21/programmers-stock-price.html">&lt;p&gt;프로그래머스 스택/큐 카테고리의 &lt;a href=&quot;https://programmers.co.kr/learn/courses/30/parts/12081&quot;&gt;주식가격&lt;/a&gt; 문제의 솔루션 두 가지 방법을 비교해봤습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;for-loop-사용&quot;&gt;For loop 사용&lt;/h2&gt;
-
-&lt;h3 id=&quot;선택한-답-️&quot;&gt;선택한 답 ⭕️&lt;/h3&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))]&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;성능&quot;&gt;성능&lt;/h4&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;정확성&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;66.7&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;효율성&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;33.3&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;정확성&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;109.84&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;84.72&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;18.5&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;133.52&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;20.8&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;92.46&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;19.2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;67.19&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;17.6&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;비슷하지만-효율성이-낮았던-답-&quot;&gt;비슷하지만 효율성이 낮았던 답 ❌&lt;/h3&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))]&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;search_q&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:]&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;search_q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;search_q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;성능-1&quot;&gt;성능&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Solution 1과 비슷하지만 시간 더 많이 걸린다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;정확성&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;66.7&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;효율성&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;시간&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;초과&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.12&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.64&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.96&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.47&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.05&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.14&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.38&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.06&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.27&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.4&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;queue-사용&quot;&gt;Queue 사용&lt;/h2&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;collections&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;deque&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solution3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;deque&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;q_idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;deque&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;max_idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;popleft&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;node_idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;q_idx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;popleft&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node_idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node_idx&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node_idx&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;answer&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;성능-2&quot;&gt;성능&lt;/h3&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;정확성&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;66.7&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;효율성&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;26.7&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;합계&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;93.3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;100.0&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;정확성&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.08&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.92&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.07&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.09&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.04&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.40&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.70&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.05&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.79&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;10.3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;효율성&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;247.57&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;21.2&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;149.96&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;실패&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;시간&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;초과&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;193.79&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;19.7&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;테스트&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;〉&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;통과&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;97.84&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;18.3&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;배운점&quot;&gt;배운점&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;효율성을 높이는 방법
-새로운 list를 만들지 말고, 기존 list를 다르게 사용할 수 있는 idx를 만들자.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;시간 단축하는 방법
-for loop 2번 돌리는 것보다, 2개 list에서 pop을 반복하는게 더 빠르다.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Dasol Yoo</name></author><category term="CodingTest" /><category term="CodingTest" /><summary type="html">프로그래머스 스택/큐 카테고리의 주식가격 문제의 솔루션 두 가지 방법을 비교해봤습니다.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Dasol Yoo</name></author><category term="CodingTest" /><category term="CodingTest" /><category term="Efficiency" /><summary type="html">프로그래머스 깊이/너비 우선 탐색(DFS/BFS) 카테고리의 네트워크 문제의 솔루션 3 가지를 비교하고 시간 단축 방법을 정리했습니다.</summary></entry></feed>

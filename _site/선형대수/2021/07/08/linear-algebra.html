@@ -4,22 +4,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c"></meta><!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Recursion | Dasol Yoo</title>
+<title>선형대수 기초 개념 정리 | Dasol Yoo</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Recursion" />
+<meta property="og:title" content="선형대수 기초 개념 정리" />
 <meta name="author" content="Dasol Yoo" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="구글링을 통해 이해했다고 생각했는데 막상 코딩테스트에 가면 구현이 어려우셨나요?" />
-<meta property="og:description" content="구글링을 통해 이해했다고 생각했는데 막상 코딩테스트에 가면 구현이 어려우셨나요?" />
-<link rel="canonical" href="http://localhost:4000/algorithm/2021/04/15/recursion.html" />
-<meta property="og:url" content="http://localhost:4000/algorithm/2021/04/15/recursion.html" />
+<meta name="description" content="이 글은 포스코 AI・BigData 아카데미 교육과정에서 추천하는 선형대수 온라인 강의를 요약한 것입니다." />
+<meta property="og:description" content="이 글은 포스코 AI・BigData 아카데미 교육과정에서 추천하는 선형대수 온라인 강의를 요약한 것입니다." />
+<link rel="canonical" href="http://localhost:4000/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98/2021/07/08/linear-algebra.html" />
+<meta property="og:url" content="http://localhost:4000/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98/2021/07/08/linear-algebra.html" />
 <meta property="og:site_name" content="Dasol Yoo" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-04-15T00:00:00+09:00" />
+<meta property="article:published_time" content="2021-07-08T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Recursion" />
+<meta property="twitter:title" content="선형대수 기초 개념 정리" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/algorithm/2021/04/15/recursion.html","headline":"Recursion","dateModified":"2021-04-15T00:00:00+09:00","datePublished":"2021-04-15T00:00:00+09:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/algorithm/2021/04/15/recursion.html"},"author":{"@type":"Person","name":"Dasol Yoo"},"description":"구글링을 통해 이해했다고 생각했는데 막상 코딩테스트에 가면 구현이 어려우셨나요?","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98/2021/07/08/linear-algebra.html","headline":"선형대수 기초 개념 정리","dateModified":"2021-07-08T00:00:00+09:00","datePublished":"2021-07-08T00:00:00+09:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98/2021/07/08/linear-algebra.html"},"author":{"@type":"Person","name":"Dasol Yoo"},"description":"이 글은 포스코 AI・BigData 아카데미 교육과정에서 추천하는 선형대수 온라인 강의를 요약한 것입니다.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="shortcut icon" href="">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -538,11 +538,11 @@ function googleTranslateElementInit() {
 
 
 <header class="post-header">
-  <h1 class="post-title p-name" itemprop="name headline">Recursion</h1>
+  <h1 class="post-title p-name" itemprop="name headline">선형대수 기초 개념 정리</h1>
   <h3 class="post-subtitle"></h3>
 
   <p class="post-meta">
-    <time class="dt-published" datetime="2021-04-15T00:00:00+09:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Apr 15, 2021
+    <time class="dt-published" datetime="2021-07-08T00:00:00+09:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Jul 08, 2021
     </time>
 
     
@@ -579,133 +579,373 @@ function googleTranslateElementInit() {
 
 
 
-    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
-  </p><div class="post-tags"><a class="post-tag" href="/tags.html#Algorithm">#Algorithm</a></div></header>
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 5 mins</span>
+  </p><div class="post-tags"><a class="post-tag" href="/tags.html#Linear Algebra">#Linear Algebra</a></div></header>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
     <div class="post-content e-content" itemprop="articleBody">
 
-      <p>구글링을 통해 이해했다고 생각했는데 막상 코딩테스트에 가면 구현이 어려우셨나요?</p>
+      <p>이 글은 포스코 AI・BigData 아카데미 교육과정에서 추천하는 <a href="https://www.youtube.com/playlist?list=PLxMkK1K0XECOj2sZG-gCk-CjvZhJ_75I4">선형대수 온라인 강의</a>를 요약한 것입니다.</p>
 
-<p>저뿐만 아니라 많은 초보자분들이 재귀 방법에서 손에 잡힐 듯 잡히지 않는 느낌을 받는다고 합니다.</p>
+<p>향후 내용이 추가될 예정입니다.</p>
 
-<p>그래서 저는 오늘 재귀를 확실히 이해해보려고 합니다.</p>
+<h2 id="2-일차종속-및-독립"><strong>[2. 일차종속 및 독립]</strong></h2>
 
-<h2 id="필요성">필요성</h2>
-<p>반복문을 쓸까 재귀 함수를 쓸까?</p>
+<h3 id="일차-결합"><strong>일차 결합</strong></h3>
 
-<p>재귀를 쓴다고 항상 성능이 좋아지는건 아닙니다. 오히려 재귀 함수 호출이 반복될 때마다 스택에 정보를 저장하게 되므로 많은 메모리를 사용하게 됩니다. 스택이 너무 커질 경우에는 반복문을 사용하는 것이 더 좋습니다.</p>
+<p>벡터와 상수의 곱의 결합</p>
 
-<p>하지만 <strong>중요한 알고리즘들 (예&gt;<a href="https://dasolu.github.io/basic/2021/04/16/sort.html">퀵 정렬</a> )에 재귀가 사용되므로 확실한 개념 이해가 필요</strong>합니다.</p>
+<p>예시) $a1<em>v1+a2</em>v2+…$</p>
 
-<p>예를 들어 생각하는대로 손코딩을 하다보면 어느새 같은 기능을 반복해서 적는 구간이 생깁니다.<br />
-저는 이럴때마다 recursion(재귀)을 떠올리면서 def recursion을 정의하고 코드를 간결하게 만들려고 합니다.<br />
-하지만 재귀 방법 <strong>구현</strong> 경험이 없다보니 error가 생기면서 당황할 일이 많더라구요.</p>
+<h3 id="생성"><strong>생성</strong></h3>
 
-<p>이번 기회에 완벽히 이해해서 앞으로 복잡한 데이터 분석 코드를 작성할 때도 재귀를 에러없이 한 번에 적용할 수 있도록 해보겠습니다.</p>
+<p>일차 결합 계산 결과를 말한다.</p>
 
-<h2 id="정의">정의</h2>
-<p>Recursion 함수는 결과를 return하기 전에 자기 자신을 호출하는 방법입니다.</p>
+<h3 id="일차종속-및-독립">일차종속 및 독립</h3>
 
-<h2 id="구현">구현</h2>
-<p>재귀 함수를 작성할 때는</p>
+<p><strong>일차(선형)독립?</strong></p>
 
-<p><strong>1.무한 반복을 멈추기 위한 기본 단계</strong>와</p>
+<p>한 백터에 실수배 해서 다른 벡터를 하나라도 만들어 낼 수 없다.</p>
 
-<p>2.<strong>재귀 단계</strong>를 넣어주면 됩니다.</p>
+<p><strong>일차(선형)종속?</strong></p>
 
-<h3 id="예시">예시</h3>
-<p>한 list에 있는 원소들을 모두 더하는 함수를 재귀 함수로 작성해봅니다.</p>
+<p>한 백터에 실수배 해서 다른 벡터를 하나라도 만들어 낼 수 있다.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1">#기본 단계
-</span>        <span class="k">return</span> <span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>       <span class="c1">#가장 간단한 array는 더할 원소가 없는 array = []이며, 이때 합은 0입니다.
-</span>    <span class="k">else</span><span class="p">:</span>						 <span class="c1">#재귀 단계
-</span>        <span class="k">return</span> <span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<p>예시)</p>
 
-<span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">]))</span>  
-</code></pre></div></div>
-<h2 id="호출-순서-이해하기">호출 순서 이해하기</h2>
+<p>(1,1)과 (2,2)</p>
 
-<p>컴퓨터는 재귀 함수를 어떤 방식으로 처리하는 걸까요?</p>
+<h3 id="독립-vs-종속-판별-방법"><strong>독립 VS. 종속 판별 방법</strong></h3>
 
-<p>이 질문에 답하기 위해서는 data structure(자료 구조) 중 linear structure(선형 구조)에 속하는 <a href="https://dasolu.github.io/basic/2021/04/15/data-structure-stack.html">stack</a> (스택)에 대한 이해가 필요합니다.</p>
+<ul>
+  <li>
+    <p><strong>정방행렬인 경우&gt;</strong> 행렬식으로 판별</p>
 
-<p>예시의 재귀 함수가 돌아가면 컴퓨터는 함수를 호출할 때마다 호출에 사용된 변수의 값을 메모리에 저장합니다. 이때  새로운 함수에 의한 메모리는 이전에 호출한 함수의 변수가 저장된 메모리 위에 저장되는 <a href="https://dasolu.github.io/basic/2021/04/15/data-structure-stack.html">호출 스택</a>이 만들어집니다.</p>
+    <p>행렬식이 0이면 종속/ 0이 아니면 독립</p>
+  </li>
+  <li>
+    <p><strong>정방행렬이</strong> <strong>아닌 경우&gt;</strong> 랭크로 독립과 선형을 구분하는 방법</p>
 
-<p><a href="https://dasolu.github.io/basic/2021/04/15/data-structure-stack.html">호출 스택</a>은 한 방향, 즉 <strong>위쪽 방향으로 push(삽입)되고 실행할 때는 가장 위에 있는 것부터 제거(pop)</strong> 합니다.</p>
+    <ul>
+      <li>
+        <p><strong>랭크 A?</strong></p>
 
-<p>우리가 예제에 있는 재귀함수인 sum([2,4,6])를 호출하면 컴퓨터는 다음과 같은 호출 스택을 만듭니다.</p>
+        <p><strong>A행렬의 열들 중에서 일차 독립인 열들의 최대 개수</strong></p>
 
-<p>아래에 쌓인 함수 호출들은 기본 단계를 만나기 전까지 완료되지 않고 호출 상태가 저장된 상태로 멈추게 됩니다.</p>
+        <p>=행렬의 열들로 생성될 수 있는 백터 공간의 차원</p>
+      </li>
+      <li>
+        <p><strong>랭크로 독립과 선형을 구분하는 방법?</strong></p>
 
-<p><strong>가장 위에 있는 호출이 먼저</strong> 처리되며 sum([6])이 실행되고 6을 반환합니다.</p>
+        <p>각 열에 실수배를 하고 더하는 과정을 거쳤을 때,</p>
 
-<p>그 결과 3 번째 호출은 4 + 6이 반환합니다.</p>
+        <p>맨 마지막 열이 0으로 구성될 경우 실수배해서 생성할 수 있으므로 종속이다.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center"> </th>
-      <th style="text-align: center">호출 스택이 쌓여있는 모습</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">3 번째 호출</td>
-      <td style="text-align: center">4+sum([6])</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">2 번째 호출</td>
-      <td style="text-align: center">2+sum([4,6])</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">1 번째 호출</td>
-      <td style="text-align: center">sum([2,4,6])</td>
-    </tr>
-  </tbody>
-</table>
+<h2 id="3-기저-및-차원"><strong>[3. 기저 및 차원]</strong></h2>
 
-<p>값을 반환한 3 번째 호출은 제거(pop)되며, 남은 호출 스택의 모습은 다음과 같게 됩니다.</p>
+<h3 id="기저basis"><strong>기저(basis)</strong></h3>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center"> </th>
-      <th style="text-align: center">호출 스택이 쌓여있는 모습</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">2 번째 호출</td>
-      <td style="text-align: center">2+sum([4,6])</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">1 번째 호출</td>
-      <td style="text-align: center">sum([2,4,6])</td>
-    </tr>
-  </tbody>
-</table>
+<h4 id="정의">정의</h4>
 
-<p>다음으로는 3 번째 호출이 반환한 4 + 6이 2번째 호출에 대입되고, 2 번째 호출은 2+(4+6)를 반환합니다.</p>
+<p>백터 공간 v에 대해 s가 부분집합일 때,</p>
 
-<p>마찬가지로 1 번째 호출은  1+ (2+(4+6))를 반환하여 최종 답인 12가 구해집니다.</p>
+<p>집합 s가</p>
+
+<p>1.v를 생성하고</p>
+
+<p>2.선형독립이라면</p>
+
+<p>s를 v의 기저(basis)라고 한다.</p>
+
+<p>예시) 음악이라는 벡터 공간의 기저는 “도레미파솔라시도”음계이다.</p>
+
+<p>흑백 공간이라는 벡터 공간의 기저는 “종이, 연필, 지우개”이다.</p>
+
+<p>즉 흑백 <strong>공간을 만들기 위한 최소의 엑기스</strong>는 “종이, 연필, 지우개”이다.</p>
+
+<h4 id="특징">특징</h4>
+
+<p>“<strong>기저는 여러개일 수 있다. 하지만 차원(기저의 개수)는 변하지 않는다.</strong>”</p>
+
+<h3 id="표준-기저"><strong>표준 기저</strong></h3>
+
+<p>기저 중에 표준인 것을 의미한다.</p>
+
+<p>예시)</p>
+
+<p>R^2: {(1,0), (0,1)} , R2의 기저의 개수, 즉 차원은 2이다.</p>
+
+<h3 id="기저의-좌표"><strong>기저의 좌표</strong></h3>
+
+<p>(3,4) = <strong>3</strong><em>(1,0)+<strong>4</strong></em>(0,1)이므로</p>
+
+<p>이때 <strong>좌표 벡터(상대좌표, 좌표행렬)</strong>은 <strong>[3,4]</strong>이다.</p>
+
+<h2 id="4-고유치-및-고유벡터"><strong>[4. 고유치 및 고유벡터]</strong></h2>
+
+<h3 id="-정의">📌 정의</h3>
+
+<p><img src="/assets/images/linearalgebra/linearalgebra-1.tiff" alt="linearalgebra-1" /></p>
+
+<p><strong>A행렬에 어떤 백터 v를 곱한 결과가</strong>
+<strong>v에 어떤 실수 λ배 한 것과 같을 때,</strong></p>
+
+<p><strong>v를 고유 벡터,λ를 고유치라 한다.</strong></p>
+
+<p>고유벡터는 0이 아닌 벡터이기 때문에, A-λI의 역행렬이 존재하면 안된다.</p>
+
+<p><strong>따라서 A-λI의 행렬식이 0이어야 한다.</strong></p>
+
+<p>(즉, 고유 방정식이 0이어야 한다.)</p>
+
+<h3 id="고유치-계산-방법"><strong>고유치 계산 방법</strong></h3>
+
+<p>고유 방정식을 계산한다.</p>
+
+<p>즉, 대각 성분에 λ를 빼준 뒤 행렬식 값을 구한다.</p>
+
+<p># 3X3이상 큰 행렬의 행렬식을 구할 때,</p>
+
+<p>어떤 행 또는 열에 0을 포함하고 있다면,</p>
+
+<p>0을 포함하는 행 또는 열의 다른 원소를 0으로 만들어준다.</p>
+
+<p>이때 방법은 행 또는 열에 실수배를 하여 더하거나 빼준다.</p>
+
+<p>이러한 방법으로 행렬식 원소를 0으로 만들어서 계산을 간소화 할 수 있다.</p>
+
+<h3 id="고유벡터-계산-방법"><strong>고유벡터 계산 방법</strong></h3>
+
+<p>구한 고유치 값을 대각성분에서 빼준다.</p>
+
+<p>(A-λI)v=0을 만족하는 x,y를 아무거나 찾아준다.</p>
+
+<h2 id="5-고유치-및-고유벡터의-성질"><strong>[5. 고유치 및 고유벡터의 성질]</strong></h2>
+
+<h3 id="trace">📌<strong>Trace</strong></h3>
+
+<p><strong>Tr(A)=A행렬의 대각 행렬들을 모두 더한 것</strong></p>
+
+<h3 id="-성질-1"><strong>📌 [성질 1]</strong></h3>
+
+<p><strong>A행렬의</strong></p>
+
+<p><strong>1.고유치의 합은 trace(A)와 같다.</strong></p>
+
+<p><strong>2.고유치의 곱은 A의 행렬식 값과 같다.</strong></p>
+
+<h3 id="성질-2"><strong>📌[성질 2]</strong></h3>
+
+<p><strong>1.A^T와 A의 고유치는 같다.</strong></p>
+
+<p>​	<strong>(단, 고유벡터는 같다고 보장할 수 없다.</strong></p>
+
+<p><strong>2.A의 고유치가 lambda이면,</strong></p>
+
+<p>​	A^n의 고유치는 lambda^n이다.</p>
+
+<p>​	A^(-1)의 고유치는 lambda^(-1)이다.</p>
+
+<p>​	a<em>A의 고유치는 a</em>lambda이다.</p>
+
+<p>​	A+a*I의 고유치는 lambda+a이다.</p>
+
+<h3 id="성질-3"><strong>📌[성질 3]</strong></h3>
+
+<p><strong>1.대칭행렬의 고유치는 항상 실수이며,</strong></p>
+
+<p><strong>서로 다른 고유치에 해당하는 각각의 고유벡터는 수직관계를 갖는다.</strong></p>
+
+<p><strong>(즉, 두 벡터를 내적하면 0이다.)</strong></p>
+
+<p><img src="/assets/images/linearalgebra/linearalgebra-2.tiff" alt="" /></p>
+
+<p># 팁: 내적계산은 전치와 같다.</p>
+
+<p># 이유: 원래 벡터는 세워서 쓴느게 원칙이기 때문에, 전치를 하면 눕혀진다. 그 결과 내적 계산과 같아진다.</p>
+
+<p><strong>2.교대행렬의 고유치는 0 또는 순허수이다.</strong></p>
+
+<p><strong>3.직교 행렬의 고유치는 1 또는 -1 및 켤례복소수이며, 그 절댓값은 항상 1이다.( 즉 $a^{2}+b^{2}=1$)</strong></p>
+
+<h2 id="6-닮은-행렬과-대각화-행렬"><strong>[6. 닮은 행렬과 대각화 행렬]</strong></h2>
+
+<h3 id="닮은-행렬">닮은 행렬</h3>
+
+<h3 id="정의-1">📌정의</h3>
+
+<p><strong>$Q^{-1}AQ = B$ 일 때, (단,</strong> <strong>Q가 역행렬이 존재할 때)</strong></p>
+
+<p><strong>A와 B는 닮은 행렬이다.</strong></p>
+
+<p>이는 <strong>“행렬의 성질이 같음을 의미한다.”</strong></p>
+
+<p><strong>1)행렬식 값이 같다.</strong></p>
+
+<p><strong>2)Rank값이 같다.</strong></p>
+
+<p><strong>3)Tr(A)=Tr(B)</strong></p>
+
+<p><strong>4)고유치가 서로 같다.(고유 벡터가 같다고 보장할 수는 없다.)</strong></p>
+
+<h3 id="대각화-행렬"><strong>대각화 행렬</strong></h3>
+
+<p><strong>$P^{-1}AP = D$</strong></p>
+
+<p><strong>P: 대각화 시키는 행렬 (이때, P는 A의 고유벡터로 이루어진 행렬)</strong></p>
+
+<p><strong>D: 대각화 행렬 (A의 고유치로 이루어진 행렬)</strong></p>
+
+<h3 id="대각화-시키는-행렬과-대각화-행렬을-구하는-방법"><strong>대각화 시키는 행렬과 대각화 행렬을 구하는 방법</strong></h3>
+
+<p>먼저 A행렬의 고유치와 그에 해당하는 고유 벡터를 구한다.</p>
+
+<p>이때 P는 고유벡터를 세로로 놓으면 되며,</p>
+
+<p>D는 대각 부분에 고유 고유벡터에 해당하는 고유치를 순서대로 넣어주면 된다.</p>
+
+<ul>
+  <li>
+    <p><strong>D는 항상 존재하는가? =A 행렬은 대각화 가능한가?</strong></p>
+
+    <p><strong>무조건 존재하지는 않는다. P의 역행렬이 존재할 때만 존재한댜.</strong></p>
+
+    <p>P의 역행렬이 존재하면 P의 행렬식 값이 0이 아니다.</p>
+
+    <p>이는 P를 이루는 고유벡터 열들이 일차독립이어야 함을 의미한다.</p>
+
+    <ul>
+      <li>
+        <p>방법&gt;</p>
+
+        <p><strong>1.서로 다른 고유치가 N개 존재해야한다.</strong></p>
+
+        <p>​	만약 <strong>중근</strong>을 갖는 경우, 대각화는 가능할 수도 불가능 할 수도 있다.</p>
+
+        <p>​	따라서 2번째 조건을 추가로 확인한다.</p>
+
+        <p>2.<strong>대각화가 가능하려면 일차독립인 고유벡터의 개수가 N개 존재해야한다.</strong></p>
+
+        <p>​	중근인 고유치에 해당하는 고유 벡터가 서로 다른지 확인한다.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="7-벡터"><strong>[7. 벡터]</strong></h2>
+
+<h3 id="벡터-표현"><strong>벡터 표현</strong></h3>
+
+<p>시점에서 종점으로 방향과 힘이 제시된 수학적 연산이다.</p>
+
+<h3 id="벡터의-상등">벡터의 상등</h3>
+
+<p>크키와 방향이 같은 벡터.</p>
+
+<p>이러한 벡터는 이동이 가능하다.</p>
+
+<h3 id="벡터의-실수배"><strong>벡터의 실수배</strong></h3>
+
+<p>방향은 그대로이지만 크기가 실수배 된다.</p>
+
+<p>음수를 곱할 경우 방향이 반대가 된다.</p>
+
+<h3 id="단위벡터">단위벡터</h3>
+
+<p>크기가 1인 벡터.</p>
+
+<p>단위 벡터 만드는 방법:벡터 자기 자신의 크기로 나눈다.</p>
+
+<h3 id="벡터의-사칙연산"><strong>벡터의 사칙연산</strong></h3>
+
+<p>덧셈, 뺄셈, 곱셈만 존재한다.</p>
+
+<h2 id="8-벡터의-내적"><strong>[8. 벡터의 내적]</strong></h2>
+
+<h3 id="내적의-성질"><strong>내적의 성질</strong></h3>
+
+<p><img src="/assets/images/linearalgebra/linearalgebra-4.tiff" alt="" /></p>
+
+<p>#중요: 수직인 두 벡터의 내적은 0이다.</p>
+
+<h2 id="9-랭크-1"><strong>[9. 랭크 1]</strong></h2>
+
+<h3 id="랭크-연산법"><strong>랭크 연산법</strong></h3>
+
+<p><strong>=연립방정식을 푸는 방법과 완전히 동일하다.</strong></p>
+
+<p><img src="/assets/images/linearalgebra/linearalgebra-5.tiff" alt="" /></p>
+
+<ul>
+  <li>
+    <p>행 작업만 가능하다.</p>
+  </li>
+  <li>
+    <p>행과 행을 바꿔도 된다.</p>
+  </li>
+  <li>
+    <p>행에 실수배를 해도 된다.</p>
+  </li>
+</ul>
+
+<p><strong>[가우스 소거법]</strong></p>
+
+<p>첫번째 행의 선두(0이 아닌 숫자) 밑에를 0으로 만든다.</p>
+
+<p>두번째 행의 선두 밑을 0으로 만든다.</p>
+
+<p><img src="/assets/images/linearalgebra/linearalgebra-6.tiff" alt="" /></p>
+
+<p><strong>이때 랭크는 행이 0으로 이루어지지 않은 행의 개수이다.</strong></p>
+
+<p><img src="/assets/images/linearalgebra/linearalgebra-7.tiff" alt="" /></p>
+
+<h2 id="10-랭크의-활용"><strong>[10. 랭크의 활용]</strong></h2>
+
+<p><img src="/assets/images/linearalgebra/linearalgebra-8.tiff" alt="" /></p>
+
+<p><img src="/assets/images/linearalgebra/linearalgebra-9.tiff" alt="" /></p>
+
+<p><img src="/assets/images/linearalgebra/linearalgebra-10.tiff" alt="" /></p>
+
+<h2 id="reference">Reference</h2>
+
+<p>포스코 AI・BigData 아카데미 교육과정에서 추천하는 선형대수 온라인 강의와,</p>
+
+<ul>
+  <li>https://www.youtube.com/playlist?list=PLxMkK1K0XECOj2sZG-gCk-CjvZhJ_75I4</li>
+</ul>
+
+<p>추가적인 개념 이해에 도움 받은 블로그들입니다.</p>
+
+<ul>
+  <li>
+    <p>https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&amp;blogId=sw4r&amp;logNo=221921810588</p>
+  </li>
+  <li>
+    <p>https://angeloyeo.github.io/2019/07/17/eigen_vector.html</p>
+  </li>
+</ul>
 
 
 
     </div>
 
 </article>
-<div class="post-nav"><a class="previous" href="/basic/2021/04/15/data-structure-stack.html" title="Data Structure Stack">Data Structure Stack</a><a class="next" href="/algorithm/2021/04/16/sort.html" title="Sort">Sort</a></div><div class="post-related">
+<div class="post-nav"><a class="previous" href="/codingtest/2021/06/08/summary-bfs.html" title="Summary for BFS Algorithm">Summary for BFS Algorithm</a><span></span></div><div class="post-related">
       <div>Related Articles</div>
       <ul>
-        <li><a class="post-link" href="/codingtest/2021/04/30/backjoon-basic.html" title="Sort">BAEKJOON 백준 시작 방법 초보자 길라잡이</a></li><li><a class="post-link" href="/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98/2021/07/08/linear-algebra.html" title="Sort">선형대수 기초 개념 정리</a></li><li><a class="post-link" href="/codingtest/2021/04/25/programmers-network.html" title="Sort">Programmers 네트워크 문제</a></li><li><a class="post-link" href="/basic/2021/04/13/big-o-notation.html" title="Sort">Big O Notation</a></li></ul>
+        <li><a class="post-link" href="/basic/2021/04/15/data-structure-stack.html" title="">Data Structure Stack</a></li><li><a class="post-link" href="/ai/2021/05/25/naver-ai-now.html" title="">NAVER AI Now</a></li><li><a class="post-link" href="/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98/2021/07/08/linear-algebra.html" title="">선형대수 기초 개념 정리</a></li><li><a class="post-link" href="/codingtest/2021/04/19/summary-sort.html" title="">Summary for Sort Algorithm</a></li></ul>
     </div><div class="post-comments">  <div id="gitment_thread"></div>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
   <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
   <script>
     var gitment = new Gitment({
-      id: '/algorithm/2021/04/15/recursion',
+      id: '/%EC%84%A0%ED%98%95%EB%8C%80%EC%88%98/2021/07/08/linear-algebra',
       owner: 'Dasol Yoo',
       repo: 'dasolu.github.io',
       oauth: {
