@@ -20,7 +20,11 @@ tags: [CodingTest, Summary]
 
 #### List 원본 변경
 
-list.sort(key=lambda x: x[1], reverse=True)
+예시) 첫 번째 key(x[1])를 기준 오름차순 정렬한 뒤, 두 번째 key(-x[0])를 기준으로 내림차순 정렬
+
+list.sort(key=lambda x: (x[1], -x[0]), reverse=True)
+
+
 
 이 방법은 반환 값이 없으며 (Return None) 원본을 바꾸는 방법입니다.
 
