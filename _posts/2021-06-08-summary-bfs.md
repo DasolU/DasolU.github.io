@@ -19,9 +19,14 @@ queue에 2D node를 추가할 때 시공간 복잡도가 가장 낮은 방법.
 
 (현재까지 진행한 여러가지 테스트롤 통해 내린 결론이며, 향후 변경될 수 있다.)
 
-1. q = deque()
+1. **from** collections **import** deque
+
+   q = deque()
+
 2. q.append((sy, sx))
+
 3. (y, x) = q.popleft()
+
 4. q.append((ny, nx))
 
 ## Graph 만드는 방법
@@ -80,7 +85,7 @@ visited = [[0]*column for _ in range(row)]
 [13023번 - ABCDE](https://www.acmicpc.net/problem/13023)
 
  	1. for문 사용하여 모든 노드 방문
-      	1. DFS: level == n-1일 때 return
+ 	  	1. DFS: level == n-1일 때 return
 
 
 
